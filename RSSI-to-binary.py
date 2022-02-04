@@ -1,5 +1,5 @@
 import math #provides the math functions
-#import csv #provides the CSV related functions
+import csv #provides the CSV related functions
 
 #env vars declaration
 #vet test values
@@ -18,7 +18,7 @@ RSSI_quant_threshold_upper = 0 #upper quantization threshold
 RSSI_quant_threshold_lower = 0 #lower quantization threshold
 #files to be used by the program
 results_foldername = "results" #folder to store the results
-results_filename = "results_bit-sequence.txt"
+results_filename = "results_bit-sequence.csv"
 
 print ("Input values: " + str(vet_RSSI_input)) #print input values, just for testing
 
@@ -70,19 +70,33 @@ def print_bit_sequence(vet_RSSI_output):
 
 print_bit_sequence(vet_RSSI_output)
 
+def get_raw_bit_sequence(vet_RSSI_output):
+    bit_sequence = ""
+    for i in vet_RSSI_output:
+        if (i == 0):
+            bit_sequence = bit_sequence + "0"
+        elif (i == 1):
+            bit_sequence = bit_sequence + "1"
+        elif (i == 2):
+            bit_sequence = bit_sequence + "2"
+    return bit_sequence
+
 def write_bit_sequence_to_file(vet_RSSI_output, foldername, filename):
     results_path = foldername + "/" + filename
+    row = str(get_raw_bit_sequence(vet_RSSI_output))
     print ("Writing the result to the file located at: " + str(results_path))
-    with open(results_path, "w") as f: #open file to write
-        for i in vet_RSSI_output:
+    with open(results_path, "w") as file: #open file to write
+        """for i in vet_RSSI_output:
             if (i == 0):
-                f.write("0")
+                file.write("0")
             elif (i == 1):
-                f.write("1")
+                file.write("1")
             elif (i == 2):
-                f.write("2")
-        f.write("\n") #ends the file with a new line
-        f.close() #close file
+                file.write("2")"""
+        csvwriter = csv.writer(file) #creating a csv writer object 
+        csvwriter.writerow([row]) #writing the row to the file
+        #file.write("\n") #ends the file with a new line
+        file.close() #close file
     print ("The writing process is done!")
 
 write_bit_sequence_to_file(vet_RSSI_output, results_foldername, results_filename)
