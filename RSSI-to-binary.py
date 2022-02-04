@@ -1,11 +1,12 @@
 import math #provides the math functions
+#import csv #provides the CSV related functions
 
 #env vars declaration
 #vet test values
 #source test
-vet_RSSI_input = [-69, -50, -122, -40] #input data #TODO change to file reading
+#vet_RSSI_input = [-69, -50, -122, -40] #input data #TODO change to file reading
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/indoor_LOS_avg_rssi_dist.txt
-#vet_RSSI_input = [-42.8, -41.77, -42.59, -41.68, -41.69, -41.96, -40.9, -40.66, -39.35, -35.11]
+vet_RSSI_input = [-42.8, -41.77, -42.59, -41.68, -41.69, -41.96, -40.9, -40.66, -39.35, -35.11]
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/indoor_LOS_raw_rssi.ods
 #vet_RSSI_input = [-85,-79,-82,-78,-80,-81,-82,-79,-81,-79,-81,-74,-76,-76,-75,-76,-74,-74,-74,-74,-74,-74,-74,-74,-76,-76,-75,-75,-76,-76,-75,-75,-75,-76,-75,-76,-76,-75,-76,-76,-74,-74,-74,-74,-74,-74,-74,-74,-75,-75,-76,-76,-76,-76,-76,-76,-74,-74,-74,-74,-74,-74,-74,-74,-74,-74,-73,-74,-74,-74,-74,-73,-76,-76,-76,-76,-76,-76,-76,-76,-74,-74,-74,-74,-74,-74,-74,-73,-76,-76,-75,-75,-75,-75,-76,-76,-75,-76,-75,-76]
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/outdoor_LOS_avg_rssi_dist.txt
@@ -15,6 +16,9 @@ RSSI_average = 0
 RSSI_standard_deviation = 0
 RSSI_quant_threshold_upper = 0 #upper quantization threshold
 RSSI_quant_threshold_lower = 0 #lower quantization threshold
+#files to be used by the program
+results_foldername = "results" #folder to store the results
+results_filename = "results_bit-sequence.txt"
 
 print ("Input values: " + str(vet_RSSI_input)) #print input values, just for testing
 
@@ -53,7 +57,7 @@ def process_RSSI_bits(vet_RSSI_input, vet_RSSI_output, RSSI_quant_threshold_uppe
 vet_RSSI_output = process_RSSI_bits(vet_RSSI_input, vet_RSSI_output, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower)
 print ("Output values: " + str(vet_RSSI_output))
 
-def print_bit_sequece(vet_RSSI_output):
+def print_bit_sequence(vet_RSSI_output):
     print ("Bit sequence: ", end="") #inline print
     for i in vet_RSSI_output:
         if (i == 0):
@@ -64,4 +68,21 @@ def print_bit_sequece(vet_RSSI_output):
             print ("2", end="")
     print ("")
 
-print_bit_sequece(vet_RSSI_output)
+print_bit_sequence(vet_RSSI_output)
+
+def write_bit_sequence_to_file(vet_RSSI_output, foldername, filename):
+    results_path = foldername + "/" + filename
+    print ("Writing the result to the file located at: " + str(results_path))
+    with open(results_path, "w") as f: #open file to write
+        for i in vet_RSSI_output:
+            if (i == 0):
+                f.write("0")
+            elif (i == 1):
+                f.write("1")
+            elif (i == 2):
+                f.write("2")
+        f.write("\n") #ends the file with a new line
+        f.close() #close file
+    print ("The writing process is done!")
+
+write_bit_sequence_to_file(vet_RSSI_output, results_foldername, results_filename)
