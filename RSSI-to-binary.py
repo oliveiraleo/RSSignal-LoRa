@@ -6,7 +6,7 @@ import csv #provides the CSV related functions
 #source test
 #vet_RSSI_input = [-69, -50, -122, -40] #input data #TODO change to file reading
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/indoor_LOS_avg_rssi_dist.txt
-vet_RSSI_input = [-42.8, -41.77, -42.59, -41.68, -41.69, -41.96, -40.9, -40.66, -39.35, -35.11]
+#vet_RSSI_input = [-42.8, -41.77, -42.59, -41.68, -41.69, -41.96, -40.9, -40.66, -39.35, -35.11]
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/indoor_LOS_raw_rssi.ods
 #vet_RSSI_input = [-85,-79,-82,-78,-80,-81,-82,-79,-81,-79,-81,-74,-76,-76,-75,-76,-74,-74,-74,-74,-74,-74,-74,-74,-76,-76,-75,-75,-76,-76,-75,-75,-75,-76,-75,-76,-76,-75,-76,-76,-74,-74,-74,-74,-74,-74,-74,-74,-75,-75,-76,-76,-76,-76,-76,-76,-74,-74,-74,-74,-74,-74,-74,-74,-74,-74,-73,-74,-74,-74,-74,-73,-76,-76,-76,-76,-76,-76,-76,-76,-74,-74,-74,-74,-74,-74,-74,-73,-76,-76,-75,-75,-75,-75,-76,-76,-75,-76,-75,-76]
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/outdoor_LOS_avg_rssi_dist.txt
@@ -19,7 +19,25 @@ RSSI_quant_threshold_lower = 0 #lower quantization threshold
 #files to be used by the program
 results_foldername = "results" #folder to store the results
 results_filename = "results_bit-sequence.csv"
+data_file_foldername = "dataset-files" #folder where the data files are stored
+data_file_filename = "Goldoni_2022-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
 
+def read_input_file(foldername, filename):
+    data_file_path = foldername + "/" + filename
+    vet_RSSI_values = []
+    print ("Reading the file located at: " + str(data_file_path))
+    with open(data_file_path, "r") as file: #open file to read
+        csvreader = csv.reader(file) #creating a csv reader object
+        i = 0
+        for row in csvreader:
+            #print (row)
+            for i in range(0, len(row)):
+                vet_RSSI_values.append(float(row[i])) #TODO check if float is okay here
+        file.close() #close file
+    print ("The reading process is done!")
+    return vet_RSSI_values
+
+vet_RSSI_input = read_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
 print ("Input values: " + str(vet_RSSI_input)) #print input values, just for testing
 
 RSSI_average = sum(vet_RSSI_input) / len(vet_RSSI_input) #calculates the average of the RSSI values
@@ -70,9 +88,9 @@ def print_bit_sequence(vet_RSSI_output):
 
 print_bit_sequence(vet_RSSI_output)
 
-def get_raw_bit_sequence(vet_RSSI_output):
+def get_raw_bit_sequence(vet_bit_sequence):
     bit_sequence = ""
-    for i in vet_RSSI_output:
+    for i in vet_bit_sequence:
         if (i == 0):
             bit_sequence = bit_sequence + "0"
         elif (i == 1):
@@ -99,4 +117,4 @@ def write_bit_sequence_to_file(vet_RSSI_output, foldername, filename):
         file.close() #close file
     print ("The writing process is done!")
 
-write_bit_sequence_to_file(vet_RSSI_output, results_foldername, results_filename)
+#write_bit_sequence_to_file(vet_RSSI_output, results_foldername, results_filename)
