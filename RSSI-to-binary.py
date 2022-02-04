@@ -8,11 +8,20 @@ RSSI_average = 0
 RSSI_standard_deviation = 0
 RSSI_quant_threshold_upper = 0 #upper quantization threshold
 RSSI_quant_threshold_lower = 0 #lower quantization threshold
-#files to be used by the program
+#files and paths to be used by the program
 results_foldername = "results" #folder to store the results
-results_filename = "results_bit-sequence.csv"
+results_filename = "bit-sequence_Goldoni_2022-indoor_LOS_raw_rssi-cut.csv"
 data_file_foldername = "dataset-files" #folder where the data files are stored
 data_file_filename = "Goldoni_2022-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
+
+#function created just for testing in bulk
+"""def read_file_name():
+    print ("Please, enter the name of the file to be processed: ", end="") #inline print
+    filename = input()
+    return filename
+
+data_file_filename = read_file_name()
+results_filename = "bit-sequence_" + data_file_filename"""
 
 def read_input_file(foldername, filename):
     data_file_path = foldername + "/" + filename
@@ -31,12 +40,12 @@ def read_input_file(foldername, filename):
         print ("The reading process is done!")
     #if not, prints a message and closes the program
     except FileNotFoundError:
-        print ("The file " + str(data_file_path) + " was not found!\nPlease, check the file path and name and try again.")
-        exit(code=2)
+        print ("The file " + str(filename) + " was not found!\nPlease, check the name making sure it exists and try again.")
+        exit(code=2) #TODO change that to something that makes the entire program stop (as this file can be used by other programs in the future)
     return vet_RSSI_values
 
 vet_RSSI_input = read_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
-print ("Input values: " + str(vet_RSSI_input)) #print input values, just for testing
+#print ("Input values: " + str(vet_RSSI_input)) #print input values, just for testing
 
 RSSI_average = sum(vet_RSSI_input) / len(vet_RSSI_input) #calculates the average of the RSSI values
 
@@ -71,7 +80,7 @@ def process_RSSI_bits(vet_RSSI_input, vet_bit_sequence, RSSI_quant_threshold_upp
     return vet_bit_sequence
 
 vet_binary_output = process_RSSI_bits(vet_RSSI_input, vet_binary_output, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower)
-print ("Output values: " + str(vet_binary_output))
+#print ("Output values: " + str(vet_binary_output))
 
 def print_bit_sequence(vet_bit_sequence):
     print ("Bit sequence: ", end="") #inline print
