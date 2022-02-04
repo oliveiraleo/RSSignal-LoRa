@@ -4,7 +4,7 @@ import csv #provides the CSV related functions
 #env vars declaration
 #vet test values
 #source test
-#vet_RSSI_input = [-69, -50, -122, -40] #input data #TODO change to file reading
+#vet_RSSI_input = [-69, -50, -122, -40] #input data
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/indoor_LOS_avg_rssi_dist.txt
 #vet_RSSI_input = [-42.8, -41.77, -42.59, -41.68, -41.69, -41.96, -40.9, -40.66, -39.35, -35.11]
 #source https://github.com/emanueleg/lora-rssi/blob/master/localization-2018_data/channel_data/indoor_LOS_raw_rssi.ods
@@ -26,15 +26,21 @@ def read_input_file(foldername, filename):
     data_file_path = foldername + "/" + filename
     vet_RSSI_values = []
     print ("Reading the file located at: " + str(data_file_path))
-    with open(data_file_path, "r") as file: #open file to read
-        csvreader = csv.reader(file) #creating a csv reader object
-        i = 0
-        for row in csvreader:
-            #print (row)
-            for i in range(0, len(row)):
-                vet_RSSI_values.append(float(row[i])) #TODO check if float is okay here
-        file.close() #close file
-    print ("The reading process is done!")
+    #checks if the file exists
+    try:
+        with open(data_file_path, "r") as file: #open file to read
+            csvreader = csv.reader(file) #creating a csv reader object
+            i = 0
+            for row in csvreader:
+                #print (row)
+                for i in range(0, len(row)):
+                    vet_RSSI_values.append(float(row[i])) #TODO check if float is okay here
+            file.close() #close file
+        print ("The reading process is done!")
+    #if not, prints a message and closes the program
+    except FileNotFoundError:
+        print ("The file " + str(data_file_path) + " was not found!\nPlease, check the file path and name and try again.")
+        exit(code=2)
     return vet_RSSI_values
 
 vet_RSSI_input = read_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
@@ -117,4 +123,4 @@ def write_bit_sequence_to_file(vet_RSSI_output, foldername, filename):
         file.close() #close file
     print ("The writing process is done!")
 
-#write_bit_sequence_to_file(vet_RSSI_output, results_foldername, results_filename)
+write_bit_sequence_to_file(vet_RSSI_output, results_foldername, results_filename)
