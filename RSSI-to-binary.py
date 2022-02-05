@@ -69,7 +69,7 @@ print ("Upper quantization threshold: " + str(RSSI_quant_threshold_upper))
 print ("Lower quantization threshold: " + str(RSSI_quant_threshold_lower))
 
 # processes the RSSI values to binary
-def process_RSSI_bits(vet_RSSI_input, vet_bit_sequence, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower):
+def process_RSSI_bits(vet_RSSI_input, vet_bit_sequence, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower): #TODO remove vet_bit_sequence from arguments
     for i in vet_RSSI_input: #for each value in the input vector
         if (i > RSSI_quant_threshold_upper): #if the value is greater than the upper quantization threshold
             vet_bit_sequence.append(1) #append a 1 to the output vector
@@ -108,11 +108,12 @@ def get_raw_bit_sequence(vet_bit_sequence):
 
 def write_bit_sequence_to_file(vet_bit_sequence, foldername, filename):
     results_path = foldername + "/" + filename
-    row = str(get_raw_bit_sequence(vet_bit_sequence))
     print ("Writing the result to the file located at: " + str(results_path))
+    #row = str(get_raw_bit_sequence(vet_bit_sequence))
     with open(results_path, "w") as file: #open file to write
         csvwriter = csv.writer(file) #creating a csv writer object 
-        csvwriter.writerow([row]) #writing the row to the file
+        #csvwriter.writerow([row]) #writing the row to the file
+        csvwriter.writerow(vet_bit_sequence) #writing the rows to the file
         #file.write("\n") #ends the file with a new line
         file.close() #close file
     print ("The writing process is done!")
