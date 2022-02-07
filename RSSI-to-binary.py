@@ -8,6 +8,7 @@ RSSI_average = 0
 RSSI_standard_deviation = 0
 RSSI_quant_threshold_upper = 0 #upper quantization threshold
 RSSI_quant_threshold_lower = 0 #lower quantization threshold
+RSSI_quant_threshold_alpha = 1 #thresholds adjustment
 #files and paths to be used by the program
 results_foldername = "results" #folder to store the results
 results_filename = "bit-sequence_Goldoni_2022-indoor_LOS_raw_rssi-cut.csv"
@@ -49,7 +50,7 @@ vet_RSSI_input = read_input_file(data_file_foldername, data_file_filename) #load
 
 RSSI_average = sum(vet_RSSI_input) / len(vet_RSSI_input) #calculates the average of the RSSI values
 
-print ("Average: " + str(RSSI_average))
+print ("Average: ", RSSI_average)
 
 def calculate_standard_deviation (vet_RSSI_input, RSSI_average): #calculates the standard deviation of the RSSI values
     vet_RSSI_std_deviation = []
@@ -62,11 +63,12 @@ RSSI_standard_deviation = calculate_standard_deviation(vet_RSSI_input, RSSI_aver
 print ("Standard Deviation: " + str(RSSI_standard_deviation))
 
 # calculate the quantization thresholds
-RSSI_quant_threshold_upper = RSSI_average + RSSI_standard_deviation
-RSSI_quant_threshold_lower = RSSI_average - RSSI_standard_deviation
+RSSI_quant_threshold_upper = RSSI_average + (RSSI_quant_threshold_alpha * RSSI_standard_deviation)
+RSSI_quant_threshold_lower = RSSI_average - (RSSI_quant_threshold_alpha * RSSI_standard_deviation)
 
 print ("Upper quantization threshold: " + str(RSSI_quant_threshold_upper))
 print ("Lower quantization threshold: " + str(RSSI_quant_threshold_lower))
+print ("Alpha threshold adjustment: " + str(RSSI_quant_threshold_alpha))
 
 # processes the RSSI values to binary
 def process_RSSI_bits(vet_RSSI_input, vet_bit_sequence, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower): #TODO remove vet_bit_sequence from arguments
