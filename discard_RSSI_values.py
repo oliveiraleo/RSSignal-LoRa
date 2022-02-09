@@ -7,9 +7,9 @@ RSSI_index_values = []
 binary_bit_sequence = ""
 #files and paths to be used by the program
 bit_sequence_foldername = "results" #folder to store the results
-bit_sequence_filename = "bit-sequence_Goldoni_2022-indoor_LOS_raw_rssi-cut.csv"
+bit_sequence_filename = "bit-sequence_Goldoni_2018-indoor_LOS_raw_rssi-cut.csv"
 data_file_foldername = "dataset-files" #folder where the data files are stored
-data_file_filename = "Goldoni_2022-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
+data_file_filename = "Goldoni_2018-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
 
 #definitions of the functions
 def read_RSSI_input_file(foldername, filename):
@@ -30,18 +30,19 @@ def read_RSSI_input_file(foldername, filename):
         print ("The reading process is done!")
     #if not, prints a message and closes the program
     except FileNotFoundError:
-        print ("The file " + str(filename) + " was not found!\nPlease, check the name making sure it exists and try again.")
+        print (f"The file {filename} was not found!\nPlease, check the name, make sure it exists and try again.")
         exit(code=2) #TODO change that to something that makes the entire program stop (as this file can be used by other programs in the future)
     return vet_RSSI_values
 
 def read_binary_input_file(foldername, filename):
     data_file_path = foldername + "/" + filename
-    binary_bits = ""
-    print ("Reading the file located at: " + str(data_file_path))
+    binary_bits = []
+    print ("Reading the file located at: ", data_file_path)
     #checks if the file exists
     try:
         with open(data_file_path, "r") as file: #open file to read
             csvreader = csv.reader(file, delimiter=',') #creating a csv reader object
+            #csvreader = csv.reader(file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC) #creating a csv reader object (reads the numbers as floats, not as strings)
             #binary_bits = file.readline() #read the file
             for row in csvreader:
                 #print (row)
@@ -50,7 +51,7 @@ def read_binary_input_file(foldername, filename):
         print ("The reading process is done!")
     #if not, prints a message and closes the program
     except FileNotFoundError:
-        print ("The file " + str(filename) + " was not found!\nPlease, check the name making sure it exists and try again.")
+        print (f"The file {filename} was not found!\nPlease, check the name, make sure it exists and try again.")
         exit(code=2) #TODO change that to something that makes the entire program stop (as this file can be used by other programs in the future)
     return binary_bits
 
@@ -72,6 +73,6 @@ binary_bit_sequence = read_binary_input_file(bit_sequence_foldername, bit_sequen
 RSSI_index_values = get_index_values(binary_bit_sequence) #gets the index values of the RSSI values to discard
 
 #status report, just to check if everything is ok (for testing purposes)
-print ("The RSSI values are: " + str(RSSI_values))
-print ("The bit sequence is: " + str(binary_bit_sequence))
-print ("The indexes of RSSI values to discard are: " + str(RSSI_index_values)) #TODO function to discard the indexes obtained here
+print ("The RSSI values are: ", RSSI_values)
+print ("The bit sequence is: ",  binary_bit_sequence)
+print ("The indexes of RSSI values to discard are: ", RSSI_index_values) #TODO function to discard the indexes obtained here
