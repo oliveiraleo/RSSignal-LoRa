@@ -6,10 +6,14 @@ RSSI_values = []
 RSSI_index_values = []
 binary_bit_sequence = ""
 #files and paths to be used by the program
-bit_sequence_foldername = "results" #folder to store the results
-bit_sequence_filename = "bit-sequence_Goldoni_2018-indoor_LOS_raw_rssi-cut.csv"
+filename = "Goldoni_2018-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
+results_foldername = "results"
+bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to get the results from
+bit_sequence_filename = "bit-sequence_" + filename #filename of the bit sequence file
 data_file_foldername = "dataset-files" #folder where the data files are stored
-data_file_filename = "Goldoni_2018-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
+data_file_filename = filename #filename of the data file
+discard_foldername = results_foldername + "/" + "discard" #folder to store the results
+discard_filename = "discard-indexes_" + filename #filename for the file with results
 
 #definitions of the functions
 def read_RSSI_input_file(foldername, filename):
@@ -67,12 +71,30 @@ def get_index_values(RSSI_values):
     #print (str(len(RSSI_values)) + " values were read.")
     return index_values
 
-#execution starts here
-RSSI_values = read_RSSI_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
-binary_bit_sequence = read_binary_input_file(bit_sequence_foldername, bit_sequence_filename) #loads the binary bit sequence from the file
-RSSI_index_values = get_index_values(binary_bit_sequence) #gets the index values of the RSSI values to discard
+def write_indexes_to_file(vet_discard_indexes, foldername, filename):
+    results_path = foldername + "/" + filename
+    print ("Writing the discard indexes to the file located at: ", results_path)
+    with open(results_path, "w") as file: #open file to write
+        csvwriter = csv.writer(file) #creating a csv writer object 
+        csvwriter.writerow(vet_discard_indexes) #writing the rows to the file
+        file.close() #close file
+    print ("The writing process is done!")
 
-#status report, just to check if everything is ok (for testing purposes)
-print ("The RSSI values are: ", RSSI_values)
-print ("The bit sequence is: ",  binary_bit_sequence)
-print ("The indexes of RSSI values to discard are: ", RSSI_index_values) #TODO function to discard the indexes obtained here
+# defines the main function
+def main():
+    #execution starts here
+    RSSI_values = read_RSSI_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
+    binary_bit_sequence = read_binary_input_file(bit_sequence_foldername, bit_sequence_filename) #loads the binary bit sequence from the file
+    RSSI_index_values = get_index_values(binary_bit_sequence) #gets the index values of the RSSI values to discard
+
+    #status report, just to check if everything is ok (for testing purposes)
+    print ("The RSSI values are: ", RSSI_values)
+    print ("The bit sequence is: ",  binary_bit_sequence)
+    print ("The indexes of RSSI values to discard are: ", RSSI_index_values) #TODO function to discard the indexes obtained here
+
+    # saves the results to a file
+    write_indexes_to_file(RSSI_index_values, discard_foldername, discard_filename)
+
+# checks if the file is being run directly to avoid running it mistakenly
+if __name__ == "__main__":
+    main()
