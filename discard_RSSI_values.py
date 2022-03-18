@@ -4,6 +4,7 @@ import csv #provides the CSV related functions
 #env vars declaration
 RSSI_values = []
 RSSI_index_values = []
+RSSI_new_values = []
 binary_bit_sequence = ""
 #files and paths to be used by the program
 filename = "Goldoni_2018-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
@@ -14,6 +15,8 @@ data_file_foldername = "dataset-files" #folder where the data files are stored
 data_file_filename = filename #filename of the data file
 discard_foldername = results_foldername + "/" + "discard" #folder to store the results
 discard_filename = "discard-indexes_" + filename #filename for the file with results
+values_after_discard_foldername = discard_foldername #folder to store the new list of RSSI values
+values_after_discard_filename = "new-RSSI_" + filename #filename for the file with results
 
 #definitions of the functions
 def read_RSSI_input_file(foldername, filename):
@@ -71,6 +74,19 @@ def get_index_values(RSSI_values):
     #print (str(len(RSSI_values)) + " values were read.")
     return index_values
 
+# returns only the RSSI values that will be used
+def erase_RSSI_values(RSSI_values, vet_discard_indexes):
+    RSSI_values_copy = RSSI_values.copy() #copy the list of RSSI values to prevent modifying the original list
+    RSSI_clean_values = []
+    #flags all values to be discarded
+    for i in range(0, len(vet_discard_indexes)):
+        RSSI_values_copy[vet_discard_indexes[i]] = -1
+    #removes the discarded values from the list
+    for i in range(0, len(RSSI_values_copy)):
+        if RSSI_values_copy[i] != -1:
+            RSSI_clean_values.append(RSSI_values_copy[i])
+    return RSSI_clean_values
+
 def write_indexes_to_file(vet_discard_indexes, foldername, filename):
     results_path = foldername + "/" + filename
     print ("Writing the discard indexes to the file located at: ", results_path)
@@ -80,20 +96,32 @@ def write_indexes_to_file(vet_discard_indexes, foldername, filename):
         file.close() #close file
     print ("The writing process is done!")
 
+def write_RSSI_values_to_file(RSSI_values, foldername, filename):
+    results_path = foldername + "/" + filename
+    print ("Writing the new RSSI values to the file located at: ", results_path)
+    with open(results_path, "w") as file: #open file to write
+        csvwriter = csv.writer(file) #creating a csv writer object 
+        csvwriter.writerow(RSSI_values) #writing the rows to the file
+        file.close() #close file
+    print ("The writing process is done!")
+
 # defines the main function
 def main():
     #execution starts here
     RSSI_values = read_RSSI_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
     binary_bit_sequence = read_binary_input_file(bit_sequence_foldername, bit_sequence_filename) #loads the binary bit sequence from the file
     RSSI_index_values = get_index_values(binary_bit_sequence) #gets the index values of the RSSI values to discard
+    RSSI_new_values = erase_RSSI_values(RSSI_values, RSSI_index_values) #erases the RSSI values that are going to be discarded
 
     #status report, just to check if everything is ok (for testing purposes)
     print ("The RSSI values are: ", RSSI_values)
     print ("The bit sequence is: ",  binary_bit_sequence)
-    print ("The indexes of RSSI values to discard are: ", RSSI_index_values) #TODO function to discard the indexes obtained here
+    print ("The indexes of RSSI values to discard are: ", RSSI_index_values)
+    print ("The new RSSI values are: ", RSSI_new_values)
 
     # saves the results to a file
     write_indexes_to_file(RSSI_index_values, discard_foldername, discard_filename)
+    write_RSSI_values_to_file(RSSI_new_values, values_after_discard_foldername, values_after_discard_filename)
 
 # checks if the file is being run directly to avoid running it mistakenly
 if __name__ == "__main__":
