@@ -6,6 +6,7 @@ RSSI_values = []
 RSSI_index_values = []
 RSSI_new_values = []
 binary_bit_sequence = ""
+new_key = []
 #files and paths to be used by the program
 filename = "Goldoni_2018-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
 results_foldername = "results"
@@ -17,6 +18,8 @@ discard_foldername = results_foldername + "/" + "discard" #folder to store the r
 discard_filename = "discard-indexes_" + filename #filename for the file with results
 values_after_discard_foldername = discard_foldername #folder to store the new list of RSSI values
 values_after_discard_filename = "new-RSSI_" + filename #filename for the file with results
+new_key_foldername = results_foldername + "/" + "keys"
+new_key_filename = "key_" + filename
 
 #definitions of the functions
 def read_RSSI_input_file(foldername, filename):
@@ -87,6 +90,15 @@ def erase_RSSI_values(RSSI_values, vet_discard_indexes):
             RSSI_clean_values.append(RSSI_values_copy[i])
     return RSSI_clean_values
 
+def generates_new_key(bits):
+    new_key = []
+    for i in range(0, len(bits)):
+        if bits[i] != "2":
+            new_key.append(bits[i])
+        #else:
+         #   new_key += "0"
+    return new_key
+
 def write_indexes_to_file(vet_discard_indexes, foldername, filename):
     results_path = foldername + "/" + filename
     print ("Writing the discard indexes to the file located at: ", results_path)
@@ -105,6 +117,15 @@ def write_RSSI_values_to_file(RSSI_values, foldername, filename):
         file.close() #close file
     print ("The writing process is done!")
 
+def write_new_key_to_file(key, foldername, filename):
+    results_path = foldername + "/" + filename
+    print ("Writing the new key to the file located at: ", results_path)
+    with open(results_path, "w") as file: #open file to write
+        csvwriter = csv.writer(file) #creating a csv writer object 
+        csvwriter.writerow(key) #writing the rows to the file
+        file.close() #close file
+    print ("The writing process is done!")
+
 # defines the main function
 def main():
     #execution starts here
@@ -112,16 +133,19 @@ def main():
     binary_bit_sequence = read_binary_input_file(bit_sequence_foldername, bit_sequence_filename) #loads the binary bit sequence from the file
     RSSI_index_values = get_index_values(binary_bit_sequence) #gets the index values of the RSSI values to discard
     RSSI_new_values = erase_RSSI_values(RSSI_values, RSSI_index_values) #erases the RSSI values that are going to be discarded
+    new_key = generates_new_key(binary_bit_sequence) #generates the new key
 
     #status report, just to check if everything is ok (for testing purposes)
     print ("The RSSI values are: ", RSSI_values)
     print ("The bit sequence is: ",  binary_bit_sequence)
     print ("The indexes of RSSI values to discard are: ", RSSI_index_values)
     print ("The new RSSI values are: ", RSSI_new_values)
+    print ("The new key is: ", new_key)
 
     # saves the results to a file
     write_indexes_to_file(RSSI_index_values, discard_foldername, discard_filename)
-    write_RSSI_values_to_file(RSSI_new_values, values_after_discard_foldername, values_after_discard_filename)
+    #write_RSSI_values_to_file(RSSI_new_values, values_after_discard_foldername, values_after_discard_filename) #done for testing purposes
+    write_new_key_to_file(new_key, new_key_foldername, new_key_filename)
 
 # checks if the file is being run directly to avoid running it mistakenly
 if __name__ == "__main__":
