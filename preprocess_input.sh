@@ -7,7 +7,7 @@
 path=$(pwd) # var to store the uptaded path
 
 # Help function, displays the usage of the script
-Help()
+my_help()
 {
   echo #new line
   echo "Usage:"
@@ -37,63 +37,64 @@ err()
     echo "E: $*" >>/dev/stderr
 }
 
-PrintSuccessfulSave()
+print_Sucessful_Save()
 {
   echo "The preprocessed results were saved at" $path"/"$1
 }
 
-OptionColumnAndSeparatorWithSave()
+option_Column_and_Separator_with_Save()
 {
-  #echo $@ $#
-  if [[ $4 == "-c" ]] && [[ $6 == "-s" ]] && [ $# -eq 7 ]; then #checks if the parameters are correct
+  if [ $4 == "-c" ] && [ "$6" == "-s" ] || [ $4 == "--column" ] && [ "$6" == "--separator" ] && [ $# -eq 7 ]; then #checks if the parameters are correct
     awk -F $7 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$5'}' $1 > $3
-    PrintSuccessfulSave $3
-  elif [[ $4 == "-c" ]] && [ $# -eq 5 ]; then #checks if the parameters are correct
+    print_Sucessful_Save $3
+  elif [ $4 == "-c" ] || [ $4 == "--column" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
     awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$5'}' $1 > $3
-    PrintSuccessfulSave $3
-  elif [[ $4 == "-s" ]] && [ $# -eq 5 ]; then #checks if the parameters are correct
+    print_Sucessful_Save $3
+  elif [ $4 == "-s" ] || [ $4 == "--separator" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
     awk -F $5 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1 > $3
-    PrintSuccessfulSave $3
+    print_Sucessful_Save $3
   else
     err "Error processing options... Please check them and try again"
-    Help
+    my_help
   fi
 }
 
-OptionColumnAndSeparator()
+option_Column_and_Separator()
 {
   #echo $@ $#
-  if [[ $3 == "-c" ]] && [[ $5 == "-s" ]] && [ $# -eq 6 ]; then #checks if the parameters are correct
+  if [[ $3 == "-c" ]] && [[ $5 == "-s" ]] || [[ $3 == "--column" ]] && [[ $5 == "--separator" ]] && [ $# -eq 6 ]; then #checks if the parameters are correct
     awk -F $6 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$4'}' $1
-  elif [[ $3 == "-c" ]] && [ $# -eq 4 ]; then #checks if the parameters are correct
+  elif [[ $3 == "-c" ]] || [[ $3 == "--column" ]] && [ $# -eq 4 ]; then #checks if the parameters are correct
     awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$4'}' $1
-  elif [[ $3 == "-s" ]] && [ $# -eq 4 ]; then #checks if the parameters are correct
+  elif [[ $3 == "-s" ]] || [[ $3 == "--separator" ]] && [ $# -eq 4 ]; then #checks if the parameters are correct
     awk -F $4 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1
   else
     err "Error processing options... Please check them and try again"
-    Help
+    my_help
   fi
 }
 
 # Main functionality
-Main()
+main()
 {
   #checks if the number of ARGS are ok
   if [ $# -lt 2 ]; then
     err "Not enough ARGS!"
   elif [ $# -gt 7 ]; then
     err "Too many ARGS!"
-    
-    Help
+  elif [ ! -s $1 ]; then
+    err "File $1 not found!"
+    my_help
   fi
+  
   #tests which execution flow to execute
   case "$2" in
     -o|--output)
       if [ $# -eq 3 ]; then
         awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1 > $3 #filters only negative numbers with 2 or 3 digits
-        PrintSuccessfulSave $3
+        print_Sucessful_Save $3
       else
-        OptionColumnAndSeparatorWithSave $@ #$@ sends all the ARGS from main to the function scope
+        option_Column_and_Separator_with_Save $@ #$@ sends all the ARGS from main to the function scope
       fi
       ;;
     -t|--test)
@@ -101,13 +102,13 @@ Main()
       if [ $# -eq 2 ]; then
         awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1 #filters only negative numbers with 2 or 3 digits
       else
-        OptionColumnAndSeparator $@ #$@ sends all the ARGS from main to the function scope
+        option_Column_and_Separator $@ #$@ sends all the ARGS from main to the function scope
       fi
       echo "CAUTION: This is only a preview, the results were NOT saved yet"
       ;;
     *)
-      Help
+      my_help
   esac
 }
 
-Main $@ #calls the program's main
+main $@ #calls the program's main
