@@ -88,35 +88,47 @@ def get_ecc_symbols_aux(rs_encoded_data, ecc_symbols_length, array_ecc):
 def array_to_int(input_arr):
     #int_arr = []
     for i in range(0, len(input_arr)):
-        #int_arr.append(int(string_arr[i]))
         input_arr[i] = int(input_arr[i])
     return input_arr
 
 def write_array_to_file(array, foldername, filename, is_ecc_data):
-    results_path = foldername + "/" + filename
-    if is_ecc_data:
-        print ("Writing the ECC symbols to the file located at: ", results_path)
-    else:
-        print ("Writing the key to the file located at: ", results_path)
+    results_path = foldername + "/" + filename #constructs the path to the file
+    results_path = write_array_config(results_path, type(array), is_ecc_data) #updates the path to the file, if needed
     
+    #checks the type of the array and uses the appropriate write function
     if type(array) is bytearray:
         with open(results_path, "wb") as file: #open file to write
             for i in range(0, len(array)):
                 file.write(bytes([array[i]]))
             file.close() #close file
     else:
-        with open(results_path + ".csv", "w") as file:
+        with open(results_path, "w") as file:
             csvwriter = csv.writer(file) #creating a csv writer object 
             csvwriter.writerow(array) #writing the rows to the file
             file.close()
     print ("The writing process is done!")
 
+# prints some debug messages and sets the path to the file to be written
+def write_array_config(path, array_type, is_ecc):
+    if array_type is bytearray:
+        print ("Working with bytearray, saving in binary format")
+    else:
+        path += ".csv" #updates the file format
+        print ("Working with array, saving in CSV format")
+    
+    if is_ecc:
+        print ("Writing the ECC symbols to the file located at: ", path)
+    else:
+        print ("Writing the key to the file located at: ", path)
+
+    return path
+
 # defines the main function
 def main():
     #execution starts here
-    #key = read_key_input_file(bit_stream_foldername, bit_stream_filename) #reads the key from the file
-    key = []
-    key = populate_array(key, 262) #'''
+    key = read_key_input_file(bit_stream_foldername, bit_stream_filename) #reads the key from the file
+    '''key = []
+    key = populate_array(key, 262) #generates a test key with a length of 262 bits'''
     reeedsolomon_max_length = get_next_power_of_2(len(key)) #updates the value of the max length of the codec according to the input key length
     key = array_to_int(key) #converts the array to an integer array (codec operations only accpet integers and CSV files is being read as floats)
 
