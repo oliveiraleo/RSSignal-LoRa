@@ -1,4 +1,3 @@
-#import math #provides the math functions
 import csv #provides the CSV related functions
 
 #env vars declaration
@@ -8,7 +7,7 @@ RSSI_new_values = []
 binary_bit_sequence = ""
 new_key = []
 #files and paths to be used by the program
-filename = "Goldoni_2018-indoor_LOS_raw_rssi-cut.csv" #filename to be used by the program
+filename = "DaCruz2021-preliminar1-cut-tab-2.csv" #filename to be used by the program
 results_foldername = "results"
 bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to get the results from
 bit_sequence_filename = "bit-sequence_" + filename #filename of the bit sequence file
@@ -22,7 +21,7 @@ new_key_foldername = results_foldername + "/" + "keys"
 new_key_filename = "key_" + filename
 
 #definitions of the functions
-def read_RSSI_input_file(foldername, filename):
+'''def read_RSSI_input_file(foldername, filename):
     data_file_path = foldername + "/" + filename
     vet_RSSI_values = []
     print ("Reading the file located at: " + str(data_file_path))
@@ -42,7 +41,7 @@ def read_RSSI_input_file(foldername, filename):
     except FileNotFoundError:
         print (f"The file {filename} was not found!\nPlease, check the name, make sure it exists and try again.")
         exit(code=2) #TODO change that to something that makes the entire program stop (as this file can be used by other programs in the future)
-    return vet_RSSI_values
+    return vet_RSSI_values'''
 
 def read_binary_input_file(foldername, filename):
     data_file_path = foldername + "/" + filename
@@ -78,7 +77,7 @@ def get_index_values(RSSI_values):
     return index_values
 
 # returns only the RSSI values that will be used
-def erase_RSSI_values(RSSI_values, vet_discard_indexes):
+'''def erase_RSSI_values(RSSI_values, vet_discard_indexes):
     RSSI_values_copy = RSSI_values.copy() #copy the list of RSSI values to prevent modifying the original list
     RSSI_clean_values = []
     #flags all values to be discarded
@@ -88,7 +87,7 @@ def erase_RSSI_values(RSSI_values, vet_discard_indexes):
     for i in range(0, len(RSSI_values_copy)):
         if RSSI_values_copy[i] != -1:
             RSSI_clean_values.append(RSSI_values_copy[i])
-    return RSSI_clean_values
+    return RSSI_clean_values'''
 
 def generates_new_key(bits):
     new_key = []
@@ -129,23 +128,23 @@ def write_new_key_to_file(key, foldername, filename):
 # defines the main function
 def main():
     #execution starts here
-    RSSI_values = read_RSSI_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
+    #RSSI_values = read_RSSI_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
     binary_bit_sequence = read_binary_input_file(bit_sequence_foldername, bit_sequence_filename) #loads the binary bit sequence from the file
     RSSI_index_values = get_index_values(binary_bit_sequence) #gets the index values of the RSSI values to discard
-    RSSI_new_values = erase_RSSI_values(RSSI_values, RSSI_index_values) #erases the RSSI values that are going to be discarded
-    new_key = generates_new_key(binary_bit_sequence) #generates the new key
+    #RSSI_new_values = erase_RSSI_values(RSSI_values, RSSI_index_values) #erases the RSSI values that are going to be discarded
+    #new_key = generates_new_key(binary_bit_sequence) #generates the new key
 
     #status report, just to check if everything is ok (for testing purposes)
-    print ("The RSSI values are: ", RSSI_values)
+    #print ("The RSSI values are: ", RSSI_values)
     print ("The bit sequence is: ",  binary_bit_sequence)
     print ("The indexes of RSSI values to discard are: ", RSSI_index_values)
-    print ("The new RSSI values are: ", RSSI_new_values)
-    print ("The new key is: ", new_key)
+    #print ("The new RSSI values are: ", RSSI_new_values)
+    #print ("The new key is: ", new_key)
 
     # saves the results to a file
     write_indexes_to_file(RSSI_index_values, discard_foldername, discard_filename)
     #write_RSSI_values_to_file(RSSI_new_values, values_after_discard_foldername, values_after_discard_filename) #done for testing purposes
-    write_new_key_to_file(new_key, new_key_foldername, new_key_filename)
+    #write_new_key_to_file(new_key, new_key_foldername, new_key_filename)
 
 # checks if the file is being run directly to avoid running it mistakenly
 if __name__ == "__main__":
