@@ -1,5 +1,6 @@
 import hashlib
 import time
+import statistics
 
 #env vars declaration
 #NOTE supported hash codecs https://docs.python.org/3/library/hashlib.html
@@ -57,17 +58,27 @@ def run_benchmark():
 
 def run_in_bulk_benchmark():
     total_run_time1 = 0
-    max_run_time1 = 0
-    min_run_time1 = 0
+    max_run_time1   = 0
+    min_run_time1   = 0
     total_run_time2 = 0
-    max_run_time2 = 0
-    min_run_time2 = 0
+    max_run_time2   = 0
+    min_run_time2   = 0
+
+    arr_results1 = []
+    arr_results2 = []
+    quartiles_results1 = []
+    quartiles_results2 = []
 
     i = iterations
     while i >= 0:
         benchmark_results = benchmark(hash, hash2, input, False)
         total_run_time1 += benchmark_results[2]
         total_run_time2 += benchmark_results[3]
+        
+        #store the results in arrays
+        arr_results1.append(benchmark_results[2])
+        arr_results2.append(benchmark_results[3])
+        
         if benchmark_results[2] > max_run_time1: max_run_time1 = benchmark_results[2]
         if benchmark_results[3] > max_run_time2: max_run_time2 = benchmark_results[3]
         if i == iterations:
@@ -77,6 +88,9 @@ def run_in_bulk_benchmark():
             if benchmark_results[2] < min_run_time1: min_run_time1 = benchmark_results[2]
             if benchmark_results[3] < min_run_time2: min_run_time2 = benchmark_results[3]
         i -= 1
+        
+    quartiles_results1 = statistics.quantiles(arr_results1)
+    quartiles_results2 = statistics.quantiles(arr_results2)
 
     print(f"=> Benchmark results for {iterations} iterations:")
     print("-> Python hashlib implementation")
@@ -84,11 +98,14 @@ def run_in_bulk_benchmark():
     print(f"Running time (max): {max_run_time1} ns")
     print(f"Running time (avg): {total_run_time1 / iterations} ns")
     print(f"Running time (min): {min_run_time1} ns")
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results1} ns")
+
     print("-> OpenSSL implementation")
     #print("Hash digest: ", benchmark_results[1])
     print(f"Running time (max): {max_run_time2} ns")
     print(f"Running time (avg): {total_run_time2 / iterations} ns")
     print(f"Running time (min): {min_run_time2} ns")
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results2} ns")
 
 def main():
     #execution starts here
