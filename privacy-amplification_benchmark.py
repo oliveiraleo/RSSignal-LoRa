@@ -20,7 +20,9 @@ iterations = 100 #number of iterations to run the benchmark
 benchmark_results = []
 
 #files and paths to be used by the program
-#TODO TBD
+#TODO read the input from ARGV
+#TODO save the results in a file
+#TODO add comments to the code
 
 def generate_hash(hash_codec, byte_stream):
     hash_codec.update(byte_stream)
@@ -79,7 +81,7 @@ def run_benchmark():
     print("Hash digest: ", benchmark_results[3])
     print(f"Running time: {benchmark_results[7]} ns")
 
-def run_in_bulk_benchmark():
+def run_in_bulk_benchmark(is_debugging_results):
     total_run_time1 = 0
     max_run_time1   = 0
     min_run_time1   = 0
@@ -137,6 +139,15 @@ def run_in_bulk_benchmark():
     quartiles_results3 = statistics.quantiles(arr_results3)
     quartiles_results4 = statistics.quantiles(arr_results4)
 
+    # prints the arrays containing results, just for testing purposes
+    if is_debugging_results:
+        print("=> Printing the entire data used for this benchmark:")
+        print("Test 1:", arr_results1)
+        print("Test 2:", arr_results2)
+        print("Test 3:", arr_results3)
+        print("Test 4:", arr_results4)
+        print("") #new line
+
     print(f"=> Benchmark results for {iterations} iterations:")
     print("Input size: " + str(len(input)) + " bits")
     print("-> Python SHA-512 hashlib implementation")
@@ -172,7 +183,7 @@ def main():
     print("Please, uncomment the line you want to run.\nExiting...")
     #NOTE: uncomment the option you want to test below
     #run_benchmark()
-    #run_in_bulk_benchmark()
+    #run_in_bulk_benchmark(False) #NOTE: change to True to print the data used for the benchmark
 
 # checks if the file is being run directly to avoid running it mistakenly
 if __name__ == "__main__":
