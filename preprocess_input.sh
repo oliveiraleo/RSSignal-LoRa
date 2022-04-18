@@ -4,8 +4,14 @@
    but keeping the negative numbers intact
   '
 
-path=$(pwd) # var to store the uptaded path
-#TODO Filter lines with only one digit
+# script vars
+#var to store the uptaded working path
+path=$(pwd)
+#vars that stores the search patterns to be applied
+search_pattern_float="-[0-9]|-[0-9][0-9]|-[0-9][0-9][0-9]" #filters any numbers with 1, 2 or 3 digits
+search_pattern_int="-[0-9]$|-[0-9][0-9]$|-[0-9][0-9][0-9]$" #forces filtering only numbers with 1, 2 or 3 digits #NOTE this does NOT work with floats
+search_pattern=$search_pattern_float #selects the desired pattern #TODO make this configurable through ARGS
+
 # Help function, displays the usage of the script
 my_help()
 {
@@ -52,16 +58,16 @@ option_Column_and_Separator_with_Save()
 {
   if [ "$4" == "-c" ] || [ "$4" == "--column" ] && [ $# -eq 7 ]; then #checks if the parameters are correct
     if [ "$6" == "-s" ] || [ "$6" == "--separator" ]; then #continues checking if the parameters are correct
-      awk -F $7 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$5'}' $1 > $3
+      awk -F $7 '/'$search_pattern'/{print $'$5'}' $1 > $3
       print_Sucessful_Save $3
     else
       print_Error_Args
     fi
   elif [ "$4" == "-c" ] || [ "$4" == "--column" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
-    awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$5'}' $1 > $3
+    awk '/'$search_pattern'/{print $'$5'}' $1 > $3
     print_Sucessful_Save $3
   elif [ "$4" == "-s" ] || [ "$4" == "--separator" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
-    awk -F $5 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1 > $3
+    awk -F $5 '/'$search_pattern'/{print}' $1 > $3
     print_Sucessful_Save $3
   else
     print_Error_Args
@@ -72,14 +78,14 @@ option_Column_and_Separator()
 {
   if [ "$3" == "-c" ] || [ "$3" == "--column" ] && [ $# -eq 6 ]; then #checks if the parameters are correct
     if [ "$5" == "-s" ] || [ "$5" == "--separator" ]; then #continues checking if the parameters are correct
-      awk -F $6 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$4'}' $1
+      awk -F $6 '/'$search_pattern'/{print $'$4'}' $1
     else
       print_Error_Args
     fi
   elif [ "$3" == "-c" ] || [ "$3" == "--column" ] && [ $# -eq 4 ]; then #checks if the parameters are correct
-    awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$4'}' $1
+    awk '/'$search_pattern'/{print $'$4'}' $1
   elif [ "$3" == "-s" ] || [ "$3" == "--separator" ] && [ $# -eq 4 ]; then #checks if the parameters are correct
-    awk -F $4 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1
+    awk -F $4 '/'$search_pattern'/{print}' $1
   else
     print_Error_Args
   fi
@@ -102,7 +108,7 @@ main()
   case "$2" in
     -o|--output)
       if [ $# -eq 3 ]; then
-        awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1 > $3 #filters only negative numbers with 2 or 3 digits
+        awk '/'$search_pattern'/{print}' $1 > $3 #filters negative numbers with 1, 2 or 3 digits
         print_Sucessful_Save $3
       else
         option_Column_and_Separator_with_Save $@ #$@ sends all the ARGS from main to the function scope
@@ -111,7 +117,7 @@ main()
     -t|--test)
       echo "WARNING: Test mode is enabled"
       if [ $# -eq 2 ]; then
-        awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1 #filters only negative numbers with 2 or 3 digits
+        awk '/'$search_pattern'/{print}' $1 #filters negative numbers with 1, 2 or 3 digits
       else
         option_Column_and_Separator $@ #$@ sends all the ARGS from main to the function scope
       fi
