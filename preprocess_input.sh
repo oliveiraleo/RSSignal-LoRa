@@ -5,7 +5,7 @@
   '
 
 path=$(pwd) # var to store the uptaded path
-
+#TODO Filter lines with only one digit
 # Help function, displays the usage of the script
 my_help()
 {
@@ -42,35 +42,46 @@ print_Sucessful_Save()
   echo "The preprocessed results were saved at" $path"/"$1
 }
 
+print_Error_Args()
+{
+  err "Error processing options... Please check them and try again"
+  my_help
+}
+
 option_Column_and_Separator_with_Save()
 {
-  if [ $4 == "-c" ] && [ "$6" == "-s" ] || [ $4 == "--column" ] && [ "$6" == "--separator" ] && [ $# -eq 7 ]; then #checks if the parameters are correct
-    awk -F $7 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$5'}' $1 > $3
-    print_Sucessful_Save $3
-  elif [ $4 == "-c" ] || [ $4 == "--column" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
+  if [ "$4" == "-c" ] || [ "$4" == "--column" ] && [ $# -eq 7 ]; then #checks if the parameters are correct
+    if [ "$6" == "-s" ] || [ "$6" == "--separator" ]; then #continues checking if the parameters are correct
+      awk -F $7 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$5'}' $1 > $3
+      print_Sucessful_Save $3
+    else
+      print_Error_Args
+    fi
+  elif [ "$4" == "-c" ] || [ "$4" == "--column" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
     awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$5'}' $1 > $3
     print_Sucessful_Save $3
-  elif [ $4 == "-s" ] || [ $4 == "--separator" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
+  elif [ "$4" == "-s" ] || [ "$4" == "--separator" ] && [ $# -eq 5 ]; then #checks if the parameters are correct
     awk -F $5 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1 > $3
     print_Sucessful_Save $3
   else
-    err "Error processing options... Please check them and try again"
-    my_help
+    print_Error_Args
   fi
 }
 
 option_Column_and_Separator()
 {
-  #echo $@ $#
-  if [[ $3 == "-c" ]] && [[ $5 == "-s" ]] || [[ $3 == "--column" ]] && [[ $5 == "--separator" ]] && [ $# -eq 6 ]; then #checks if the parameters are correct
-    awk -F $6 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$4'}' $1
-  elif [[ $3 == "-c" ]] || [[ $3 == "--column" ]] && [ $# -eq 4 ]; then #checks if the parameters are correct
+  if [ "$3" == "-c" ] || [ "$3" == "--column" ] && [ $# -eq 6 ]; then #checks if the parameters are correct
+    if [ "$5" == "-s" ] || [ "$5" == "--separator" ]; then #continues checking if the parameters are correct
+      awk -F $6 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$4'}' $1
+    else
+      print_Error_Args
+    fi
+  elif [ "$3" == "-c" ] || [ "$3" == "--column" ] && [ $# -eq 4 ]; then #checks if the parameters are correct
     awk '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print $'$4'}' $1
-  elif [[ $3 == "-s" ]] || [[ $3 == "--separator" ]] && [ $# -eq 4 ]; then #checks if the parameters are correct
+  elif [ "$3" == "-s" ] || [ "$3" == "--separator" ] && [ $# -eq 4 ]; then #checks if the parameters are correct
     awk -F $4 '/-[0-9][0-9]$|-[0-9][0-9][0-9]$/{print}' $1
   else
-    err "Error processing options... Please check them and try again"
-    my_help
+    print_Error_Args
   fi
 }
 
@@ -107,8 +118,8 @@ main()
       echo "CAUTION: This is only a preview, the results were NOT saved yet"
       ;;
     *)
-      my_help
+      print_Error_Args
   esac
 }
 
-main $@ #calls the program's main
+main $@ #calls the program's main function
