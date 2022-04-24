@@ -5,10 +5,7 @@ from importlib.machinery import SourceFileLoader as loader #needed to import ree
 #env vars declaration
 reedsolomon_module = loader("reedsolo", "modules/reedsolomon/reedsolo.py").load_module()
 reeedsolomon_max_length = 0 #NOTE: this value must be a power of 2. The default is 256.
-reedsolomon_num_correction_symbols = 12 #TODO adaptar esse valor de acordo com o tamanho da chave
-#RSSI_values = []
-#RSSI_index_values = []
-#RSSI_new_values = []
+reedsolomon_num_correction_symbols = 12 #TODO update this value according to the input
 key = []
 #files and paths to be used by the program
 filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
@@ -17,8 +14,9 @@ results_foldername = "results"
 bit_stream_foldername = results_foldername + "/" + "keys" #folder where the keys were stored
 bit_stream_filename = "bit-stream_" + filename + file_format
 keys_foldername = results_foldername + "/" + "keys-after-reconciliation" #folder to get the new list of RSSI values
-keys_filename = "keys_" + filename #filename for the file with results
-ecc_filename = "ecc_" + filename #filename for the file with results
+#keys_file_format = ".csv" #file format for the results file
+keys_filename = "keys_" + filename + file_format #filename for the file with results
+ecc_filename = "ecc_" + filename + file_format #filename for the file with results
 
 # returns an array of ints, just for testing purposes
 def populate_array(array, max_number):
@@ -59,7 +57,7 @@ def get_next_power_of_2(n):
     n |= n >> 16
     n += 1
     
-    if n < 256: #reeedsolomon_max_length default value is 256, so no need to have values below 256
+    if n < 256: #reeedsolomon_max_length default value is 256, so no need to get values below 256
         return 256
     else:
         return n
@@ -67,7 +65,7 @@ def get_next_power_of_2(n):
 #returns an array with the ecc bits
 def get_ecc_symbols(rs_encoded_data, ecc_symbols_length):
     #checks if it's possible to use the bytearray structure
-    #because bytearrays can only store an element which is lower than 256
+    #because bytearrays can only store an element which is below 256
     try:
         ecc = bytearray(b'') #creates an empty bytearray
         get_ecc_symbols_aux(rs_encoded_data, ecc_symbols_length, ecc)
@@ -93,35 +91,15 @@ def array_to_int(input_arr):
 
 def write_array_to_file(array, foldername, filename, is_ecc_data):
     results_path = foldername + "/" + filename #constructs the path to the file
-    results_path = write_array_config(results_path, type(array), is_ecc_data) #updates the path to the file, if needed
-    
-    #checks the type of the array and uses the appropriate write function
-    if type(array) is bytearray:
-        with open(results_path, "wb") as file: #open file to write
-            for i in range(0, len(array)):
-                file.write(bytes([array[i]]))
-            file.close() #close file
+    if is_ecc_data:
+        print ("Writing the ECC symbols to the file located at: ", results_path)
     else:
-        with open(results_path, "w") as file:
-            csvwriter = csv.writer(file) #creating a csv writer object 
-            csvwriter.writerow(array) #writing the rows to the file
-            file.close()
+        print ("Writing the key to the file located at: ", results_path)
+    with open(results_path, "w") as file:
+                csvwriter = csv.writer(file) #creating a csv writer object 
+                csvwriter.writerow(array) #writing the rows to the file
+                file.close()
     print ("The writing process is done!")
-
-# prints some debug messages and sets the path to the file to be written
-def write_array_config(path, array_type, is_ecc):
-    if array_type is bytearray:
-        print ("Working with bytearray, saving in binary format")
-    else:
-        path += ".csv" #updates the file format
-        print ("Working with array, saving in CSV format")
-    
-    if is_ecc:
-        print ("Writing the ECC symbols to the file located at: ", path)
-    else:
-        print ("Writing the key to the file located at: ", path)
-
-    return path
 
 # defines the main function
 def main():
