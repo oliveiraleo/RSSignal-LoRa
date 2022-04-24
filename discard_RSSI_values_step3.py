@@ -9,19 +9,20 @@ binary_bit_sequence = ""
 binary_bit_sequence_discard_indexes = ""
 new_key = []
 #files and paths to be used by the program
-filename = "DaCruz2021-preliminar1-cut-tab-2.csv" #filename to be used by the program
+filename = "DaCruz2021-preliminar1-cut-tab-1_alpha-0.1" #filename to be used by the program
+file_format = ".csv"
 results_foldername = "results"
 bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to get the results from
-bit_sequence_filename = "bit-sequence_" + filename #filename of the bit sequence file
+bit_sequence_filename = "bit-sequence_" + filename + file_format #filename of the bit sequence file
 #data_file_foldername = "dataset-files" #folder where the data files are stored
 #data_file_filename = filename #filename of the data file
 discard_foldername = results_foldername + "/" + "discard" #folder to store the results
-discard_filename = "discard-indexes_" + "DaCruz2021-preliminar1-cut-tab-1.csv" #filename for the file with results
-discard_filename2 = "discard-indexes_" + filename #filename for the file with results
+discard_filename = "discard-indexes_" + "DaCruz2021-preliminar1-cut-tab-2_alpha-0.1" + file_format #filename for the file with results
+discard_filename2 = "discard-indexes_" + filename + file_format #filename for the file with results
 #key_foldername = results_foldername + "/" + "keys"
 #key_filename = "key_" + filename
 new_key_foldername = results_foldername + "/" + "keys"
-new_key_filename = "bit-stream_" + filename
+new_key_filename = "bit-stream_" + filename + file_format
 
 
 #definitions of the functions

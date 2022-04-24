@@ -10,12 +10,13 @@ RSSI_quant_threshold_upper = 0 #upper quantization threshold
 RSSI_quant_threshold_lower = 0 #lower quantization threshold
 RSSI_quant_threshold_alpha = 1 #thresholds adjustment
 #files and paths to be used by the program
-filename = "Goldoni_2018-indoor_LOS_raw_rssi-cut.csv"
+filename = "DaCruz2021-preliminar1-cut-tab-2"
+file_format = ".csv"
 results_foldername = "results" #folder to store the results
 bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to store the results
-bit_sequence_filename = "bit-sequence_" + filename
+bit_sequence_filename = "bit-sequence_" + filename + "_alpha-" + str(RSSI_quant_threshold_alpha) + file_format
 data_file_foldername = "dataset-files" #folder where the data files are stored
-data_file_filename = filename #filename to be used by the program
+data_file_filename = filename + file_format #filename to be used as input by the program
 
 #function created just for testing in bulk
 """def read_file_name():
@@ -38,7 +39,7 @@ def read_input_file(foldername, filename):
             for row in csvreader:
                 #print (row)
                 for i in range(0, len(row)):
-                    vet_RSSI_values.append(float(row[i])) #TODO check if float is okay here
+                    vet_RSSI_values.append(float(row[i])) #float doesn't accept strings #TODO catch exception if the value is not a number
             file.close() #close file
         print ("The reading process is done!")
     #if not, prints a message and closes the program
@@ -77,18 +78,6 @@ def print_bit_sequence(vet_bit_sequence):
             print ("2", end="")
     print ("")
 
-# returns the bit sequence as data of string type
-"""def get_raw_bit_sequence(vet_bit_sequence):
-    bit_sequence = ""
-    for i in vet_bit_sequence:
-        if (i == 0):
-            bit_sequence = bit_sequence + "0"
-        elif (i == 1):
-            bit_sequence = bit_sequence + "1"
-        elif (i == 2):
-            bit_sequence = bit_sequence + "2"
-    return bit_sequence"""
-
 def write_bit_sequence_to_file(vet_bit_sequence, foldername, filename):
     results_path = foldername + "/" + filename
     print ("Writing the result to the file located at: ", results_path)
@@ -117,7 +106,7 @@ def main():
     RSSI_quant_threshold_lower = RSSI_average - (RSSI_quant_threshold_alpha * RSSI_standard_deviation)
     print ("Upper quantization threshold: ", RSSI_quant_threshold_upper)
     print ("Lower quantization threshold: ", RSSI_quant_threshold_lower)
-    print ("Alpha threshold adjustment: ", RSSI_quant_threshold_alpha)
+    print ("Alpha threshold adjustment: "  , RSSI_quant_threshold_alpha)
 
     vet_binary_output = process_RSSI_bits(vet_RSSI_input, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower)
     print ("Output values: ", vet_binary_output)
