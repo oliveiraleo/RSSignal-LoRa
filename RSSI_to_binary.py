@@ -1,23 +1,6 @@
 import math #provides the math functions
 import csv #provides the CSV related functions
 
-#env vars declaration
-vet_RSSI_input = [] #vector of the RSSI values to be processed (values will be read from the input file)
-vet_binary_output = [] #vector of the binary bit sequence output (values to be written to the results file)
-RSSI_average = 0
-RSSI_standard_deviation = 0
-RSSI_quant_threshold_upper = 0 #upper quantization threshold
-RSSI_quant_threshold_lower = 0 #lower quantization threshold
-RSSI_quant_threshold_alpha = 1 #thresholds adjustment
-#files and paths to be used by the program
-filename = "DaCruz2021-preliminar1-cut-tab-2"
-file_format = ".csv"
-results_foldername = "results" #folder to store the results
-bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to store the results
-bit_sequence_filename = "bit-sequence_" + filename + "_alpha-" + str(RSSI_quant_threshold_alpha) + file_format
-data_file_foldername = "dataset-files" #folder where the data files are stored
-data_file_filename = filename + file_format #filename to be used as input by the program
-
 #function created just for testing in bulk
 """def read_file_name():
     print ("Please, enter the name of the file to be processed: ", end="") #inline print
@@ -91,7 +74,30 @@ def write_bit_sequence_to_file(vet_bit_sequence, foldername, filename):
     print ("The writing process is done!")
 
 # defines the main function
-def main():
+def main(fileName, alpha = 1):
+    #updates dynamic variables
+    RSSI_quant_threshold_alpha = alpha
+    filename = fileName
+
+    #env vars declaration
+    vet_RSSI_input = [] #vector of the RSSI values to be processed (values will be read from the input file)
+    vet_binary_output = [] #vector of the binary bit sequence output (values to be written to the results file)
+    RSSI_average = 0
+    RSSI_standard_deviation = 0
+    RSSI_quant_threshold_upper = 0 #upper quantization threshold
+    RSSI_quant_threshold_lower = 0 #lower quantization threshold
+    #RSSI_quant_threshold_alpha = 1 #thresholds adjustment
+    #RSSI_quant_threshold_alpha
+    #files and paths to be used by the program
+    #filename = "DaCruz2021-preliminar1-cut-tab-2"
+    file_format = ".csv"
+    results_foldername = "results" #folder to store the results
+    bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to store the results
+    bit_sequence_filename = "bit-sequence_" + filename + "_alpha-" + str(RSSI_quant_threshold_alpha) + file_format
+    data_file_foldername = "dataset-files" #folder where the data files are stored
+    data_file_filename = filename + file_format #filename to be used as input by the program
+    
+    #execution starts here
     vet_RSSI_input = read_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
     print ("Input values: ", vet_RSSI_input) #print input values, just for testing
     
