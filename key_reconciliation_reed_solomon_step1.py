@@ -2,22 +2,7 @@ import csv #provides the CSV related functions
 import array #provides the array structure datatype (more flexible than the bytearray)
 from importlib.machinery import SourceFileLoader as loader #needed to import reedsolo module
 
-#env vars declaration
-reedsolomon_module = loader("reedsolo", "modules/reedsolomon/reedsolo.py").load_module()
-reeedsolomon_max_length = 0 #NOTE: this value must be a power of 2. The default is 256.
-reedsolomon_num_correction_symbols = 12 #TODO update this value according to the input
-key = []
-#files and paths to be used by the program
-filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
-file_format = ".csv"
-results_foldername = "results"
-bit_stream_foldername = results_foldername + "/" + "keys" #folder where the keys were stored
-bit_stream_filename = "bit-stream_" + filename + file_format
-keys_foldername = results_foldername + "/" + "keys-after-reconciliation" #folder to get the new list of RSSI values
-#keys_file_format = ".csv" #file format for the results file
-keys_filename = "keys_" + filename + file_format #filename for the file with results
-ecc_filename = "ecc_" + filename + file_format #filename for the file with results
-
+#definitions of the functions
 # returns an array of ints, just for testing purposes
 def populate_array(array, max_number):
     for i in range(0, max_number):
@@ -89,12 +74,17 @@ def array_to_int(input_arr):
         input_arr[i] = int(input_arr[i])
     return input_arr
 
-def write_array_to_file(array, foldername, filename, is_ecc_data):
+def write_array_to_file(array, foldername, filename, file_type):
     results_path = foldername + "/" + filename #constructs the path to the file
-    if is_ecc_data:
-        print ("Writing the ECC symbols to the file located at: ", results_path)
-    else:
+    if file_type == 0:
         print ("Writing the key to the file located at: ", results_path)
+    elif file_type == 1:
+        print ("Writing the ECC symbols to the file located at: ", results_path)
+    elif file_type == 2:
+        print ("Writing the codec parameters to the file located at: ", results_path)
+    else:
+        print ("Wrong file type chosen!\n Writing process failed.\nExiting...")
+        exit(code=2)
     with open(results_path, "w") as file:
                 csvwriter = csv.writer(file) #creating a csv writer object 
                 csvwriter.writerow(array) #writing the rows to the file
@@ -102,7 +92,27 @@ def write_array_to_file(array, foldername, filename, is_ecc_data):
     print ("The writing process is done!")
 
 # defines the main function
-def main():
+def main(fileName):
+    #updates dynamic variables
+    filename = fileName
+
+    #env vars declaration
+    reedsolomon_module = loader("reedsolo", "modules/reedsolomon/reedsolo.py").load_module()
+    reeedsolomon_max_length = 0 #NOTE: this value must be a power of 2. The default is 256.
+    reedsolomon_num_correction_symbols = 12 #TODO update this value according to the input
+    key = []
+    #files and paths to be used by the program
+    #filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
+    file_format = ".csv"
+    results_foldername = "results"
+    bit_stream_foldername = results_foldername + "/" + "keys" #folder where the keys were stored
+    bit_stream_filename = "bit-stream_" + filename + file_format
+    keys_foldername = results_foldername + "/" + "keys-after-reconciliation" #folder to get the new list of RSSI values
+    #keys_file_format = ".csv" #file format for the results file
+    keys_filename = "keys_" + filename + file_format #filename for the file with results
+    ecc_filename = "ecc_" + filename + file_format #filename for the file with results
+    parameters_filename = "parameters_" + filename + file_format #filename for the file with results
+
     #execution starts here
     key = read_key_input_file(bit_stream_foldername, bit_stream_filename) #reads the key from the file
     '''key = []
@@ -114,17 +124,20 @@ def main():
     reedsolomon_array = reedsolomon_codec.encode(key) #encodes the key
     reedsolomon_array[1] = 0 #introduces an error in the array
     reedsolomon_ecc_symbols = get_ecc_symbols(reedsolomon_array, reedsolomon_num_correction_symbols) #gets the ecc symbols
-    reedsolomon_data = reedsolomon_codec.decode(reedsolomon_array) #decodes the key with corrections (if any) applied
+    #reedsolomon_data = reedsolomon_codec.decode(reedsolomon_array) #decodes the key with corrections (if any) applied
+    reedsolomon_params = (reedsolomon_num_correction_symbols, reeedsolomon_max_length) #saves the parameters of the codec
 
     print ("The Reed Solomon data is: ", reedsolomon_array)
     print ("The Reed Solomon ecc bits are: ", reedsolomon_ecc_symbols)
-    print ("-After decoding-")
-    print ("RS retrieving the data: ", list(reedsolomon_data[0])) #array of the data
-    print ("RS data: ", reedsolomon_data[1]) #array of the data with ecc bits
-    print ("RS bytes corrected: ", list(reedsolomon_data[2])) #corrections made (it displays which byte was corrected)'''
+    # print ("-After decoding-")
+    # print ("RS retrieving the data: ", list(reedsolomon_data[0])) #array of the data
+    # print ("RS data: ", reedsolomon_data[1]) #array of the data with ecc bits
+    # print ("RS bytes corrected: ", list(reedsolomon_data[2])) #corrections made (it displays which byte was corrected)'''
+    print ("RS params: ", reedsolomon_params)
 
-    write_array_to_file(reedsolomon_array, keys_foldername, keys_filename, False) #writes the key to the file
-    write_array_to_file(reedsolomon_ecc_symbols, keys_foldername, ecc_filename, True) #writes the ecc symbols to the file
+    write_array_to_file(reedsolomon_array, keys_foldername, keys_filename, 0) #writes the key to the file
+    write_array_to_file(reedsolomon_ecc_symbols, keys_foldername, ecc_filename, 1) #writes the ecc symbols to the file
+    write_array_to_file(reedsolomon_params, keys_foldername, parameters_filename, 2) #writes the ecc symbols to the file
 
 # checks if the file is being run directly to avoid running it mistakenly
 if __name__ == "__main__":
