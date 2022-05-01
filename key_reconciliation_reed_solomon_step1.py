@@ -1,6 +1,6 @@
 import csv #provides the CSV related functions
 import array #provides the array structure datatype (more flexible than the bytearray)
-from importlib.machinery import SourceFileLoader as loader #needed to import reedsolo module
+from importlib.machinery import SourceFileLoader as loader #required to import reedsolo module
 
 #definitions of the functions
 # returns an array of ints, just for testing purposes
@@ -53,19 +53,13 @@ def get_ecc_symbols(rs_encoded_data, ecc_symbols_length):
     #because bytearrays can only store an element which is below 256
     try:
         ecc = bytearray(b'') #creates an empty bytearray
-        get_ecc_symbols_aux(rs_encoded_data, ecc_symbols_length, ecc)
+        ecc = rs_encoded_data[len(rs_encoded_data) - ecc_symbols_length:] #gets only the ecc_symbols from the array
     
     except ValueError: #if not possible, use the array structure (the same way as the reedsolo module)
         ecc = array.array('i', []) #creates an empty array
-        get_ecc_symbols_aux(rs_encoded_data, ecc_symbols_length, ecc)
+        ecc = rs_encoded_data[len(rs_encoded_data) - ecc_symbols_length:] #gets only the ecc_symbols from the array
     
     return ecc
-
-def get_ecc_symbols_aux(rs_encoded_data, ecc_symbols_length, array_ecc):
-    array_length = len(rs_encoded_data)
-    for i in range((array_length - ecc_symbols_length), array_length):
-        array_ecc.append(rs_encoded_data[i])
-    return array_ecc
 
 # converts the elements of (almost) any type from an array to int
 def array_to_int(input_arr):
