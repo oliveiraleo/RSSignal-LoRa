@@ -1,30 +1,5 @@
 import csv #provides the CSV related functions
 
-#env vars declaration
-RSSI_values = []
-RSSI_index_values = []
-RSSI_index_values2 = []
-RSSI_new_values = []
-binary_bit_sequence = ""
-binary_bit_sequence_discard_indexes = ""
-new_key = []
-#files and paths to be used by the program
-filename = "DaCruz2021-preliminar1-cut-tab-1_alpha-0.1" #filename to be used by the program
-file_format = ".csv"
-results_foldername = "results"
-bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to get the results from
-bit_sequence_filename = "bit-sequence_" + filename + file_format #filename of the bit sequence file
-#data_file_foldername = "dataset-files" #folder where the data files are stored
-#data_file_filename = filename #filename of the data file
-discard_foldername = results_foldername + "/" + "discard" #folder to store the results
-discard_filename = "discard-indexes_" + "DaCruz2021-preliminar1-cut-tab-2_alpha-0.1" + file_format #filename for the file with results
-discard_filename2 = "discard-indexes_" + filename + file_format #filename for the file with results
-#key_foldername = results_foldername + "/" + "keys"
-#key_filename = "key_" + filename
-new_key_foldername = results_foldername + "/" + "keys"
-new_key_filename = "bit-stream_" + filename + file_format
-
-
 #definitions of the functions
 def read_binary_input_file(foldername, filename):
     data_file_path = foldername + "/" + filename
@@ -56,16 +31,25 @@ def union_of_arrays(array1, array2):
     return list(set(array1) | set(array2))
 
 def erase_bit_values(bit_values, arr_discard_indexes):
-    bit_values_copy = bit_values.copy() #copies the list of RSSI values to prevent modifying the original list
-    bit_values_clean = []
+    #bit_values_copy = bit_values.copy() #copies the list of RSSI values to prevent modifying the original list
+    #bit_values_clean = []
     #flags all values to be discarded
-    for i in range(0, len(arr_discard_indexes)):
-        bit_values_copy[arr_discard_indexes[i]] = -1
-    #removes the discarded values from the list
-    for i in range(0, len(bit_values_copy)):
-        if bit_values_copy[i] != -1:
-            bit_values_clean.append(bit_values_copy[i])
-    return bit_values_clean
+    #print(len(arr_discard_indexes), len(bit_values_copy))
+    bit_values = [i for j,i in enumerate(bit_values) if j not in arr_discard_indexes] #erases the values that are not needed
+    return bit_values
+    # for i in range(0, min(len(bit_values_copy),len(arr_discard_indexes))):
+    #     #print(i)
+    #     #print(i, arr_discard_indexes[i])
+    #     try:
+    #         bit_values_copy[arr_discard_indexes[i]] = -1
+    #     except:
+    #         #print("Error")
+    #         print(i, arr_discard_indexes[i])
+    # #removes the discarded values from the list
+    # for i in range(0, len(bit_values_copy)):
+    #     if bit_values_copy[i] != -1:
+    #         bit_values_clean.append(bit_values_copy[i])
+    # return bit_values_clean
 
 def write_new_key_to_file(key, foldername, filename):
     results_path = foldername + "/" + filename
@@ -76,7 +60,35 @@ def write_new_key_to_file(key, foldername, filename):
         file.close() #close file
     print ("The writing process is done!")
 
-def main():
+def main(filename1, filename2):
+    #updates dynamic variables
+    filename = filename1
+    discard_filename = filename2
+
+    #env vars declaration
+    #RSSI_values = []
+    RSSI_index_values = []
+    RSSI_index_values2 = []
+    #RSSI_new_values = []
+    binary_bit_sequence = ""
+    binary_bit_sequence_discard_indexes = ""
+    #new_key = []
+    #files and paths to be used by the program
+    #filename = "DaCruz2021-preliminar1-cut-tab-1_alpha-0.1" #filename to be used by the program
+    file_format = ".csv"
+    results_foldername = "results"
+    bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to get the results from
+    bit_sequence_filename = "bit-sequence_" + filename + file_format #filename of the bit sequence file
+    #data_file_foldername = "dataset-files" #folder where the data files are stored
+    #data_file_filename = filename #filename of the data file
+    discard_foldername = results_foldername + "/" + "discard" #folder to store the results
+    discard_filename = "discard-indexes_" + discard_filename + file_format #filename for the file with results
+    discard_filename2 = "discard-indexes_" + filename + file_format #filename for the file with results
+    #key_foldername = results_foldername + "/" + "keys"
+    #key_filename = "key_" + filename
+    new_key_foldername = results_foldername + "/" + "keys"
+    new_key_filename = "bit-stream_" + filename + file_format
+    
     # execution starts here
     #read input files
     RSSI_index_values = read_binary_input_file(discard_foldername, discard_filename)
@@ -88,13 +100,14 @@ def main():
     binary_bit_sequence = array_to_int(binary_bit_sequence)
     
     print ("The old key is: ", binary_bit_sequence) #displays the old key
+    print ("The old key length is: ", len(binary_bit_sequence)) #displays the old key length
     
     binary_bit_sequence_discard_indexes = union_of_arrays(RSSI_index_values, RSSI_index_values2) #get all the indexes of the values to be discarded
     binary_bit_sequence = erase_bit_values(binary_bit_sequence, binary_bit_sequence_discard_indexes) #erase the bit values that are not needed
 
     #print ("The binary bit discard indexes are: ", binary_bit_sequence_discard_indexes) #displays the indexes of the values to be discarded
     print ("The new key is: ", binary_bit_sequence) #displays the new key
-
+    print ("The new key length is: ", len(binary_bit_sequence)) #displays the new key length
     write_new_key_to_file(binary_bit_sequence, new_key_foldername, new_key_filename) #writes the new key to a file
 
 # checks if the file is being run directly to avoid running it mistakenly
