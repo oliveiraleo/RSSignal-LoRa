@@ -1,5 +1,6 @@
 import csv #provides the CSV related functions
 import array #provides the array structure datatype (more flexible than the bytearray)
+import math #provides the math functions
 from importlib.machinery import SourceFileLoader as loader #required to import reedsolo module
 
 #definitions of the functions
@@ -48,18 +49,24 @@ def get_next_power_of_2(n):
         return n
 
 #returns an array with the ecc bits
-def get_ecc_symbols(rs_encoded_data, ecc_symbols_length):
+def get_rs_data(rs_encoded_data, ecc_symbols_length):
     #checks if it's possible to use the bytearray structure
     #because bytearrays can only store an element which is below 256
     try:
         ecc = bytearray(b'') #creates an empty bytearray
+        bits = bytearray(b'') #creates an empty bytearray
+        
         ecc = rs_encoded_data[len(rs_encoded_data) - ecc_symbols_length:] #gets only the ecc_symbols from the array
+        bits = rs_encoded_data[:len(rs_encoded_data) - ecc_symbols_length] #gets only the data bits from the array
     
     except ValueError: #if not possible, use the array structure (the same way as the reedsolo module)
         ecc = array.array('i', []) #creates an empty array
+        bits = array.array('i', []) #creates an empty array
+        
         ecc = rs_encoded_data[len(rs_encoded_data) - ecc_symbols_length:] #gets only the ecc_symbols from the array
+        bits = rs_encoded_data[:len(rs_encoded_data) - ecc_symbols_length] #gets only the data bits from the array
     
-    return ecc
+    return bits,ecc
 
 # converts the elements of (almost) any type from an array to int
 def array_to_int(input_arr):
@@ -93,7 +100,7 @@ def main(fileName):
     #env vars declaration
     reedsolomon_module = loader("reedsolo", "modules/reedsolomon/reedsolo.py").load_module()
     reeedsolomon_max_length = 0 #NOTE: this value must be a power of 2. The default is 256.
-    reedsolomon_num_correction_symbols = 12 #TODO update this value according to the input
+    reedsolomon_num_correction_symbols = 0 #12 #TODO update this value according to the input
     key = []
     #files and paths to be used by the program
     #filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
@@ -111,27 +118,32 @@ def main(fileName):
     key = read_key_input_file(bit_stream_foldername, bit_stream_filename) #reads the key from the file
     '''key = []
     key = populate_array(key, 262) #generates a test key with a length of 262 bits'''
-    reeedsolomon_max_length = get_next_power_of_2(len(key)) #updates the value of the max length of the codec according to the input key length
-    key = array_to_int(key) #converts the array to an integer array (codec operations only accpet integers and CSV files is being read as floats)
-
+    #updates the number of correction symbols according to the input key's length
+    reedsolomon_num_correction_symbols = math.ceil(len(key)/2) #NOTE: codec operations only accpet integers and length/2 can return a float number, eg. if len = odd int
+    #updates the value of the max length of the codec according to the input key's length
+    reeedsolomon_max_length = get_next_power_of_2(len(key) + reedsolomon_num_correction_symbols) #NOTE: length of total message+ecc, as required by the codec ("message" is what we are calling "key" here)
+    #converts the array to an integer array (codec operations only accpet integers and CSV files are being read as floats)
+    key = array_to_int(key)
+    
+    #codec encode operations
     reedsolomon_codec = reedsolomon_module.RSCodec(reedsolomon_num_correction_symbols, nsize=(reeedsolomon_max_length-1)) #creates a codec object with desired params
     reedsolomon_array = reedsolomon_codec.encode(key) #encodes the key
-    reedsolomon_array[1] = 0 #introduces an error in the array
-    reedsolomon_ecc_symbols = get_ecc_symbols(reedsolomon_array, reedsolomon_num_correction_symbols) #gets the ecc symbols
-    #reedsolomon_data = reedsolomon_codec.decode(reedsolomon_array) #decodes the key with corrections (if any) applied
+    reedsolomon_data_bits, reedsolomon_ecc_symbols = get_rs_data(reedsolomon_array, reedsolomon_num_correction_symbols) #separates the bits from the ecc symbols
     reedsolomon_params = (reedsolomon_num_correction_symbols, reeedsolomon_max_length) #saves the parameters of the codec
 
-    print ("The Reed Solomon data is: ", reedsolomon_array)
-    print ("The Reed Solomon ecc bits are: ", reedsolomon_ecc_symbols)
-    # print ("-After decoding-")
-    # print ("RS retrieving the data: ", list(reedsolomon_data[0])) #array of the data
-    # print ("RS data: ", reedsolomon_data[1]) #array of the data with ecc bits
-    # print ("RS bytes corrected: ", list(reedsolomon_data[2])) #corrections made (it displays which byte was corrected)'''
-    print ("RS params: ", reedsolomon_params)
+    print ("The key is: "                           , key)
+    print ("The input's length is: "                , len(key))
+    print ("The Reed Solomon message data is: "     , reedsolomon_array)
+    print ("The Reed Solomon message's length is: " , len(reedsolomon_array))
+    print ("The Reed Solomon data bits are: "       , reedsolomon_data_bits)
+    print ("The Reed Solomon data bits' length is: ", len(reedsolomon_data_bits))
+    print ("The Reed Solomon ecc bits are: "        , reedsolomon_ecc_symbols)
+    print ("The Reed Solomon ecc bits' length is: " , len(reedsolomon_ecc_symbols))
+    print ("RS params: "                            , reedsolomon_params)
 
-    write_array_to_file(reedsolomon_array, keys_foldername, keys_filename, 0) #writes the key to the file
+    write_array_to_file(reedsolomon_data_bits, keys_foldername, keys_filename, 0) #writes the key to the file
     write_array_to_file(reedsolomon_ecc_symbols, keys_foldername, ecc_filename, 1) #writes the ecc symbols to the file
-    write_array_to_file(reedsolomon_params, keys_foldername, parameters_filename, 2) #writes the ecc symbols to the file
+    write_array_to_file(reedsolomon_params, keys_foldername, parameters_filename, 2) #writes the codec params to the file
 
 # checks if the file is being run directly to avoid running it mistakenly
 if __name__ == "__main__":
