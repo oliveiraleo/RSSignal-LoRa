@@ -87,9 +87,9 @@ def write_array_to_file(array, foldername, filename, file_type):
         print ("Wrong file type chosen!\n Writing process failed.\nExiting...")
         exit(code=2)
     with open(results_path, "w") as file:
-                csvwriter = csv.writer(file) #creating a csv writer object 
-                csvwriter.writerow(array) #writing the rows to the file
-                file.close()
+        csvwriter = csv.writer(file) #creating a csv writer object 
+        csvwriter.writerow(array) #writing the rows to the file
+        file.close()
     print ("The writing process is done!")
 
 # defines the main function
@@ -108,11 +108,11 @@ def main(fileName):
     results_foldername = "results"
     bit_stream_foldername = results_foldername + "/" + "keys" #folder where the keys were stored
     bit_stream_filename = "bit-stream_" + filename + file_format
-    keys_foldername = results_foldername + "/" + "keys-after-reconciliation" #folder to get the new list of RSSI values
+    keys_foldername = results_foldername + "/" + "key-reconciliation" #folder to store the produced data (keys + ecc + params) from this step
     #keys_file_format = ".csv" #file format for the results file
-    keys_filename = "keys_" + filename + file_format #filename for the file with results
-    ecc_filename = "ecc_" + filename + file_format #filename for the file with results
-    parameters_filename = "parameters_" + filename + file_format #filename for the file with results
+    keys_filename = "keys_" + filename + file_format #TODO: comments here
+    ecc_filename = "ecc_" + filename + file_format 
+    parameters_filename = "parameters_" + filename + file_format 
 
     #execution starts here
     key = read_key_input_file(bit_stream_foldername, bit_stream_filename) #reads the key from the file

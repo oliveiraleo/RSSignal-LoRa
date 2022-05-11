@@ -108,7 +108,7 @@ def main(fileName, fileName2):
     ecc_filename = "ecc_" + filename2 + file_format 
     parameters_filename = "parameters_" + filename + file_format
     output_keys_foldername = results_foldername + "/" + "key-after-reconciliation" #folder to store the data
-    output_keys_filename = "corrected-keys_" + filename + file_format #TODO: comment here
+    output_keys_filename = "keys_" + filename + file_format #TODO: comment here
 
     #execution starts here
     key = read_input_file(keys_foldername, keys_filename) #reads the key from the file
