@@ -55,6 +55,14 @@ def write_bin_file(binary_key, foldername, filename):
     
     print ("The writing process is done!")
 
+def write_log_file(file_content, foldername, filename):
+    path = foldername + "/" + filename
+    print ("Writing the log file to the file located at: ", path)
+    
+    with open(path, "w") as file:
+        file.write(file_content)
+    file.close()
+
 def run_test_module(foldername, filename):
     print ("Running the test module...")
     #os.system("modules/sp800_22_tests/sp800_22_tests.py" + " " + foldername + "/" + filename)
@@ -79,18 +87,21 @@ def main(fileName):
     #filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
     file_format = ".csv"
     bin_file_format = ".bin"
+    log_file_format = ".log"
     results_foldername = "results"
     keys_foldername = results_foldername + "/" + "key-after-reconciliation" #folder to get the input key
     keys_backup_foldername = results_foldername + "/" + "key-reconciliation" #folder to get the input key
     keys_filename = "keys_" + filename + file_format #filename for the file with the key
-    keys_bin_foldername = results_foldername + "/" + "key-evaluation" #folder to get the input key
+    keys_eval_foldername = results_foldername + "/" + "key-evaluation" #folder to get the input key
     keys_bin_filename = "keys_" + filename + bin_file_format #filename for the file with the key
+    keys_log_filename = "keys_" + filename + log_file_format #filename for the file with the key
 
     #execution starts here
     key = read_input_from_file(keys_foldername, keys_backup_foldername, keys_filename) #reads the key from the file
-    write_bin_file(key, keys_bin_foldername, keys_bin_filename) #writes the key to a binary file (NOTE: required to be used by the test module)
-    test_module_output = run_test_module(keys_bin_foldername, keys_bin_filename) #runs the test module
+    write_bin_file(key, keys_eval_foldername, keys_bin_filename) #writes the key to a binary file (NOTE: required to be used by the test module)
+    test_module_output = run_test_module(keys_eval_foldername, keys_bin_filename) #runs the test module
     #print(test_module_output)
+    write_log_file(test_module_output, keys_eval_foldername, keys_log_filename) #writes the test module output to a log file
     check_key_is_approved(test_module_output) #checks if the key is approved
 
 # checks if the file is being run directly to avoid running it mistakenly
