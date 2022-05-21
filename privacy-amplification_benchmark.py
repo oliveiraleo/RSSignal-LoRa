@@ -191,8 +191,11 @@ def run_in_bulk_benchmark(is_debugging_results):
     quartiles_results7 = []
     quartiles_results8 = []
 
+    print("=> Benchmarking in bulk mode <=\nPlease, wait...")
+
     i = iterations
     while i >= 0:
+        progress = (iterations - i) / iterations * 100
         benchmark_results = benchmark(hash, hash2, hash3, hash4, hash5, hash6, hash7, hash8, input, False)
         total_run_time1 += benchmark_results[8]
         total_run_time2 += benchmark_results[9]
@@ -240,6 +243,10 @@ def run_in_bulk_benchmark(is_debugging_results):
             if benchmark_results[13] < min_run_time6: min_run_time6 = benchmark_results[13]
             if benchmark_results[14] < min_run_time7: min_run_time7 = benchmark_results[14]
             if benchmark_results[15] < min_run_time8: min_run_time8 = benchmark_results[15]
+        
+        if progress % 5 == 0:
+            print(f"Progress: {progress}%")
+
         i -= 1
         
     quartiles_results1 = statistics.quantiles(arr_results1)
