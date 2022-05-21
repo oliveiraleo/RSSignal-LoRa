@@ -31,6 +31,13 @@ def read_input_file(foldername, filename):
         exit(code=2) #TODO change that to something that makes the entire program stop (as this file can be used by other programs in the future)
     return vet_RSSI_values
 
+def calculate_RSSI_difference(vet_RSSI_input, m):
+    arr_RSSI_difference = []
+    for i in range(0, len(vet_RSSI_input) - m):
+        #if i + m < len(vet_RSSI_input):
+        arr_RSSI_difference.append(vet_RSSI_input[i] - vet_RSSI_input[i + m])
+    return arr_RSSI_difference
+
 def calculate_standard_deviation (vet_RSSI_input, RSSI_average): #calculates the standard deviation of the RSSI values
     vet_RSSI_std_deviation = []
     for i in vet_RSSI_input: #for each value in the input vector
@@ -74,10 +81,11 @@ def write_bit_sequence_to_file(vet_bit_sequence, foldername, filename):
     print ("The writing process is done!")
 
 # defines the main function
-def main(fileName, alpha = 1):
+def main(fileName, alpha = 1, m_value = 1):
     #updates dynamic variables
     RSSI_quant_threshold_alpha = alpha
     filename = fileName
+    m = m_value
 
     #env vars declaration
     vet_RSSI_input = [] #vector of the RSSI values to be processed (values will be read from the input file)
@@ -93,18 +101,25 @@ def main(fileName, alpha = 1):
     file_format = ".csv"
     results_foldername = "results" #folder to store the results
     bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to store the results
-    bit_sequence_filename = "bit-sequence_" + filename + "_alpha-" + str(RSSI_quant_threshold_alpha) + file_format
+    bit_sequence_filename = "bit-sequence_" + filename + "_alpha-" + str(RSSI_quant_threshold_alpha) + "_m-" + str(m) + file_format
     data_file_foldername = "dataset-files" #folder where the data files are stored
     data_file_filename = filename + file_format #filename to be used as input by the program
     
     #execution starts here
-    vet_RSSI_input = read_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
-    print ("Input values: ", vet_RSSI_input) #print input values, just for testing
+    #print (f"Using alpha = {RSSI_quant_threshold_alpha} and m = {m}")
     
-    RSSI_average = sum(vet_RSSI_input) / len(vet_RSSI_input) #calculates the average of the RSSI values
+    vet_RSSI_input = read_input_file(data_file_foldername, data_file_filename) #loads the RSSI values from the file
+    print ("Input values: ", vet_RSSI_input, len(vet_RSSI_input)) #print input values, just for testing
+
+    arr_RSSI_diff = calculate_RSSI_difference(vet_RSSI_input, m) #calculates the RSSI difference
+    print ("RSSI difference: ", arr_RSSI_diff, len(arr_RSSI_diff)) #print RSSI difference, just for testing
+    print ("M value: ", m) #print M value, just for testing
+    
+    #RSSI_average = sum(vet_RSSI_input) / len(vet_RSSI_input) #calculates the average of the RSSI values
+    RSSI_average = sum(arr_RSSI_diff) / len(arr_RSSI_diff) #calculates the average of the RSSI values
     print ("Average: ", RSSI_average)
 
-    RSSI_standard_deviation = calculate_standard_deviation(vet_RSSI_input, RSSI_average)
+    RSSI_standard_deviation = calculate_standard_deviation(arr_RSSI_diff, RSSI_average)
     print ("Standard Deviation: ", RSSI_standard_deviation)
 
     # calculate the quantization thresholds
@@ -114,7 +129,8 @@ def main(fileName, alpha = 1):
     print ("Lower quantization threshold: ", RSSI_quant_threshold_lower)
     print ("Alpha threshold adjustment: "  , RSSI_quant_threshold_alpha)
 
-    vet_binary_output = process_RSSI_bits(vet_RSSI_input, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower)
+    #vet_binary_output = process_RSSI_bits(vet_RSSI_input, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower)
+    vet_binary_output = process_RSSI_bits(arr_RSSI_diff, RSSI_quant_threshold_upper, RSSI_quant_threshold_lower)
     print ("Output values: ", vet_binary_output)
     print_bit_sequence(vet_binary_output)
     
