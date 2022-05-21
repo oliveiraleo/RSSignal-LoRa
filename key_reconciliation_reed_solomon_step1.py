@@ -1,7 +1,7 @@
 import csv #provides the CSV related functions
 import array #provides the array structure datatype (more flexible than the bytearray)
 import math #provides the math functions
-from importlib.machinery import SourceFileLoader as loader #required to import reedsolo module
+from importlib.machinery import SourceFileLoader as loader
 
 #definitions of the functions
 # returns an array of ints, just for testing purposes
@@ -119,7 +119,7 @@ def main(fileName):
     '''key = []
     key = populate_array(key, 262) #generates a test key with a length of 262 bits'''
     #updates the number of correction symbols according to the input key's length
-    reedsolomon_num_correction_symbols = math.ceil(len(key)/2) #NOTE: codec operations only accpet integers and length/2 can return a float number, eg. if len = odd int
+    reedsolomon_num_correction_symbols = math.ceil(len(key)*2) #NOTE: codec operations only accpet integers and length/2 can return a float number, eg. if len = odd int
     #updates the value of the max length of the codec according to the input key's length
     reeedsolomon_max_length = get_next_power_of_2(len(key) + reedsolomon_num_correction_symbols) #NOTE: length of total message+ecc, as required by the codec ("message" is what we are calling "key" here)
     #converts the array to an integer array (codec operations only accpet integers and CSV files are being read as floats)
@@ -140,6 +140,7 @@ def main(fileName):
     print ("The Reed Solomon ecc bits are: "        , reedsolomon_ecc_symbols)
     print ("The Reed Solomon ecc bits' length is: " , len(reedsolomon_ecc_symbols))
     print ("RS params: "                            , reedsolomon_params)
+    reedsolomon_max_errors, reedsolomon_max_erasures = reedsolomon_codec.maxerrata(verbose=True) #gets the max number of errors and erasures
 
     write_array_to_file(reedsolomon_data_bits, keys_foldername, keys_filename, 0) #writes the key to the file
     write_array_to_file(reedsolomon_ecc_symbols, keys_foldername, ecc_filename, 1) #writes the ecc symbols to the file

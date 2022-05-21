@@ -128,7 +128,8 @@ def main(fileName, fileName2):
     #codec operations
     reedsolomon_codec = reedsolomon_module.RSCodec(reedsolomon_num_correction_symbols, nsize=(reeedsolomon_max_length-1)) #creates a codec object with desired params
     reedsolomon_payload = key + ecc #generates the payload (NOTE: payload or message is the key + ecc symbols or data + ecc symbols)
-    print("The RS payload is: ", reedsolomon_payload, len(reedsolomon_payload)) #prints the payload
+    print("The RS payload is: ", reedsolomon_payload) #prints the payload
+    print("The RS payload length is: ", len(reedsolomon_payload)) #prints the payload length
     reedsolomon_array = reedsolomon_codec.decode(reedsolomon_payload) #decodes the key with corrections (if any) applied
 
     print ("-After decoding-")
