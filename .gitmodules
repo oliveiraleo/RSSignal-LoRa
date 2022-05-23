@@ -1,0 +1,3 @@
+[submodule "modules/reedsolomon"]
+	path = modules/reedsolomon
+	url = https://github.com/tomerfiliba/reedsolomon
