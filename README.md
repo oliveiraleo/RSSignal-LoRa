@@ -40,15 +40,13 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ### Requirements
 
-\- An UNIX-like platform <!-- TODO update this -->
+\- An UNIX-like platform
 
 \- [GNU BASH](https://www.gnu.org/software/bash/) 5.1.16 or above or other [Unix shell](https://en.wikipedia.org/wiki/Unix_shell) interpreter
 
 \- Python 3.10.2 or above
 
 \- [Numpy](https://github.com/numpy/numpy) 1.22.2 or above
-
-<!-- \- [CommPy](https://github.com/veeresht/CommPy) (scikit-commpy) 0.7.0 or above -->
 
 \- [Reed-Solomon Codec](https://github.com/tomerfiliba/reedsolomon) 1.5.4
 
@@ -119,7 +117,7 @@ The authors would like to acknowledge Mr. Pedro Ivo da Cruz for all the knowledg
 
 We would like to thank the [Federal University of Juiz de Fora](https://ufjf.br), [FAPEMIG](https://fapemig.br/) and [FAPESP](https://fapesp.br/) for financially supporting this work
 
-We would like to thank also Mr. Merek Simka and Mr. Ladislav Polak for releasing their LoRa RSSI data set (available on [GitHub](https://github.com/xsimka/LoRa-Localization)) which was used for [their work](https://www.radioeng.cz/fulltexts/2022/22_01_0135_0143.pdf) entitled *On the RSSI-based Indoor Localization Employing LoRa in the 2.4 GHz ISM Band*
+We would like to thank also Mr. Marek Simka and Mr. Ladislav Polak for releasing their LoRa RSSI data set (available on [GitHub](https://github.com/xsimka/LoRa-Localization)) which was used for [their work](https://www.radioeng.cz/fulltexts/2022/22_01_0135_0143.pdf) entitled *On the RSSI-based Indoor Localization Employing LoRa in the 2.4 GHz ISM Band*
 
 ## Repo TODO
 
