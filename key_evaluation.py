@@ -13,8 +13,8 @@ def read_input_from_file(foldername, foldername2, filename):
     #checks if the file exists
     try:
         with open(data_file_path, "r") as file: #open file to read
-            #csvreader = csv.reader(file, delimiter=',') #creating a csv reader object
-            csvreader = csv.reader(file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC) #creating a csv reader object (reads the numbers as floats, not as strings)
+            csvreader = csv.reader(file, delimiter=',') #creating a csv reader object
+            #csvreader = csv.reader(file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC) #creating a csv reader object (reads the numbers as floats, not as strings)
             for row in csvreader:
                 binary_key = row
             file.close() #close file
@@ -27,8 +27,8 @@ def read_input_from_file(foldername, foldername2, filename):
             print (f"Trying to check if the file located at: {data_file_path} exists...")
             
             with open(data_file_path, "r") as file: #open file to read
-                #csvreader = csv.reader(file, delimiter=',') #creating a csv reader object
-                csvreader = csv.reader(file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC) #creating a csv reader object (reads the numbers as floats, not as strings)
+                csvreader = csv.reader(file, delimiter=',') #creating a csv reader object
+                #csvreader = csv.reader(file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC) #creating a csv reader object (reads the numbers as floats, not as strings)
                 for row in csvreader:
                     binary_key = row
                 file.close() #close file
@@ -40,6 +40,7 @@ def read_input_from_file(foldername, foldername2, filename):
     finally:
         try:
             binary_key = bytearray(list_to_int(binary_key)) #converts the input array to a bytearray
+            #binary_key = bytearray(binary_key) #converts the input array to a bytearray
         except UnboundLocalError:
             print ("An error ocurred during the reading process. Please, check the messages above.")
             exit(code=2) #TODO change that to something that makes the entire program stop (as this file can be used by other programs in the future)
@@ -85,7 +86,7 @@ def main(fileName):
 
     #files and paths to be used by the program
     #filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
-    file_format = ".csv"
+    file_format = ".txt"
     bin_file_format = ".bin"
     log_file_format = ".log"
     results_foldername = "results"
