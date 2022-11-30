@@ -34,6 +34,10 @@ Each file has the step name which it belongs to appended as a prefix of the file
 
 [TODO] Expand on the naming pattern
 
+## RSSignal workflow
+
+[TODO] Insert an image that relates the files to each framework step
+
 ## Using this project
 
 Please, make sure your environment meets the requirements below if you want to run the framework.
@@ -68,7 +72,28 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ```source pyvenv/bin/activate```
 
-[TODO] Write full instructions
+#### 4- Run the automated script
+
+```python main_controller.py OPTION```
+
+Where OPTION is the step of the script automation. Please refer to the list below.
+
+### Automated script reference list
+
+- s1: Packet exchange, RSSI data collection* [RSSignal 1st step]
+- s2: Preprocess the input [RSSignal 2nd step]
+- s3: Quantization [RSSignal 3rd step]
+- s4: Index exchange (calculates the indexes to be discarded) [RSSignal 4th step]
+- s5: Index exchange (erases the indexes discarded) [RSSignal 4th step]
+- s6: Key reconciliation (encodes the data and generates the ecc bits) [RSSignal 5th step]
+- s7: Key reconciliation (reconciliates the data and ecc bits) [RSSignal 5th step]
+- s8: Privacy amplification [RSSignal 6th step]
+- auto-mode: TODO
+- key-eval: TODO
+- auto-key-eval: TODO
+- hash-benchmark: TODO
+
+\* Currently *not* implemented, please refer [to the FAQ](https://github.com/oliveiraleo/RSSignal-LoRa#q2-why-didnt-you-implement-the-frameworks-1st-step-probing). For an example on how it would be, please refer to that [other project](https://github.com/oliveiraleo/LoRaRSSIGrabber).
 
 ## FAQ
 
