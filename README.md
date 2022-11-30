@@ -52,7 +52,7 @@ Please, make sure your environment meets the requirements below if you want to r
 
 \- [OpenSSL](https://www.openssl.org/) 1.1.1n or 3.0 or above
 
-### General instructions
+### Installing the framework
 
 #### 1- Clone the source code using:
 
@@ -78,11 +78,15 @@ Some frequently asked questions and their answers
 
 A: We didn't focus on any step that involved the real world environment implementation because, as stated in our work, RSSI is available in a range of wireless technologies (e.g. WiFi, ZigBee, LoRa, etc) and each one has its own standards which affects how the implementation would be done.
 
-### Q2: Why so many different files? Wouldn't it be better to keep everything together and avoid some overhead?
+### Q2: Why didn't you implement the framework's 1st step (Probing)?
+
+A: The same as the question above.
+
+### Q3: Why so many different files? Wouldn't it be better to keep everything together and avoid some overhead?
 
 A: Yes, it might would. However, we tried to be as didactic and modular as possible, then we tried to reduce the dependability between the modules so they can be more easily swapped.
 
-### Q3: Why did you choose Reed Solomon instead of X?
+### Q4: Why did you choose Reed Solomon instead of X?
 
 A: As mentioned on the work by [[DaCruz et al., 2022]](https://doi.org/10.1016/j.phycom.2021.101480), for certain applications, maybe a convolutional approach might fit better, but for our project we thought that the RS codec suffices the requirements and still is as easy to understand.
 
