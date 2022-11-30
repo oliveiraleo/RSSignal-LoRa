@@ -56,7 +56,7 @@ Please, make sure your environment meets the requirements below if you want to r
 
 \- [OpenSSL](https://www.openssl.org/) 1.1.1n or 3.0 or above
 
-### Installing the framework
+### Running the framework
 
 #### 1- Clone the source code using:
 
@@ -76,7 +76,7 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ```python main_controller.py OPTION```
 
-Where OPTION is the step of the script automation. Please refer to the list below.
+Where OPTION is the step of the script automation. Please refer to the [list below](https://github.com/oliveiraleo/RSSignal-LoRa#automated-script-reference-list).
 
 ### Automated script reference list
 
@@ -123,6 +123,10 @@ A: We didn't change any of it's internal functionality. The code uploaded here i
 
 A: Please, note that the total number of RSSI measurements obtained from both sides should be equal. If they are different (or for some reason they were modified during the pre processing step), chances are that the RS codec will fail to correct the bits.
 
+### Q7: I need to reduce the amount of storage required in order to run the framework. What can I do?
+
+A: For a start, maybe you should ditch the Python Virtual Environment located inside the `pyvenv` folder. But keep in mind that the [requirements](https://github.com/oliveiraleo/RSSignal-LoRa#requirements) must be met for the framework to be able to run.
+
 ## Citing this work
 
 Please, cite this work as:
@@ -158,7 +162,7 @@ We would like to thank the [Federal University of Juiz de Fora](https://ufjf.br)
 
 We would like to thank also Mr. Marek Simka and Mr. Ladislav Polak for releasing their LoRa RSSI data set (available on [GitHub](https://github.com/xsimka/LoRa-Localization)) which was used for [their work](https://www.radioeng.cz/fulltexts/2022/22_01_0135_0143.pdf) entitled *On the RSSI-based Indoor Localization Employing LoRa in the 2.4 GHz ISM Band*
 
-We would like to acknowledge Mr. [Steven Kho Ang](https://github.com/stevenang), Mr. [Tomer Filiba](https://github.com/tomerfiliba) and Mr. [Stephen Karl Larroque](https://github.com/lrq3000) for their open source work (NIST test suite and RS codec python implementations) that were incorporated as part of the framework
+We would like to acknowledge Mr. [Steven Kho Ang](https://github.com/stevenang), Mr. [Tomer Filiba](https://github.com/tomerfiliba) and Mr. [Stephen Karl Larroque](https://github.com/lrq3000) for their open source work (NIST test suite and RS codec python implementations) that were [incorporated as part of the framework](./modules/ACKNOWLEDGEMENTS.txt)
 
 ## Repo TODO
 
