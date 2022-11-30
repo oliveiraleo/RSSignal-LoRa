@@ -54,13 +54,19 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ### General instructions
 
-1. Clone the source code using:
+#### 1- Clone the source code using:
 
 <code>git clone --recursive https://github.com/oliveiraleo/RSSignal-LoRa.git</code>
 
 **Note:** The option ```--recursive``` will clone our code + all the modules required
 
-2.
+#### 2- Enter the project folder
+
+<code>cd RSSignal-Lora</code>
+
+#### 3- Load the virtual environment
+
+```source pyvenv/bin/activate```
 
 [TODO] Write full instructions
 
