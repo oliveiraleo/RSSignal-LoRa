@@ -1,0 +1,11 @@
+This folder called modules contains the souce code grabbed from other Open Source projects whose authors deserve credit
+
+=> The original source of the NIST TRNG & PRNG Test Suite
+https://github.com/stevenang/randomness_testsuite
+
+Tested with the version https://github.com/stevenang/randomness_testsuite/tree/32ff14ce65da3090a57401069a4d2e65673f658b
+
+=> The original source of the Reed-Solomon codec
+https://github.com/tomerfiliba/reedsolomon
+
+Tested with the version https://github.com/tomerfiliba/reedsolomon/tree/cf146880d197bba15300ce8934afcf069c05d157
