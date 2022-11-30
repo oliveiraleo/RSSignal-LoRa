@@ -74,19 +74,23 @@ Please, make sure your environment meets the requirements below if you want to r
 
 Some frequently asked questions and their answers
 
-**-> Q: Where are the "step 2" files?**
+### Q1: Where are the "step 2" files?
 
 A: We didn't focus on any step that involved the real world environment implementation because, as stated in our work, RSSI is available in a range of wireless technologies (e.g. WiFi, ZigBee, LoRa, etc) and each one has its own standards which affects how the implementation would be done.
 
-**-> Q: Why so many different files? Wouldn't it be better to keep everything together and avoid some overhead?**
+### Q2: Why so many different files? Wouldn't it be better to keep everything together and avoid some overhead?
 
 A: Yes, it might would. However, we tried to be as didactic and modular as possible, then we tried to reduce the dependability between the modules so they can be more easily swapped.
 
-**-> Q: Why did you choose Reed Solomon instead of X?**
+### Q3: Why did you choose Reed Solomon instead of X?
 
-\- A: As mentioned on the work by [[DaCruz et al., 2022]](https://doi.org/10.1016/j.phycom.2021.101480), for certain applications, maybe a convolutional approach might fit better, but for our project we thought that the RS codec suffices the requirements and still is as easy to understand.
+A: As mentioned on the work by [[DaCruz et al., 2022]](https://doi.org/10.1016/j.phycom.2021.101480), for certain applications, maybe a convolutional approach might fit better, but for our project we thought that the RS codec suffices the requirements and still is as easy to understand.
 
-**-> Q: Why the Reed Solomon (RS) codec does not work for me?**
+### Q5: What modifications did you make to the Reed Solomon (RS) codec code?
+
+A: We didn't change any of it's internal functionality. The code uploaded here is based on the commit [32ff14c](https://github.com/stevenang/randomness_testsuite/tree/32ff14ce65da3090a57401069a4d2e65673f658b). As it can be verified on our source code, the only modifications we have made are: (i) message related (i.e. suppressing some console messages); (ii) disabled auto input (e.g. the original code had a randomly generated input and now we use our own); and (iii) disabled some tests (some tests require very long inputs to be statistically meaningful, so we choose the tests according to the framework needs).
+
+### Q6: Why the RS codec does not work for me?
 
 A: Please, note that the total number of RSSI measurements obtained from both sides should be equal. If they are different (or for some reason they were modified during the pre processing step), chances are that the RS codec will fail to correct the bits.
 
@@ -124,6 +128,8 @@ The authors would like to acknowledge Mr. Pedro Ivo da Cruz for all the knowledg
 We would like to thank the [Federal University of Juiz de Fora](https://ufjf.br), [FAPEMIG](https://fapemig.br/) and [FAPESP](https://fapesp.br/) for financially supporting this work
 
 We would like to thank also Mr. Marek Simka and Mr. Ladislav Polak for releasing their LoRa RSSI data set (available on [GitHub](https://github.com/xsimka/LoRa-Localization)) which was used for [their work](https://www.radioeng.cz/fulltexts/2022/22_01_0135_0143.pdf) entitled *On the RSSI-based Indoor Localization Employing LoRa in the 2.4 GHz ISM Band*
+
+We would like to acknowledge Mr. [Steven Kho Ang](https://github.com/stevenang), Mr. [Tomer Filiba](https://github.com/tomerfiliba) and Mr. [Stephen Karl Larroque](https://github.com/lrq3000) for their open source work (NIST test suite and RS codec python implementations) that were incorporated as part of the framework
 
 ## Repo TODO
 
