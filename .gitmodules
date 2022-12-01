@@ -1,3 +1,6 @@
 [submodule "modules/reedsolomon"]
 	path = modules/reedsolomon
 	url = https://github.com/tomerfiliba/reedsolomon
+[submodule "modules/RSSignal-LoRa_randomness_testsuite"]
+	path = modules/RSSignal-LoRa_randomness_testsuite
+	url = https://github.com/oliveiraleo/RSSignal-LoRa_randomness_testsuite.git
