@@ -26,14 +26,14 @@ my_help()
   echo "-s  --separator   Specifies which separator to use when reading data (defaults to SPACE)"
   echo #new line
   echo "Examples:"
-  echo $0 "input.csv -t"
-  echo $0 "input.csv -t -c 2"
-  echo $0 "input.csv -t -s '\n'"
-  echo $0 "input.csv -t -c 2 -s '\n'"
-  echo $0 "input.csv -o output.csv"
-  echo $0 "input.csv -o output.csv -c 1"
-  echo $0 "input.csv -o output.csv -s '\t'"
-  echo $0 "input.csv -o output.csv -c 1 -s '\t'"
+  echo $0 "dataset-files/input.csv -t"
+  echo $0 "dataset-files/input.csv -t -c 2"
+  echo $0 "dataset-files/input.csv -t -s '\n'"
+  echo $0 "dataset-files/input.csv -t -c 2 -s '\n'"
+  echo $0 "dataset-files/input.csv -o dataset-files/output.csv"
+  echo $0 "dataset-files/input.csv -o dataset-files/output.csv -c 1"
+  echo $0 "dataset-files/input.csv -o dataset-files/output.csv -s '\t'"
+  echo $0 "dataset-files/input.csv -o dataset-files/output.csv -c 1 -s '\t'"
   exit
 }
 
