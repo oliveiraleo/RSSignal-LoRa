@@ -10,9 +10,8 @@ def read_binary_input_file(foldername, filename):
         with open(data_file_path, "r") as file: #open file to read
             #csvreader = csv.reader(file, delimiter=',') #creating a csv reader object
             csvreader = csv.reader(file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC) #creating a csv reader object (reads the numbers as floats, not as strings)
-            #binary_bits = file.readline() #read the file
             for row in csvreader:
-                #print (row)
+                #print (row) #DEBUG
                 binary_bits = row
             file.close() #close file
         print ("The reading process is done!")
@@ -31,25 +30,8 @@ def union_of_arrays(array1, array2):
     return list(set(array1) | set(array2))
 
 def erase_bit_values(bit_values, arr_discard_indexes):
-    #bit_values_copy = bit_values.copy() #copies the list of RSSI values to prevent modifying the original list
-    #bit_values_clean = []
-    #flags all values to be discarded
-    #print(len(arr_discard_indexes), len(bit_values_copy))
     bit_values = [i for j,i in enumerate(bit_values) if j not in arr_discard_indexes] #erases the values that are not needed
     return bit_values
-    # for i in range(0, min(len(bit_values_copy),len(arr_discard_indexes))):
-    #     #print(i)
-    #     #print(i, arr_discard_indexes[i])
-    #     try:
-    #         bit_values_copy[arr_discard_indexes[i]] = -1
-    #     except:
-    #         #print("Error")
-    #         print(i, arr_discard_indexes[i])
-    # #removes the discarded values from the list
-    # for i in range(0, len(bit_values_copy)):
-    #     if bit_values_copy[i] != -1:
-    #         bit_values_clean.append(bit_values_copy[i])
-    # return bit_values_clean
 
 def write_new_key_to_file(key, foldername, filename):
     results_path = foldername + "/" + filename
@@ -62,19 +44,16 @@ def write_new_key_to_file(key, foldername, filename):
 
 def main(filename1, filename2):
     #updates dynamic variables
-    filename = filename1
+    filename = filename1 #filename to be used by the program
     discard_filename = filename2
 
     #env vars declaration
-    #RSSI_values = []
     RSSI_index_values = []
     RSSI_index_values2 = []
-    #RSSI_new_values = []
     binary_bit_sequence = ""
     binary_bit_sequence_discard_indexes = ""
-    #new_key = []
+    
     #files and paths to be used by the program
-    #filename = "DaCruz2021-preliminar1-cut-tab-1_alpha-0.1" #filename to be used by the program
     file_format = ".csv"
     results_foldername = "results"
     bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to get the results from
@@ -99,15 +78,15 @@ def main(filename1, filename2):
     RSSI_index_values2 = array_to_int(RSSI_index_values2)
     binary_bit_sequence = array_to_int(binary_bit_sequence)
     
-    print ("The old key is: ", binary_bit_sequence) #displays the old key
-    print ("The old key length is: ", len(binary_bit_sequence)) #displays the old key length
+    print ("The old key is: ", binary_bit_sequence) #displays the old key #DEBUG
+    print ("The old key length is: ", len(binary_bit_sequence)) #displays the old key length #DEBUG
     
     binary_bit_sequence_discard_indexes = union_of_arrays(RSSI_index_values, RSSI_index_values2) #get all the indexes of the values to be discarded
     binary_bit_sequence = erase_bit_values(binary_bit_sequence, binary_bit_sequence_discard_indexes) #erase the bit values that are not needed
 
-    #print ("The binary bit discard indexes are: ", binary_bit_sequence_discard_indexes) #displays the indexes of the values to be discarded
-    print ("The new key is: ", binary_bit_sequence) #displays the new key
-    print ("The new key length is: ", len(binary_bit_sequence)) #displays the new key length
+    #print ("The binary bit discard indexes are: ", binary_bit_sequence_discard_indexes) #displays the indexes of the values to be  #DEBUG
+    print ("The new key is: ", binary_bit_sequence) #displays the new key #DEBUG
+    print ("The new key length is: ", len(binary_bit_sequence)) #displays the new key length #DEBUG
     write_new_key_to_file(binary_bit_sequence, new_key_foldername, new_key_filename) #writes the new key to a file
 
 # checks if the file is being run directly to avoid running it mistakenly

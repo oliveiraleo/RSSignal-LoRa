@@ -1,7 +1,7 @@
 import csv #provides the CSV related functions
 import array #provides the array structure datatype (more flexible than the bytearray)
 import math #provides the math functions
-from importlib.machinery import SourceFileLoader as loader
+from importlib.machinery import SourceFileLoader as loader #required to load the reedsolo module
 
 #definitions of the functions
 # returns an array of ints, just for testing purposes
@@ -95,27 +95,27 @@ def write_array_to_file(array, foldername, filename, file_type):
 # defines the main function
 def main(fileName):
     #updates dynamic variables
-    filename = fileName
+    filename = fileName #filename to be used by the program
 
     #env vars declaration
     reedsolomon_module = loader("reedsolo", "modules/reedsolomon/reedsolo.py").load_module()
     reeedsolomon_max_length = 0 #NOTE: this value must be a power of 2. The default is 256.
-    reedsolomon_num_correction_symbols = 0 #12 #TODO update this value according to the input
+    reedsolomon_num_correction_symbols = 0 #NOTE: The default was 12.
     key = []
     #files and paths to be used by the program
-    #filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
     file_format = ".csv"
     results_foldername = "results"
     bit_stream_foldername = results_foldername + "/" + "keys" #folder where the keys were stored
     bit_stream_filename = "bit-stream_" + filename + file_format
     keys_foldername = results_foldername + "/" + "key-reconciliation" #folder to store the produced data (keys + ecc + params) from this step
     #keys_file_format = ".csv" #file format for the results file
-    keys_filename = "keys_" + filename + file_format #TODO: comments here
-    ecc_filename = "ecc_" + filename + file_format 
-    parameters_filename = "parameters_" + filename + file_format 
+    keys_filename = "keys_" + filename + file_format #appends the correct prefix and concats the filename that will be used by the keys
+    ecc_filename = "ecc_" + filename + file_format #appends the correct prefix and concats the filename that will be used by the ecc bits
+    parameters_filename = "parameters_" + filename + file_format #appends the correct prefix and concats the filename that will be used to store the params
 
     #execution starts here
     key = read_key_input_file(bit_stream_foldername, bit_stream_filename) #reads the key from the file
+    #use the line below to run tests in stand-alone manner
     '''key = []
     key = populate_array(key, 262) #generates a test key with a length of 262 bits'''
     #updates the number of correction symbols according to the input key's length

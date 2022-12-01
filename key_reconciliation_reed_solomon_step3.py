@@ -1,6 +1,6 @@
 import csv #provides the CSV related functions
 import array #provides the array structure datatype (more flexible than the bytearray)
-from importlib.machinery import SourceFileLoader as loader #needed to import reedsolo module
+from importlib.machinery import SourceFileLoader as loader #required to load the reedsolo module
 
 # returns an array of ints, just for testing purposes
 def populate_array(array, max_number):
@@ -53,14 +53,12 @@ def get_payload_and_ecc_symbols(rs_encoded_data, ecc_symbols_length):
     try:
         ecc = bytearray(b'') #creates an empty bytearray
         payload = bytearray(b'') #creates an empty bytearray
-        #get_ecc_symbols_aux(rs_encoded_data, ecc_symbols_length, payload, ecc)
         payload = rs_encoded_data[0:len(rs_encoded_data) - ecc_symbols_length]
         ecc = rs_encoded_data[len(rs_encoded_data) - ecc_symbols_length:]
     
     except ValueError: #if not possible, use the array structure (the same way as the reedsolo module)
         ecc = array.array('i', []) #creates an empty array
         payload = array.array('i', []) #creates an empty array
-        #get_ecc_symbols_aux(rs_encoded_data, ecc_symbols_length, payload, ecc)
         payload = rs_encoded_data[0:len(rs_encoded_data) - ecc_symbols_length]
         ecc = rs_encoded_data[len(rs_encoded_data) - ecc_symbols_length:]
     
@@ -68,7 +66,6 @@ def get_payload_and_ecc_symbols(rs_encoded_data, ecc_symbols_length):
 
 # converts the elements of (almost) any type from an array to int
 def array_to_int(input_arr):
-    #int_arr = []
     for i in range(0, len(input_arr)):
         input_arr[i] = int(input_arr[i])
     return input_arr
@@ -86,19 +83,15 @@ def write_output_to_file(array, foldername, filename):
 # defines the main function
 def main(fileName, fileName2):
     #updates dynamic variables
-    filename = fileName
-    filename2 = fileName2
+    filename = fileName #filename to be used by the program
+    filename2 = fileName2 #filename to be used by the program
 
     #env vars declaration
     reedsolomon_module = loader("reedsolo", "modules/reedsolomon/reedsolo.py").load_module()
     reeedsolomon_max_length = 0 #NOTE: this value must be a power of 2. The default is 256.
     reedsolomon_num_correction_symbols = 0 
-    #RSSI_values = []
-    #RSSI_index_values = []
-    #RSSI_new_values = []
     key = []
     #files and paths to be used by the program
-    #filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
     file_format = ".csv"
     results_foldername = "results"
     #bit_stream_foldername = results_foldername + "/" + "keys" #folder where the keys were stored
@@ -128,15 +121,15 @@ def main(fileName, fileName2):
     #codec operations
     reedsolomon_codec = reedsolomon_module.RSCodec(reedsolomon_num_correction_symbols, nsize=(reeedsolomon_max_length-1)) #creates a codec object with desired params
     reedsolomon_payload = key + ecc #generates the payload (NOTE: payload or message is the key + ecc symbols or data + ecc symbols)
-    print("The RS payload is: ", reedsolomon_payload) #prints the payload
-    print("The RS payload length is: ", len(reedsolomon_payload)) #prints the payload length
+    print("The RS payload is: ", reedsolomon_payload) #prints the payload #DEBUG
+    print("The RS payload length is: ", len(reedsolomon_payload)) #prints the payload length #DEBUG
     reedsolomon_array = reedsolomon_codec.decode(reedsolomon_payload) #decodes the key with corrections (if any) applied
 
-    print ("-After decoding-")
-    print ("RS retrieved data is: ", list(reedsolomon_array[0])) #prints the decoded data (with corrections applied if any)
-    #print ("RS payload is: ", reedsolomon_payload) #prints the payload
-    print ("RS ecc bits are: ", ecc) #displays the ecc symbols
-    print ("RS no. of bytes corrected: ", list(reedsolomon_array[2])) #corrections made (it displays which byte was corrected aka byte position index)
+    print ("-After decoding-") #DEBUG
+    print ("RS retrieved data is: ", list(reedsolomon_array[0])) #prints the decoded data (with corrections applied if any) #DEBUG
+    #print ("RS payload is: ", reedsolomon_payload) #prints the payload #DEBUG
+    print ("RS ecc bits are: ", ecc) #displays the ecc symbols #DEBUG
+    print ("RS no. of bytes corrected: ", list(reedsolomon_array[2])) #corrections made (it displays which byte was corrected aka byte position index) #DEBUG
     
     write_output_to_file(list(reedsolomon_array[0]), output_keys_foldername, output_keys_filename) #writes the corrected key to the file
 

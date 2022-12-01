@@ -1,6 +1,5 @@
 import csv
 import os
-#from importlib.machinery import SourceFileLoader as loader #needed to import NIST sp800-22-tests module
 
 def list_to_int(input_arr):
     for i in range(0, len(input_arr)):
@@ -66,7 +65,6 @@ def write_log_file(file_content, foldername, filename):
 
 def run_test_module(foldername, filename):
     print ("Running the test module...")
-    #os.system("modules/sp800_22_tests/sp800_22_tests.py" + " " + foldername + "/" + filename)
     output = os.popen("modules/sp800_22_tests/sp800_22_tests.py" + " " + foldername + "/" + filename).read()
     print ("The test module is done!")
 
@@ -82,10 +80,9 @@ def check_key_is_approved(test_output):
 def main(fileName):
     #key_test_module = loader("sp800_22_tests", "modules/sp800_22_tests/sp800_22_tests.py")
     #updates dynamic variables
-    filename = fileName
+    filename = fileName #filename to be used by the program
 
     #files and paths to be used by the program
-    #filename = "DaCruz2021-preliminar1-cut-tab-1" #filename to be used by the program
     file_format = ".txt"
     bin_file_format = ".bin"
     log_file_format = ".log"
@@ -101,7 +98,7 @@ def main(fileName):
     key = read_input_from_file(keys_foldername, keys_backup_foldername, keys_filename) #reads the key from the file
     write_bin_file(key, keys_eval_foldername, keys_bin_filename) #writes the key to a binary file (NOTE: required to be used by the test module)
     test_module_output = run_test_module(keys_eval_foldername, keys_bin_filename) #runs the test module
-    #print(test_module_output)
+    #print(test_module_output) #DEBUG
     write_log_file(test_module_output, keys_eval_foldername, keys_log_filename) #writes the test module output to a log file
     check_key_is_approved(test_module_output) #checks if the key is approved
 

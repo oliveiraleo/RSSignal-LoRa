@@ -10,9 +10,8 @@ def read_input_file(foldername, filename):
         with open(data_file_path, "r") as file: #open file to read
             csvreader = csv.reader(file, delimiter=',') #creating a csv reader object
             #csvreader = csv.reader(file, delimiter=',', quoting=csv.QUOTE_NONNUMERIC) #creating a csv reader object (reads the numbers as floats, not as strings)
-            #binary_bits = file.readline() #read the file
             for row in csvreader:
-                #print (row)
+                #print (row) #DEBUG
                 binary_bits = row
             file.close() #close file
         print ("The reading process is done!")
@@ -29,9 +28,9 @@ def get_index_values(RSSI_values):
     for i in range(0, len(RSSI_values)):
         if int(RSSI_values[i]) == 2: #checks if the value i of RSSI_values is 2
             index_values.append(int(index)) #if yes, adds the index to the list of indexes
-            #print ("Index value: " + str(index))
+            #print ("Index value: " + str(index)) #DEBUG
         index += 1
-    #print (str(len(RSSI_values)) + " values were read.")
+    #print (str(len(RSSI_values)) + " values were read.") #DEBUG
     return index_values
 
 def write_indexes_to_file(vet_discard_indexes, foldername, filename):
@@ -46,13 +45,13 @@ def write_indexes_to_file(vet_discard_indexes, foldername, filename):
 # defines the main function
 def main(fileName):
     #updates dynamic variables
-    filename = fileName
+    filename = fileName #filename to be used by the program
 
     #env vars declaration
     RSSI_index_values = []
     binary_bit_sequence = ""
+    
     #files and paths to be used by the program
-    #filename = "DaCruz2021-preliminar1-cut-tab-2_alpha-1" #filename to be used by the program
     file_format = ".csv"
     results_foldername = "results"
     bit_sequence_foldername = results_foldername + "/" + "bit-sequence" #folder to get the results from

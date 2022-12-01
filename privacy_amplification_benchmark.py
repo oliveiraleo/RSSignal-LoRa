@@ -14,11 +14,11 @@ hash4 = hashlib.new('sha256') #uses the OpenSSL implementation
 #hash4_digest = ''
 hash5 = hashlib.sha224()
 #hash5_digest = ''
-hash6 = hashlib.new('sha224')
+hash6 = hashlib.new('sha224') #uses the OpenSSL implementation
 #hash6_digest = ''
 hash7 = hashlib.sha1()
 #hash7_digest = ''
-hash8 = hashlib.new('sha1')
+hash8 = hashlib.new('sha1') #uses the OpenSSL implementation
 #hash8_digest = ''
 
 #NOTE: below there are two input vars to help comparing the relation
@@ -109,42 +109,42 @@ def benchmark(hash_codec1, hash_codec2, hash_codec3, hash_codec4,
 def run_benchmark():
     benchmark_results = benchmark(hash, hash2, hash3, hash4, hash5, hash6, hash7, hash8, input, True)
 
-    print("=> Benchmark results:")
-    print("Input size: " + str(len(input)) + " bits")
+    print("=> Benchmark results:")                     #DEBUG
+    print("Input size: " + str(len(input)) + " bits")  #DEBUG
 
-    print("-> Python SHA-512 hashlib implementation")
-    print("Hash digest: ", benchmark_results[0])
-    print(f"Running time: {benchmark_results[8]} ns")
+    print("-> Python SHA-512 hashlib implementation")  #DEBUG
+    print("Hash digest: ", benchmark_results[0])       #DEBUG
+    print(f"Running time: {benchmark_results[8]} ns")  #DEBUG
 
-    print("-> OpenSSL SHA-512 implementation")
-    print("Hash digest: ", benchmark_results[1])
-    print(f"Running time: {benchmark_results[9]} ns")
+    print("-> OpenSSL SHA-512 implementation")         #DEBUG
+    print("Hash digest: ", benchmark_results[1])       #DEBUG
+    print(f"Running time: {benchmark_results[9]} ns")  #DEBUG
 
-    print("-> Python SHA-256 hashlib implementation")
-    print("Hash digest: ", benchmark_results[2])
-    print(f"Running time: {benchmark_results[10]} ns")
+    print("-> Python SHA-256 hashlib implementation")  #DEBUG
+    print("Hash digest: ", benchmark_results[2])       #DEBUG
+    print(f"Running time: {benchmark_results[10]} ns") #DEBUG
 
-    print("-> OpenSSL SHA-256 implementation")
-    print("Hash digest: ", benchmark_results[3])
-    print(f"Running time: {benchmark_results[11]} ns")
+    print("-> OpenSSL SHA-256 implementation")         #DEBUG
+    print("Hash digest: ", benchmark_results[3])       #DEBUG
+    print(f"Running time: {benchmark_results[11]} ns") #DEBUG
 
-    print("-> Python SHA-224 hashlib implementation")
-    print("Hash digest: ", benchmark_results[4])
-    print(f"Running time: {benchmark_results[12]} ns")
+    print("-> Python SHA-224 hashlib implementation")   #DEBUG
+    print("Hash digest: ", benchmark_results[4])        #DEBUG
+    print(f"Running time: {benchmark_results[12]} ns")  #DEBUG
 
-    print("-> OpenSSL SHA-224 implementation")
-    print("Hash digest: ", benchmark_results[5])
-    print(f"Running time: {benchmark_results[13]} ns")
-
-    print("WARNING: Please note that SHA-1 is not cryptographically secure anymore, so it should not be used!")
-    print("-> Python SHA-1 hashlib implementation")
-    print("Hash digest: ", benchmark_results[6])
-    print(f"Running time: {benchmark_results[14]} ns")
+    print("-> OpenSSL SHA-224 implementation")          #DEBUG
+    print("Hash digest: ", benchmark_results[5])        #DEBUG
+    print(f"Running time: {benchmark_results[13]} ns")  #DEBUG
 
     print("WARNING: Please note that SHA-1 is not cryptographically secure anymore, so it should not be used!")
-    print("-> OpenSSL SHA-1 implementation")
-    print("Hash digest: ", benchmark_results[7])
-    print(f"Running time: {benchmark_results[15]} ns")
+    print("-> Python SHA-1 hashlib implementation")     #DEBUG
+    print("Hash digest: ", benchmark_results[6])        #DEBUG
+    print(f"Running time: {benchmark_results[14]} ns")  #DEBUG
+
+    print("WARNING: Please note that SHA-1 is not cryptographically secure anymore, so it should not be used!")
+    print("-> OpenSSL SHA-1 implementation")            #DEBUG
+    print("Hash digest: ", benchmark_results[7])        #DEBUG
+    print(f"Running time: {benchmark_results[15]} ns")  #DEBUG
 
 
 def run_in_bulk_benchmark(is_debugging_results):
@@ -271,65 +271,65 @@ def run_in_bulk_benchmark(is_debugging_results):
         print("Test 8:", arr_results8)
         print("") #new line
 
-    print(f"=> Benchmark results for {iterations} iterations:")
-    print("Input size: " + str(len(input)) + " bits")
-    print("-> Python SHA-512 hashlib implementation")
-    #print("Hash digest: ", benchmark_results[0])
-    print(f"Running time (max): {max_run_time1} ns")
-    print(f"Running time (avg): {total_run_time1 / iterations} ns")
-    print(f"Running time (min): {min_run_time1} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results1} ns")
+    print(f"=> Benchmark results for {iterations} iterations:")                 #DEBUG
+    print("Input size: " + str(len(input)) + " bits")                           #DEBUG
+    print("-> Python SHA-512 hashlib implementation")                           #DEBUG
+    #print("Hash digest: ", benchmark_results[0])                               #DEBUG
+    print(f"Running time (max): {max_run_time1} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time1 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time1} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results1} ns") #DEBUG
 
-    print("-> OpenSSL SHA-512 implementation")
-    #print("Hash digest: ", benchmark_results[1])
-    print(f"Running time (max): {max_run_time2} ns")
-    print(f"Running time (avg): {total_run_time2 / iterations} ns")
-    print(f"Running time (min): {min_run_time2} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results2} ns")
+    print("-> OpenSSL SHA-512 implementation")                                  #DEBUG
+    #print("Hash digest: ", benchmark_results[1])                               #DEBUG
+    print(f"Running time (max): {max_run_time2} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time2 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time2} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results2} ns") #DEBUG
 
-    print("-> Python SHA-256 hashlib implementation")
-    #print("Hash digest: ", benchmark_results[2])
-    print(f"Running time (max): {max_run_time3} ns")
-    print(f"Running time (avg): {total_run_time3 / iterations} ns")
-    print(f"Running time (min): {min_run_time3} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results3} ns")
+    print("-> Python SHA-256 hashlib implementation")                           #DEBUG
+    #print("Hash digest: ", benchmark_results[2])                               #DEBUG
+    print(f"Running time (max): {max_run_time3} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time3 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time3} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results3} ns") #DEBUG
 
-    print("-> OpenSSL SHA-256 implementation")
-    #print("Hash digest: ", benchmark_results[3])
-    print(f"Running time (max): {max_run_time4} ns")
-    print(f"Running time (avg): {total_run_time4 / iterations} ns")
-    print(f"Running time (min): {min_run_time4} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results4} ns")
+    print("-> OpenSSL SHA-256 implementation")                                  #DEBUG
+    #print("Hash digest: ", benchmark_results[3])                               #DEBUG
+    print(f"Running time (max): {max_run_time4} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time4 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time4} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results4} ns") #DEBUG
 
-    print("-> Python SHA-224 hashlib implementation")
-    #print("Hash digest: ", benchmark_results[4])
-    print(f"Running time (max): {max_run_time5} ns")
-    print(f"Running time (avg): {total_run_time5 / iterations} ns")
-    print(f"Running time (min): {min_run_time5} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results5} ns")
+    print("-> Python SHA-224 hashlib implementation")                           #DEBUG
+    #print("Hash digest: ", benchmark_results[4])                               #DEBUG
+    print(f"Running time (max): {max_run_time5} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time5 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time5} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results5} ns") #DEBUG
 
-    print("-> OpenSSL SHA-224 implementation")
-    #print("Hash digest: ", benchmark_results[5])
-    print(f"Running time (max): {max_run_time6} ns")
-    print(f"Running time (avg): {total_run_time6 / iterations} ns")
-    print(f"Running time (min): {min_run_time6} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results6} ns")
-
-    print("WARNING: Please note that SHA-1 is not cryptographically secure anymore, so it should not be used!")
-    print("-> Python SHA-1 hashlib implementation")
-    #print("Hash digest: ", benchmark_results[6])
-    print(f"Running time (max): {max_run_time7} ns")
-    print(f"Running time (avg): {total_run_time7 / iterations} ns")
-    print(f"Running time (min): {min_run_time7} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results7} ns")
+    print("-> OpenSSL SHA-224 implementation")                                  #DEBUG
+    #print("Hash digest: ", benchmark_results[5])                               #DEBUG
+    print(f"Running time (max): {max_run_time6} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time6 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time6} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results6} ns") #DEBUG
 
     print("WARNING: Please note that SHA-1 is not cryptographically secure anymore, so it should not be used!")
-    print("-> OpenSSL SHA-1 implementation")
-    #print("Hash digest: ", benchmark_results[7])
-    print(f"Running time (max): {max_run_time8} ns")
-    print(f"Running time (avg): {total_run_time8 / iterations} ns")
-    print(f"Running time (min): {min_run_time8} ns")
-    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results8} ns")
+    print("-> Python SHA-1 hashlib implementation")                             #DEBUG
+    #print("Hash digest: ", benchmark_results[6])                               #DEBUG
+    print(f"Running time (max): {max_run_time7} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time7 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time7} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results7} ns") #DEBUG
+
+    print("WARNING: Please note that SHA-1 is not cryptographically secure anymore, so it should not be used!")
+    print("-> OpenSSL SHA-1 implementation")                                    #DEBUG
+    #print("Hash digest: ", benchmark_results[7])                               #DEBUG
+    print(f"Running time (max): {max_run_time8} ns")                            #DEBUG
+    print(f"Running time (avg): {total_run_time8 / iterations} ns")             #DEBUG
+    print(f"Running time (min): {min_run_time8} ns")                            #DEBUG
+    print(f"Running time quartiles (25% / 50% / 75%): {quartiles_results8} ns") #DEBUG
 
 def main():
     #execution starts here
