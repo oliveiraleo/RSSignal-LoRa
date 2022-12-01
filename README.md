@@ -40,6 +40,9 @@ Each file has the step name which it belongs to appended as a prefix of the file
 
 [TODO] Insert an image that relates the files to each framework step
 
+<!-- s2 > s3 > s4 > s5 > s6 > s7 > s8 > prepare-key-eval > key-eval -->
+<!-- s2 > auto-mode > prepare-key-eval > auto-key-eval -->
+
 ## Using this project
 
 Please, make sure your environment meets the requirements below if you want to run the framework.
@@ -192,12 +195,12 @@ We would like to thank also Mr. Marek Simka and Mr. Ladislav Polak for releasing
 
 We would like to acknowledge Mr. [Steven Kho Ang](https://github.com/stevenang), Mr. [Tomer Filiba](https://github.com/tomerfiliba) and Mr. [Stephen Karl Larroque](https://github.com/lrq3000) for their open source work (NIST test suite and RS codec python implementations) that were [incorporated as part of the framework](./modules/ACKNOWLEDGEMENTS.txt)
 
-## Repo TODO
+## Repo TODOs
 
-- [TODO] Upload (or link) the NIST 800-22 implementation used for the tests
-- [TODO] Upload some test results
-- [TODO] Write and upload the automation script
-- [TODO] Finish up this README file 
+- [x] ~~Upload (or link) the NIST 800-22 implementation used for the tests~~
+- [ ] Upload some test results
+- [x] ~~Write and upload the automation script~~
+- [ ] Finish up this README file 
 
 **Note:** We can't provide an ETA for this list ATM. However we hope we can finish its activities ASAP
 
