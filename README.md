@@ -76,9 +76,11 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ```python main_controller.py OPTION```
 
-Where OPTION is the step of the script automation. Please refer to the [list below](https://github.com/oliveiraleo/RSSignal-LoRa#automated-script-reference-list).
+Where OPTION is the step of the script automation. Please refer to the [list below](https://github.com/oliveiraleo/RSSignal-LoRa#automated-script-option-reference-list).
 
-### Automated script reference list
+### Automated script option reference lists
+
+#### Main functionality
 
 - s1: Packet exchange, RSSI data collection* [RSSignal 1st step]
 - s2: Preprocess the input [RSSignal 2nd step]
@@ -88,12 +90,16 @@ Where OPTION is the step of the script automation. Please refer to the [list bel
 - s6: Key reconciliation (encodes the data and generates the ecc bits) [RSSignal 5th step]
 - s7: Key reconciliation (reconciliates the data and ecc bits) [RSSignal 5th step]
 - s8: Privacy amplification [RSSignal 6th step]
-- auto-mode: TODO
-- key-eval: TODO
-- auto-key-eval: TODO
-- hash-benchmark: TODO
 
 \* Currently *not* implemented, please refer [to the FAQ](https://github.com/oliveiraleo/RSSignal-LoRa#q2-why-didnt-you-implement-the-frameworks-1st-step-probing). For an example on how it would be, please refer to that [other project](https://github.com/oliveiraleo/LoRaRSSIGrabber).
+
+#### Extra functionality
+
+- auto-mode: Executes the steps 3 - 8 automatically
+- prepare-key-eval: Executes the preprocess script to prepare data for the key evaluation
+- key-eval: Executes the key evaluation for a given file
+- auto-key-eval: Executes the key evaluation for a given range of data automatically
+- hash-benchmark: Executes the hash benchmark
 
 ## FAQ
 
