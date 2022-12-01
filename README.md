@@ -10,6 +10,8 @@ The limited resources of IoT devices, the reproducibility of the obtained result
 
 This README file still in a "work in progress" state, so expect to see some TODO's
 
+This section will be removed once everything is finished
+
 ## Motivation
 
 Given the number of IoT devices already deployed worldwide, the wide range of possibilities related to the LoRa and LoRaWAN technologies, the [key distribution](https://en.wikipedia.org/wiki/Key_distribution) problem and the lack of reproducibility of experiments related to key generation in IoT environments, this work proposes an open source framework that tries to address some of those issues.
@@ -44,17 +46,35 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ### Requirements
 
+List of requirements to run the framework
+
+#### Operating system requirements
+
 \- An UNIX-like platform
 
 \- [GNU BASH](https://www.gnu.org/software/bash/) 5.1.16 or above or other [Unix shell](https://en.wikipedia.org/wiki/Unix_shell) interpreter
 
-\- Python 3.10.2 or above
+\- Python 3.10.2 or above (tested with 3.10.8 already)
 
-\- [Numpy](https://github.com/numpy/numpy) 1.22.2 or above
+\- Python-pip 22.3.1 or above
 
-\- [Reed-Solomon Codec](https://github.com/tomerfiliba/reedsolomon) 1.5.4
+\- [OpenSSL](https://www.openssl.org/) 1.1.1n or 3.0 or above (tested with 3.0.7 already)
 
-\- [OpenSSL](https://www.openssl.org/) 1.1.1n or 3.0 or above
+#### Python pip requirements*
+
+\- [Numpy](https://github.com/numpy/numpy) 1.22.2 or above (tested with 1.23.5 already)
+
+\- [Scipy](https://github.com/scipy/scipy) 1.9.3 or above
+
+#### Other modules
+
+\- [Reed-Solomon Codec](https://github.com/tomerfiliba/reedsolomon) 1.5.4*
+
+\- [NIST randomness test suite](https://github.com/stevenang/randomness_testsuite)**
+
+\* These are shipped with the framework
+
+** A [custom version](https://github.com/oliveiraleo/RSSignal-LoRa_randomness_testsuite) already ships within the framework
 
 ### Running the framework
 
@@ -72,13 +92,13 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ```source pyvenv/bin/activate```
 
-#### 4- Run the automated script*
+#### 4- Run the automated script***
 
 ```python main_controller.py OPTION```
 
 Where OPTION is the step of the script automation. Please refer to the [list below](https://github.com/oliveiraleo/RSSignal-LoRa#automated-script-option-reference-lists).
 
-\* Each option calls a different module/file of the framework. It's possible to call each one separately and we recommend doing so if you are studying the framework (i.e. not using the "auto modes" until you understand the whole process)
+*** Each option calls a different module/file of the framework. It's possible to call each one separately and we recommend doing so if you are studying the framework (i.e. not using the "auto modes" until you understand the whole process)
 
 ### Automated script option reference lists
 
