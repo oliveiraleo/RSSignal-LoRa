@@ -26,14 +26,14 @@ my_help()
   echo "-s  --separator   Specifies which separator to use when reading data (defaults to SPACE)"
   echo #new line
   echo "Examples:"
-  echo $0 "input.txt -t"
-  echo $0 "input.txt -t -c 2"
-  echo $0 "input.txt -t -s '\n'"
-  echo $0 "input.txt -t -c 2 -s '\n'"
-  echo $0 "input.txt -o output.txt"
-  echo $0 "input.txt -o output.txt -c 1"
-  echo $0 "input.txt -o output.txt -s '\t'"
-  echo $0 "input.txt -o output.txt -c 1 -s '\t'"
+  echo $0 "input.csv -t"
+  echo $0 "input.csv -t -c 2"
+  echo $0 "input.csv -t -s '\n'"
+  echo $0 "input.csv -t -c 2 -s '\n'"
+  echo $0 "input.csv -o output.csv"
+  echo $0 "input.csv -o output.csv -c 1"
+  echo $0 "input.csv -o output.csv -s '\t'"
+  echo $0 "input.csv -o output.csv -c 1 -s '\t'"
   exit
 }
 
@@ -101,7 +101,8 @@ main()
     err "Too many ARGS!"
   elif [ ! -s $1 ]; then
     err "File $1 not found!"
-    my_help
+    # my_help
+    exit 1
   fi
   
   #tests which execution flow to execute
