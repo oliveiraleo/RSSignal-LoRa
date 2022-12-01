@@ -72,17 +72,19 @@ Please, make sure your environment meets the requirements below if you want to r
 
 ```source pyvenv/bin/activate```
 
-#### 4- Run the automated script
+#### 4- Run the automated script*
 
 ```python main_controller.py OPTION```
 
-Where OPTION is the step of the script automation. Please refer to the [list below](https://github.com/oliveiraleo/RSSignal-LoRa#automated-script-option-reference-list).
+Where OPTION is the step of the script automation. Please refer to the [list below](https://github.com/oliveiraleo/RSSignal-LoRa#automated-script-option-reference-lists).
+
+\* Each option calls a different module/file of the framework. It's possible to call each one separately and we recommend doing so if you are studying the framework (i.e. not using the "auto modes" until you understand the whole process)
 
 ### Automated script option reference lists
 
 #### Main functionality
 
-- s1: Packet exchange, RSSI data collection* [RSSignal 1st step]
+- s1: Packet exchange, RSSI data collection** [RSSignal 1st step]
 - s2: Preprocess the input [RSSignal 2nd step]
 - s3: Quantization [RSSignal 3rd step]
 - s4: Index exchange (calculates the indexes to be discarded) [RSSignal 4th step]
@@ -91,7 +93,7 @@ Where OPTION is the step of the script automation. Please refer to the [list bel
 - s7: Key reconciliation (reconciliates the data and ecc bits) [RSSignal 5th step]
 - s8: Privacy amplification [RSSignal 6th step]
 
-\* Currently *not* implemented, please refer [to the FAQ](https://github.com/oliveiraleo/RSSignal-LoRa#q2-why-didnt-you-implement-the-frameworks-1st-step-probing). For an example on how it would be, please refer to that [other project](https://github.com/oliveiraleo/LoRaRSSIGrabber).
+** Currently *not* implemented, please refer [to the FAQ](https://github.com/oliveiraleo/RSSignal-LoRa#q2-why-didnt-you-implement-the-frameworks-1st-step-probing). For an example on how it would be, please refer to that [other project](https://github.com/oliveiraleo/LoRaRSSIGrabber).
 
 #### Extra functionality
 
