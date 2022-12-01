@@ -143,13 +143,13 @@ A: Yes, it might would. However, we tried to be as didactic and modular as possi
 
 A: As mentioned on the work by [[DaCruz et al., 2022]](https://doi.org/10.1016/j.phycom.2021.101480), for certain applications, maybe a convolutional approach might fit better, but for our project we thought that the RS codec suffices the requirements and still is as easy to understand.
 
-### Q5: What modifications did you make to the Reed Solomon (RS) codec code?
+### Q5: Why the RS codec does not work for me?
 
-A: We didn't change any of it's internal functionality. The code uploaded here is based on the commit [32ff14c](https://github.com/stevenang/randomness_testsuite/tree/32ff14ce65da3090a57401069a4d2e65673f658b). As it can be verified on our source code, the only modifications we have made are: (i) message related (i.e. suppressing some console messages); (ii) disabled auto input (e.g. the original code had a randomly generated input and now we use our own); and (iii) disabled some tests (some tests require very long inputs to be statistically meaningful, so we choose the tests according to the framework needs).
+A: Please, note that the total number of RSSI measurements obtained from both sides should be equal. If they are different (or for some reason they were modified during the preprocessing step), chances are that the RS codec will fail to correct the bits.
 
-### Q6: Why the RS codec does not work for me?
+### Q6: What modifications did you make to the NIST test suite?
 
-A: Please, note that the total number of RSSI measurements obtained from both sides should be equal. If they are different (or for some reason they were modified during the pre processing step), chances are that the RS codec will fail to correct the bits.
+A: We didn't change any of it's internal functionality. The external module is based on the commit [32ff14c](https://github.com/stevenang/randomness_testsuite/tree/32ff14ce65da3090a57401069a4d2e65673f658b). The [original source code](https://github.com/stevenang/randomness_testsuite/) contained all the available tests and even a GUI program, so the only modifications we made were: (i) message related (i.e. suppressing some console messages); (ii) disabled automatic input (e.g. the original code had a randomly generated input and now we use our own); (iii) disabled some tests (some tests require very long inputs to be statistically meaningful, so we choose the tests according to the framework needs); (iv) adding a custom script ([CustomKeyEval.py](./modules/RSSignal-LoRa_randomness_testsuite/CustomKeyEval.py)) that calls the test suite implementation API; and (v) removing all unused/unneeded code and data. That modifications made a huge improvement in storage space required to have the test suite available, the original code took ~5MB and our custom version takes only 77kB of disk space.
 
 ### Q7: I need to reduce the amount of storage required in order to run the framework. What can I do?
 
