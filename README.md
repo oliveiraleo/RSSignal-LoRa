@@ -107,7 +107,7 @@ Where OPTION is the step of the script automation. Please refer to the [list bel
 
 #### Main functionality
 
-- s1: Packet exchange, RSSI data collection** [RSSignal 1st step]
+- s1: Packet exchange, RSSI data collection**** [RSSignal 1st step]
 - s2: Preprocess the input [RSSignal 2nd step]
 - s3: Quantization [RSSignal 3rd step]
 - s4: Index exchange (calculates the indexes to be discarded) [RSSignal 4th step]
@@ -116,7 +116,7 @@ Where OPTION is the step of the script automation. Please refer to the [list bel
 - s7: Key reconciliation (reconciliates the data and ecc bits) [RSSignal 5th step]
 - s8: Privacy amplification [RSSignal 6th step]
 
-** Currently *not* implemented, please refer [to the FAQ](https://github.com/oliveiraleo/RSSignal-LoRa#q2-why-didnt-you-implement-the-frameworks-1st-step-probing). For an example on how it would be, please refer to that [other project](https://github.com/oliveiraleo/LoRaRSSIGrabber).
+\*\*** Currently *not* implemented, please refer [to the FAQ](https://github.com/oliveiraleo/RSSignal-LoRa#q2-why-didnt-you-implement-the-frameworks-1st-step-probing).
 
 #### Extra functionality
 
@@ -136,7 +136,7 @@ A: We didn't focus on any step that involved the real world environment implemen
 
 ### Q2: Why didn't you implement the framework's 1st step (Probing)?
 
-A: The same as the question above.
+A: Please, read the answer above. For an example on how it would be, please refer to that [other project](https://github.com/oliveiraleo/LoRa-RSSI-Grabber). 
 
 ### Q3: Why so many different files? Wouldn't it be better to keep everything together and avoid some overhead?
 
@@ -144,7 +144,7 @@ A: Yes, it might would. However, we tried to be as didactic and modular as possi
 
 ### Q4: Why did you choose Reed Solomon instead of X?
 
-A: As mentioned on the work by [[DaCruz et al., 2022]](https://doi.org/10.1016/j.phycom.2021.101480), for certain applications, maybe a convolutional approach might fit better, but for our project we thought that the RS codec suffices the requirements and still is as easy to understand.
+A: As mentioned on the work by [[DaCruz et al., 2021]](https://doi.org/10.1016/j.phycom.2021.101480), for certain applications, maybe a convolutional approach might fit better, but for our project we thought that the RS codec suffices the requirements and still is as easy to understand.
 
 ### Q5: Why the RS codec does not work for me?
 
