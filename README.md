@@ -156,6 +156,10 @@ A: We didn't change any of it's internal functionality. The external module is b
 
 A: For a start, maybe you should ditch the Python Virtual Environment located inside the `pyvenv` folder. But keep in mind that the [requirements](https://github.com/oliveiraleo/RSSignal-LoRa#requirements) must be met for the framework to be able to run.
 
+### Q8: I'm a student and I want to learn about your framework, but I'm new to LoRa and Key Generation process. What do you recommend doing?
+
+A: First, study the basics of LoRa (if you manage to read the docs from [Semtech](https://www.semtech.com/lora/), [LoRa Alliance](https://lora-alliance.org/about-lorawan/) or [TTN](https://www.thethingsnetwork.org/docs/lorawan/), good. If not, try to watch some up to date videos on YouTube - avoiding the old ones might be a good idea as they might be outdated because LoRa is constantly evolving). Then, try to take a look at the work by [[DaCruz et al., 2021]](https://doi.org/10.1016/j.phycom.2021.101480). The next step is to clone this repo, carefully read the README files, study the source code (you should know how to use Python programming language, the good news is that usually people find it very easy to learn), understand it and start using it with the datasets already shared or with some other you find online or you made yourself.
+
 ## Citing this work
 
 Please, cite this work as:
