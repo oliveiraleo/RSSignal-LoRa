@@ -2,7 +2,7 @@
 
 This folder contains the data collected from the real world environments. The data is used as input to RSSignal's 2nd Step.
 
-Bellow goes some metadata regarding the datasets.
+Below goes some metadata regarding the datasets.
 
 **Pattern:** Dataset file name preffix >> RSSI max, RSSI min, total length | Environment's main characteristic
 
