@@ -81,21 +81,29 @@ List of requirements to run the framework
 
 #### 1- Clone the source code using:
 
-<code>git clone --recursive https://github.com/oliveiraleo/RSSignal-LoRa.git</code>
+```
+git clone --recursive https://github.com/oliveiraleo/RSSignal-LoRa.git
+```
 
-**Note:** The option ```--recursive``` will clone our code + all the modules required
+**Note:** The option `--recursive` will clone our code + all the modules required
 
 #### 2- Enter the project folder
 
-<code>cd RSSignal-Lora</code>
+```
+cd RSSignal-Lora
+```
 
 #### 3- Load the virtual environment
 
-```source pyvenv/bin/activate```
+```
+source pyvenv/bin/activate
+```
 
 #### 4- Run the automated script***
 
-```python main_controller.py OPTION```
+```
+python main_controller.py OPTION
+```
 
 Where OPTION is the step of the script automation. Please refer to the [list below](https://github.com/oliveiraleo/RSSignal-LoRa#automated-script-option-reference-lists).
 
@@ -158,7 +166,7 @@ A: For a start, maybe you should ditch the Python Virtual Environment located in
 
 ### Q8: I'm a student and I want to learn about your framework, but I'm new to LoRa and Key Generation process. What do you recommend doing?
 
-A: First, study the basics of LoRa (if you manage to read the docs from [Semtech](https://www.semtech.com/lora/), [LoRa Alliance](https://lora-alliance.org/about-lorawan/) or [TTN](https://www.thethingsnetwork.org/docs/lorawan/), good. If not, try to watch some up to date videos on YouTube - avoiding the old ones might be a good idea as they might be outdated because LoRa is constantly evolving). Then, try to take a look at the work by [[DaCruz et al., 2021]](https://doi.org/10.1016/j.phycom.2021.101480). The next step is to clone this repo, carefully read the README files, study the source code (you should know how to use Python programming language, the good news is that usually people find it very easy to learn), understand it and start using it with the datasets already shared or with some other you find online or you made yourself.
+A: First, study the basics of LoRa (if you manage to read the docs from [Semtech](https://www.semtech.com/lora/), [LoRa Alliance](https://lora-alliance.org/about-lorawan/) or [TTN](https://www.thethingsnetwork.org/docs/lorawan/), good. If not, try to watch some up to date videos on YouTube - avoiding the old ones might be a good idea as they might be outdated because LoRa is constantly evolving). Then, try to take a look at the work by [[DaCruz et al., 2021]](https://doi.org/10.1016/j.phycom.2021.101480). The next step is to clone this repo, carefully read the README files, study the source code (you should know how to use Python programming language. The good news is that usually people find it very easy to learn), understand it and start using it with the datasets already shared or with some other you find online or you made yourself.
 
 ## Citing this work
 
@@ -200,7 +208,7 @@ We would like to acknowledge Mr. [Steven Kho Ang](https://github.com/stevenang),
 ## Repo TODOs
 
 - [x] ~~Upload (or link) the NIST 800-22 implementation used for the tests~~
-- [ ] Upload some test results
+- [x] ~~Upload some test results~~
 - [x] ~~Write and upload the automation script~~
 - [ ] Finish up this README file 
 
