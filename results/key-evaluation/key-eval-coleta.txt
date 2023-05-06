@@ -1,0 +1,528 @@
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.0_m-1.txt
+-> Input length: 2087 
+
+2.1. Frequency Test:									 (0.0020256858487085016, False)
+2.2. Block Frequency Test:								 (0.7525388237079861, True)
+2.3. Run Test:											 (1.3964750918145707e-32, False)
+2.4. Run Test (Longest Run of Ones): 					 (7.269956349506322e-05, False)
+2.11. Serial Test:										 ((0.0011632130893691577, False), (0.08311280752216892, True))
+2.12. Approximate Entropy Test:							 (0.03912891648538868, True)
+2.13. Cumulative Sums (Forward):						 (0.00376295709531146, False)
+2.13. Cumulative Sums (Backward):						 (0.003007084772992383, False)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.0_m-2.txt
+-> Input length: 2086 
+
+2.1. Frequency Test:									 (0.006628240244233706, False)
+2.2. Block Frequency Test:								 (0.29890734355150417, True)
+2.3. Run Test:											 (2.982848670957278e-06, False)
+2.4. Run Test (Longest Run of Ones): 					 (9.894166271622916e-08, False)
+2.11. Serial Test:										 ((0.08885537865599633, True), (0.2710055673134936, True))
+2.12. Approximate Entropy Test:							 (0.14207989862714873, True)
+2.13. Cumulative Sums (Forward):						 (0.009472623650172924, False)
+2.13. Cumulative Sums (Backward):						 (0.008255477625329185, False)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.0_m-3.txt
+-> Input length: 2085 
+
+2.1. Frequency Test:									 (0.000687484361105089, False)
+2.2. Block Frequency Test:								 (0.22447282951929998, True)
+2.3. Run Test:											 (1.9773799013786895e-14, False)
+2.4. Run Test (Longest Run of Ones): 					 (2.273950102367284e-13, False)
+2.11. Serial Test:										 ((6.098126397508652e-07, False), (8.120474548608579e-05, False))
+2.12. Approximate Entropy Test:							 (0.13591483384983974, True)
+2.13. Cumulative Sums (Forward):						 (0.001079457424018012, False)
+2.13. Cumulative Sums (Backward):						 (0.0009949106665656019, False)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.0_m-4.txt
+-> Input length: 2084 
+
+2.1. Frequency Test:									 (0.00440361788740822, False)
+2.2. Block Frequency Test:								 (0.13243506310957665, True)
+2.3. Run Test:											 (1.7304047452438032e-20, False)
+2.4. Run Test (Longest Run of Ones): 					 (1.674546615606571e-14, False)
+2.11. Serial Test:										 ((4.930925116144578e-05, False), (0.21675656122299816, True))
+2.12. Approximate Entropy Test:							 (0.025984320948193713, True)
+2.13. Cumulative Sums (Forward):						 (0.006664006611031089, False)
+2.13. Cumulative Sums (Backward):						 (0.00538119343345933, False)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.1_m-1.txt
+-> Input length: 1774 
+
+2.1. Frequency Test:									 (0.6014398289558351, True)
+2.2. Block Frequency Test:								 (0.9924497858900161, True)
+2.3. Run Test:											 (1.442368830138265e-31, False)
+2.4. Run Test (Longest Run of Ones): 					 (5.711829408583421e-09, False)
+2.11. Serial Test:										 ((0.05665834397029062, True), (0.0927888219912128, True))
+2.12. Approximate Entropy Test:							 (0.8135796561306814, True)
+2.13. Cumulative Sums (Forward):						 (0.905654862373704, True)
+2.13. Cumulative Sums (Backward):						 (0.936746791705662, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.1_m-2.txt
+-> Input length: 1799 
+
+2.1. Frequency Test:									 (0.4365491995741837, True)
+2.2. Block Frequency Test:								 (0.8688891762746632, True)
+2.3. Run Test:											 (0.010574416367442151, True)
+2.4. Run Test (Longest Run of Ones): 					 (7.933415238192047e-05, False)
+2.11. Serial Test:										 ((0.10043675637354893, True), (0.15716049765579873, True))
+2.12. Approximate Entropy Test:							 (0.46150916908366707, True)
+2.13. Cumulative Sums (Forward):						 (0.5141613072901081, True)
+2.13. Cumulative Sums (Backward):						 (0.8341177601284848, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.1_m-3.txt
+-> Input length: 1840 
+
+2.1. Frequency Test:									 (0.28354914961880573, True)
+2.2. Block Frequency Test:								 (0.8827125872846149, True)
+2.3. Run Test:											 (1.7046156012141372e-14, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0001801332438895341, False)
+2.11. Serial Test:										 ((0.8349191703731587, True), (0.8373689231774128, True))
+2.12. Approximate Entropy Test:							 (0.29224552122407543, True)
+2.13. Cumulative Sums (Forward):						 (0.5054226423663164, True)
+2.13. Cumulative Sums (Backward):						 (0.383261040512207, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.1_m-4.txt
+-> Input length: 1816 
+
+2.1. Frequency Test:									 (0.7782548777062315, True)
+2.2. Block Frequency Test:								 (0.9985425182661003, True)
+2.3. Run Test:											 (7.39808318508638e-19, False)
+2.4. Run Test (Longest Run of Ones): 					 (5.133158050927988e-11, False)
+2.11. Serial Test:										 ((0.9920016097375248, True), (0.9999736833467988, True))
+2.12. Approximate Entropy Test:							 (0.13514876984726254, True)
+2.13. Cumulative Sums (Forward):						 (0.8372818973086891, True)
+2.13. Cumulative Sums (Backward):						 (0.9739573370652503, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.2_m-1.txt
+-> Input length: 1291 
+
+2.1. Frequency Test:									 (0.6361163048858333, True)
+2.2. Block Frequency Test:								 (0.9721393191149353, True)
+2.3. Run Test:											 (4.970513022929496e-25, False)
+2.4. Run Test (Longest Run of Ones): 					 (3.467809887560967e-07, False)
+2.11. Serial Test:										 ((0.03761687317192171, True), (0.19978606641729998, True))
+2.12. Approximate Entropy Test:							 (0.9999996954554939, True)
+2.13. Cumulative Sums (Forward):						 (0.8330315001051833, True)
+2.13. Cumulative Sums (Backward):						 (0.9526009605120376, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.2_m-2.txt
+-> Input length: 1360 
+
+2.1. Frequency Test:									 (0.6254835936164523, True)
+2.2. Block Frequency Test:								 (0.9591440520538009, True)
+2.3. Run Test:											 (0.9618908404652754, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0033023502563679853, False)
+2.11. Serial Test:										 ((0.22540276567953588, True), (0.8241372362245765, True))
+2.12. Approximate Entropy Test:							 (0.9722022319880799, True)
+2.13. Cumulative Sums (Forward):						 (0.9466105459938414, True)
+2.13. Cumulative Sums (Backward):						 (0.8935879686964243, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.2_m-3.txt
+-> Input length: 1425 
+
+2.1. Frequency Test:									 (0.5780033334206635, True)
+2.2. Block Frequency Test:								 (0.9670938559627902, True)
+2.3. Run Test:											 (7.848834938047901e-08, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.003309660584070146, False)
+2.11. Serial Test:										 ((0.024495947939960065, True), (0.08167488993282782, True))
+2.12. Approximate Entropy Test:							 (0.6589261300507396, True)
+2.13. Cumulative Sums (Forward):						 (0.7956261436883456, True)
+2.13. Cumulative Sums (Backward):						 (0.6968598425040851, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.2_m-4.txt
+-> Input length: 1409 
+
+2.1. Frequency Test:									 (0.8105119167248099, True)
+2.2. Block Frequency Test:								 (0.9960529083834393, True)
+2.3. Run Test:											 (1.891227805770006e-18, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.00010406290100457991, False)
+2.11. Serial Test:										 ((0.00015755360444177606, False), (8.409240294563997e-06, False))
+2.12. Approximate Entropy Test:							 (0.9817970291803938, True)
+2.13. Cumulative Sums (Forward):						 (0.9985678918552989, True)
+2.13. Cumulative Sums (Backward):						 (0.9752795086494337, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.3_m-1.txt
+-> Input length: 1291 
+
+2.1. Frequency Test:									 (0.6361163048858333, True)
+2.2. Block Frequency Test:								 (0.9721393191149353, True)
+2.3. Run Test:											 (4.970513022929496e-25, False)
+2.4. Run Test (Longest Run of Ones): 					 (3.467809887560967e-07, False)
+2.11. Serial Test:										 ((0.03761687317192171, True), (0.19978606641729998, True))
+2.12. Approximate Entropy Test:							 (0.9999996954554939, True)
+2.13. Cumulative Sums (Forward):						 (0.8330315001051833, True)
+2.13. Cumulative Sums (Backward):						 (0.9526009605120376, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.3_m-2.txt
+-> Input length: 1086 
+
+2.1. Frequency Test:									 (0.5439191835316166, True)
+2.2. Block Frequency Test:								 (0.9323811465444837, True)
+2.3. Run Test:											 (0.3258312349741703, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.01073131313324477, True)
+2.11. Serial Test:										 ((0.9217587334509992, True), (0.6293359574025326, True))
+2.12. Approximate Entropy Test:							 (0.9999668516083229, True)
+2.13. Cumulative Sums (Forward):						 (0.8507471770321053, True)
+2.13. Cumulative Sums (Backward):						 (0.7694673890295629, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.3_m-3.txt
+-> Input length: 1048 
+
+2.1. Frequency Test:									 (0.9016633383536226, True)
+2.2. Block Frequency Test:								 (0.40943836535393996, True)
+2.3. Run Test:											 (9.952865461362463e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.023299805574547482, True)
+2.11. Serial Test:										 ((0.0001404370180253763, False), (0.04270770659293731, True))
+2.12. Approximate Entropy Test:							 (0.9998350804859987, True)
+2.13. Cumulative Sums (Forward):						 (0.9918431494934845, True)
+2.13. Cumulative Sums (Backward):						 (0.9497493082560142, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.3_m-4.txt
+-> Input length: 1061 
+
+2.1. Frequency Test:									 (0.44278016271968346, True)
+2.2. Block Frequency Test:								 (0.8094331073774425, True)
+2.3. Run Test:											 (1.5352769316941847e-10, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.052085674757514466, True)
+2.11. Serial Test:										 ((0.027225143749930042, True), (0.003399880673338283, False))
+2.12. Approximate Entropy Test:							 (0.999999132381121, True)
+2.13. Cumulative Sums (Forward):						 (0.7314894914839185, True)
+2.13. Cumulative Sums (Backward):						 (0.43842644481424786, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.4_m-1.txt
+-> Input length: 893 
+
+2.1. Frequency Test:									 (0.8147939522372969, True)
+2.2. Block Frequency Test:								 (0.9856123220330293, True)
+2.3. Run Test:											 (7.12345499731657e-24, False)
+2.4. Run Test (Longest Run of Ones): 					 (5.528079553482095e-06, False)
+2.11. Serial Test:										 ((0.12591986052583037, True), (0.41830162042379093, True))
+2.12. Approximate Entropy Test:							 (0.9999999999999997, True)
+2.13. Cumulative Sums (Forward):						 (0.9904847159934407, True)
+2.13. Cumulative Sums (Backward):						 (0.9998585196192133, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.4_m-2.txt
+-> Input length: 1015 
+
+2.1. Frequency Test:									 (0.593618240794583, True)
+2.2. Block Frequency Test:								 (0.750574044174908, True)
+2.3. Run Test:											 (0.2174174116497537, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.03365209612261629, True)
+2.11. Serial Test:										 ((0.4989610874592126, True), (0.037904589349163305, True))
+2.12. Approximate Entropy Test:							 (0.9999954078509142, True)
+2.13. Cumulative Sums (Forward):						 (0.8552003745094121, True)
+2.13. Cumulative Sums (Backward):						 (0.8282929161195616, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.4_m-3.txt
+-> Input length: 1048 
+
+2.1. Frequency Test:									 (0.9016633383536226, True)
+2.2. Block Frequency Test:								 (0.40943836535393996, True)
+2.3. Run Test:											 (9.952865461362463e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.023299805574547482, True)
+2.11. Serial Test:										 ((0.0001404370180253763, False), (0.04270770659293731, True))
+2.12. Approximate Entropy Test:							 (0.9998350804859987, True)
+2.13. Cumulative Sums (Forward):						 (0.9918431494934845, True)
+2.13. Cumulative Sums (Backward):						 (0.9497493082560142, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.4_m-4.txt
+-> Input length: 1061 
+
+2.1. Frequency Test:									 (0.44278016271968346, True)
+2.2. Block Frequency Test:								 (0.8094331073774425, True)
+2.3. Run Test:											 (1.5352769316941847e-10, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.052085674757514466, True)
+2.11. Serial Test:										 ((0.027225143749930042, True), (0.003399880673338283, False))
+2.12. Approximate Entropy Test:							 (0.999999132381121, True)
+2.13. Cumulative Sums (Forward):						 (0.7314894914839185, True)
+2.13. Cumulative Sums (Backward):						 (0.43842644481424786, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.5_m-1.txt
+-> Input length: 733 
+
+2.1. Frequency Test:									 (0.631109392327342, True)
+2.2. Block Frequency Test:								 (0.6376182092589423, True)
+2.3. Run Test:											 (2.4647420582452972e-17, False)
+2.4. Run Test (Longest Run of Ones): 					 (5.138391870240237e-05, False)
+2.11. Serial Test:										 ((0.018454402750990175, True), (0.6883328793655934, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7004046842329941, True)
+2.13. Cumulative Sums (Backward):						 (0.8960066796371957, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.5_m-2.txt
+-> Input length: 727 
+
+2.1. Frequency Test:									 (0.393646670101904, True)
+2.2. Block Frequency Test:								 (0.271420191916966, True)
+2.3. Run Test:											 (0.03855596028662351, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.07456121101836649, True)
+2.11. Serial Test:										 ((0.24022481581663352, True), (0.8938089917974867, True))
+2.12. Approximate Entropy Test:							 (0.9999999999999992, True)
+2.13. Cumulative Sums (Forward):						 (0.4993886187711728, True)
+2.13. Cumulative Sums (Backward):						 (0.4143148206521712, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.5_m-3.txt
+-> Input length: 766 
+
+2.1. Frequency Test:									 (0.7725417765810223, True)
+2.2. Block Frequency Test:								 (0.9518670314540424, True)
+2.3. Run Test:											 (0.17064743623353196, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.05945208040828367, True)
+2.11. Serial Test:										 ((0.49896108745923523, True), (0.40524483618501944, True))
+2.12. Approximate Entropy Test:							 (0.9999999999945586, True)
+2.13. Cumulative Sums (Forward):						 (0.9070974848095535, True)
+2.13. Cumulative Sums (Backward):						 (0.9311033221572762, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.5_m-4.txt
+-> Input length: 788 
+
+2.1. Frequency Test:									 (0.25430596599062316, True)
+2.2. Block Frequency Test:								 (0.3038549927435128, True)
+2.3. Run Test:											 (7.068952720883172e-11, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.015020432691528975, True)
+2.11. Serial Test:										 ((1.4347353724206793e-07, False), (0.000328780541803584, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.35157038670773844, True)
+2.13. Cumulative Sums (Backward):						 (0.35157038670773844, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.6_m-1.txt
+-> Input length: 612 
+
+2.1. Frequency Test:									 (0.6860465054289349, True)
+2.2. Block Frequency Test:								 (0.9602455129924674, True)
+2.3. Run Test:											 (1.894749557716621e-12, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.000583374220168908, False)
+2.11. Serial Test:										 ((0.7983734204400494, True), (0.9813650319968747, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6944699441449768, True)
+2.13. Cumulative Sums (Backward):						 (0.9066106407104568, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.6_m-2.txt
+-> Input length: 557 
+
+2.1. Frequency Test:									 (0.8322187546799893, True)
+2.2. Block Frequency Test:								 (0.36536245674258067, True)
+2.3. Run Test:											 (0.08198769097952846, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.4258557955679759, True)
+2.11. Serial Test:										 ((0.32216276916753955, True), (0.16473794459891125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.978171467570214, True)
+2.13. Cumulative Sums (Backward):						 (0.8473082848950291, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.6_m-3.txt
+-> Input length: 517 
+
+2.1. Frequency Test:									 (0.9649203862117123, True)
+2.2. Block Frequency Test:								 (0.9971026267487209, True)
+2.3. Run Test:											 (0.6922998240762708, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.7197039623275745, True)
+2.11. Serial Test:										 ((0.838983460337418, True), (0.9606601095988655, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9848197979118836, True)
+2.13. Cumulative Sums (Backward):						 (0.9934592373795188, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.6_m-4.txt
+-> Input length: 568 
+
+2.1. Frequency Test:									 (0.2400531710910312, True)
+2.2. Block Frequency Test:								 (0.24809390824223512, True)
+2.3. Run Test:											 (4.9079521323339e-06, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.34894731578801413, True)
+2.11. Serial Test:										 ((0.6731504800621685, True), (0.9727047429156553, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3865103726879724, True)
+2.13. Cumulative Sums (Backward):						 (0.2838792491518296, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.7_m-1.txt
+-> Input length: 394 
+
+2.1. Frequency Test:									 (0.7624419520046469, True)
+2.2. Block Frequency Test:								 (0.8239192841451535, True)
+2.3. Run Test:											 (1.5605879490972202e-07, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.011563763813119545, True)
+2.11. Serial Test:										 ((0.026066623894507004, True), (0.32191655764398514, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7631591438305787, True)
+2.13. Cumulative Sums (Backward):						 (0.9770768787658888, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.7_m-2.txt
+-> Input length: 512 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (0.8801523424473137, True)
+2.3. Run Test:											 (0.25053597441363795, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.4181172030485364, True)
+2.11. Serial Test:										 ((0.6907747220244375, True), (0.7596793164083161, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9231415350093144, True)
+2.13. Cumulative Sums (Backward):						 (0.9231415350093144, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.7_m-3.txt
+-> Input length: 517 
+
+2.1. Frequency Test:									 (0.9649203862117123, True)
+2.2. Block Frequency Test:								 (0.9971026267487209, True)
+2.3. Run Test:											 (0.6922998240762708, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.7197039623275745, True)
+2.11. Serial Test:										 ((0.838983460337418, True), (0.9606601095988655, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9848197979118836, True)
+2.13. Cumulative Sums (Backward):						 (0.9934592373795188, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.7_m-4.txt
+-> Input length: 411 
+
+2.1. Frequency Test:									 (0.40172291139444205, True)
+2.2. Block Frequency Test:								 (0.15857119517113882, True)
+2.3. Run Test:											 (0.005407879283230906, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.07626642300958335, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.3287362961009731, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6415893858533179, True)
+2.13. Cumulative Sums (Backward):						 (0.2524617896170772, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.8_m-1.txt
+-> Input length: 394 
+
+2.1. Frequency Test:									 (0.7624419520046469, True)
+2.2. Block Frequency Test:								 (0.8239192841451535, True)
+2.3. Run Test:											 (1.5605879490972202e-07, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.011563763813119545, True)
+2.11. Serial Test:										 ((0.026066623894507004, True), (0.32191655764398514, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7631591438305787, True)
+2.13. Cumulative Sums (Backward):						 (0.9770768787658888, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.8_m-2.txt
+-> Input length: 359 
+
+2.1. Frequency Test:									 (0.8741936618934341, True)
+2.2. Block Frequency Test:								 (0.9692332344763441, True)
+2.3. Run Test:											 (0.7908310889124406, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.5884460272605534, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.30608444251285677, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9946267278112475, True)
+2.13. Cumulative Sums (Backward):						 (0.998742619321229, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.8_m-3.txt
+-> Input length: 367 
+
+2.1. Frequency Test:									 (0.7148150611532569, True)
+2.2. Block Frequency Test:								 (0.8161762130223398, True)
+2.3. Run Test:											 (0.9528003490120743, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.27313004195435187, True)
+2.11. Serial Test:										 ((0.7568524292532413, True), (0.49853075529672924, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7828270333448188, True)
+2.13. Cumulative Sums (Backward):						 (0.8736218737537901, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.8_m-4.txt
+-> Input length: 411 
+
+2.1. Frequency Test:									 (0.40172291139444205, True)
+2.2. Block Frequency Test:								 (0.15857119517113882, True)
+2.3. Run Test:											 (0.005407879283230906, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.07626642300958335, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.3287362961009731, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6415893858533179, True)
+2.13. Cumulative Sums (Backward):						 (0.2524617896170772, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.9_m-1.txt
+-> Input length: 255 
+
+2.1. Frequency Test:									 (0.5730251193553904, True)
+2.2. Block Frequency Test:								 (0.5958830905651777, True)
+2.3. Run Test:											 (7.761674519472524e-06, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.196539105847264, True)
+2.11. Serial Test:										 ((0.9780911849407452, True), (0.9998366743180572, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5713222874591903, True)
+2.13. Cumulative Sums (Backward):						 (0.8567427896787692, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.9_m-2.txt
+-> Input length: 270 
+
+2.1. Frequency Test:									 (0.9031238431673467, True)
+2.2. Block Frequency Test:								 (0.9844964370054085, True)
+2.3. Run Test:											 (0.9024044897458374, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.757481558207276, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9188390492775143, True)
+2.13. Cumulative Sums (Backward):						 (0.9791576997571179, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.9_m-3.txt
+-> Input length: 244 
+
+2.1. Frequency Test:									 (0.5220527237152881, True)
+2.2. Block Frequency Test:								 (0.8596837951986662, True)
+2.3. Run Test:											 (0.6810445917731061, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.6588527201817294, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.8942024979965137, True)
+2.13. Cumulative Sums (Backward):						 (0.842585462370279, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-0.9_m-4.txt
+-> Input length: 292 
+
+2.1. Frequency Test:									 (0.6396668933244998, True)
+2.2. Block Frequency Test:								 (0.9692332344763441, True)
+2.3. Run Test:											 (0.00163466893243672, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.38317606538338705, True)
+2.11. Serial Test:										 ((0.19015605971523064, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.8489337034241902, True)
+2.13. Cumulative Sums (Backward):						 (0.7432122974421504, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-1.0_m-1.txt
+-> Input length: 205 
+
+2.1. Frequency Test:									 (0.5296192990034517, True)
+2.2. Block Frequency Test:								 (0.3767591178115822, True)
+2.3. Run Test:											 (5.909630615060624e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.8003784744386766, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5862590637680332, True)
+2.13. Cumulative Sums (Backward):						 (0.8984822534628616, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-1.0_m-2.txt
+-> Input length: 242 
+
+2.1. Frequency Test:									 (0.8977019657834406, True)
+2.2. Block Frequency Test:								 (0.8596837951986662, True)
+2.3. Run Test:											 (0.8968542272490374, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.2889535570379134, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9680730980780439, True)
+2.13. Cumulative Sums (Backward):						 (0.9971241459519848, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-1.0_m-3.txt
+-> Input length: 173 
+
+2.1. Frequency Test:									 (0.40297799045375093, True)
+2.2. Block Frequency Test:								 (0.8596837951986662, True)
+2.3. Run Test:											 (0.6635058076537376, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.35576799187597147, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5069688434053725, True)
+2.13. Cumulative Sums (Backward):						 (0.6398914399712106, True)
+
+=> keys_DaCruz2021-coleta-finalB_alpha-1.0_m-4.txt
+-> Input length: 210 
+
+2.1. Frequency Test:									 (0.6788452994243183, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (0.054615474036456835, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.016679709551585556, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.948021153045191, True)
+2.13. Cumulative Sums (Backward):						 (0.5974446445151443, True)

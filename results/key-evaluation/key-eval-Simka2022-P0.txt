@@ -1,0 +1,528 @@
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.0_m-1.txt
+-> Input length: 199 
+
+2.1. Frequency Test:									 (4.381445966637982e-28, False)
+2.2. Block Frequency Test:								 (3.8421483271207017e-20, False)
+2.3. Run Test:											 (0.0, False)
+2.4. Run Test (Longest Run of Ones): 					 (5.751562240368841e-17, False)
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0, True)
+2.13. Cumulative Sums (Backward):						 (1.0, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.0_m-2.txt
+-> Input length: 198 
+
+2.1. Frequency Test:									 (1.6830651940699811e-21, False)
+2.2. Block Frequency Test:								 (1.7920200056510255e-15, False)
+2.3. Run Test:											 (0.0, False)
+2.4. Run Test (Longest Run of Ones): 					 (5.530194895120916e-06, False)
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0, True)
+2.13. Cumulative Sums (Backward):						 (1.0, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.0_m-3.txt
+-> Input length: 197 
+
+2.1. Frequency Test:									 (1.4511120537499236e-19, False)
+2.2. Block Frequency Test:								 (7.35784791797448e-15, False)
+2.3. Run Test:											 (0.0, False)
+2.4. Run Test (Longest Run of Ones): 					 (2.3876368521570806e-05, False)
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0, True)
+2.13. Cumulative Sums (Backward):						 (1.0, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.0_m-4.txt
+-> Input length: 196 
+
+2.1. Frequency Test:									 (3.8605766904412164e-16, False)
+2.2. Block Frequency Test:								 (4.234563376336225e-13, False)
+2.3. Run Test:											 (0.0, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0020425939143249804, False)
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0, True)
+2.13. Cumulative Sums (Backward):						 (1.0000000000000002, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.1_m-1.txt
+-> Input length: 18 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.018422125454099002, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9085645446534358, True)
+2.13. Cumulative Sums (Backward):						 (0.9085645446534358, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.1_m-2.txt
+-> Input length: 28 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.4496917979688909, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5126739360664152, True)
+2.13. Cumulative Sums (Backward):						 (0.5126739360664152, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.1_m-3.txt
+-> Input length: 35 
+
+2.1. Frequency Test:									 (0.8657723749926215, True)
+2.2. Block Frequency Test:								 (0.8657723749926215, True)
+2.3. Run Test:											 (0.6151938822784171, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7792284197628361, True)
+2.13. Cumulative Sums (Backward):						 (0.6174705840501692, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.1_m-4.txt
+-> Input length: 44 
+
+2.1. Frequency Test:									 (0.763024600552995, True)
+2.2. Block Frequency Test:								 (0.763024600552995, True)
+2.3. Run Test:											 (0.03562203533071478, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5802665217314131, True)
+2.13. Cumulative Sums (Backward):						 (0.8548153583600839, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.2_m-1.txt
+-> Input length: 18 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.018422125454099002, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9085645446534358, True)
+2.13. Cumulative Sums (Backward):						 (0.9085645446534358, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.2_m-2.txt
+-> Input length: 28 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.4496917979688909, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5126739360664152, True)
+2.13. Cumulative Sums (Backward):						 (0.5126739360664152, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.2_m-3.txt
+-> Input length: 35 
+
+2.1. Frequency Test:									 (0.8657723749926215, True)
+2.2. Block Frequency Test:								 (0.8657723749926215, True)
+2.3. Run Test:											 (0.6151938822784171, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7792284197628361, True)
+2.13. Cumulative Sums (Backward):						 (0.6174705840501692, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.2_m-4.txt
+-> Input length: 44 
+
+2.1. Frequency Test:									 (0.763024600552995, True)
+2.2. Block Frequency Test:								 (0.763024600552995, True)
+2.3. Run Test:											 (0.03562203533071478, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5802665217314131, True)
+2.13. Cumulative Sums (Backward):						 (0.8548153583600839, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.3_m-1.txt
+-> Input length: 18 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.018422125454099002, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9085645446534358, True)
+2.13. Cumulative Sums (Backward):						 (0.9085645446534358, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.3_m-2.txt
+-> Input length: 28 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.4496917979688909, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5126739360664152, True)
+2.13. Cumulative Sums (Backward):						 (0.5126739360664152, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.3_m-3.txt
+-> Input length: 35 
+
+2.1. Frequency Test:									 (0.8657723749926215, True)
+2.2. Block Frequency Test:								 (0.8657723749926215, True)
+2.3. Run Test:											 (0.6151938822784171, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7792284197628361, True)
+2.13. Cumulative Sums (Backward):						 (0.6174705840501692, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.3_m-4.txt
+-> Input length: 44 
+
+2.1. Frequency Test:									 (0.763024600552995, True)
+2.2. Block Frequency Test:								 (0.763024600552995, True)
+2.3. Run Test:											 (0.03562203533071478, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5802665217314131, True)
+2.13. Cumulative Sums (Backward):						 (0.8548153583600839, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.4_m-1.txt
+-> Input length: 18 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.018422125454099002, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9085645446534358, True)
+2.13. Cumulative Sums (Backward):						 (0.9085645446534358, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.4_m-2.txt
+-> Input length: 11 
+
+2.1. Frequency Test:									 (0.36571229628151325, True)
+2.2. Block Frequency Test:								 (0.36571229628151325, True)
+2.3. Run Test:											 (0.553680228249833, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1795313984959541, True)
+2.13. Cumulative Sums (Backward):						 (1.113751631657116, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.4_m-3.txt
+-> Input length: 15 
+
+2.1. Frequency Test:									 (0.19670560245894697, True)
+2.2. Block Frequency Test:								 (0.19670560245894697, True)
+2.3. Run Test:											 (0.8464505968765912, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.098299045695228, True)
+2.13. Cumulative Sums (Backward):						 (1.098299045695228, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.4_m-4.txt
+-> Input length: 16 
+
+2.1. Frequency Test:									 (0.6170750774519739, True)
+2.2. Block Frequency Test:								 (0.6170750774519739, True)
+2.3. Run Test:											 (0.34090381592813035, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.105561356586881, True)
+2.13. Cumulative Sums (Backward):						 (0.6319215063128601, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.5_m-1.txt
+-> Input length: 5 
+
+2.1. Frequency Test:									 (0.17971249487899987, True)
+2.2. Block Frequency Test:								 (0.17971249487899987, True)
+2.3. Run Test:											 (0.05039928287148222, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (1.0626686675933774e-228, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.089827750391235, True)
+2.13. Cumulative Sums (Backward):						 (1.089827750391235, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.5_m-2.txt
+-> Input length: 11 
+
+2.1. Frequency Test:									 (0.36571229628151325, True)
+2.2. Block Frequency Test:								 (0.36571229628151325, True)
+2.3. Run Test:											 (0.553680228249833, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1795313984959541, True)
+2.13. Cumulative Sums (Backward):						 (1.113751631657116, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.5_m-3.txt
+-> Input length: 10 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1691786433473728, True)
+2.13. Cumulative Sums (Backward):						 (1.1691786433473728, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.5_m-4.txt
+-> Input length: 16 
+
+2.1. Frequency Test:									 (0.6170750774519739, True)
+2.2. Block Frequency Test:								 (0.6170750774519739, True)
+2.3. Run Test:											 (0.34090381592813035, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.105561356586881, True)
+2.13. Cumulative Sums (Backward):						 (0.6319215063128601, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.6_m-1.txt
+-> Input length: 5 
+
+2.1. Frequency Test:									 (0.17971249487899987, True)
+2.2. Block Frequency Test:								 (0.17971249487899987, True)
+2.3. Run Test:											 (0.05039928287148222, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (1.0626686675933774e-228, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.089827750391235, True)
+2.13. Cumulative Sums (Backward):						 (1.089827750391235, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.6_m-2.txt
+-> Input length: 8 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.4795001221869535, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.925308495308754, True)
+2.13. Cumulative Sums (Backward):						 (0.925308495308754, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.6_m-3.txt
+-> Input length: 10 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1691786433473728, True)
+2.13. Cumulative Sums (Backward):						 (1.1691786433473728, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.6_m-4.txt
+-> Input length: 15 
+
+2.1. Frequency Test:									 (0.43857802608099994, True)
+2.2. Block Frequency Test:								 (0.43857802608099994, True)
+2.3. Run Test:											 (0.5186050164287255, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0606659459200811, True)
+2.13. Cumulative Sums (Backward):						 (1.1498770252702561, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.7_m-1.txt
+-> Input length: 5 
+
+2.1. Frequency Test:									 (0.17971249487899987, True)
+2.2. Block Frequency Test:								 (0.17971249487899987, True)
+2.3. Run Test:											 (0.05039928287148222, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (1.0626686675933774e-228, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.089827750391235, True)
+2.13. Cumulative Sums (Backward):						 (1.089827750391235, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.7_m-2.txt
+-> Input length: 4 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.157305642550119, True)
+2.13. Cumulative Sums (Backward):						 (1.157305642550119, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.7_m-3.txt
+-> Input length: 8 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1436908817434737, True)
+2.13. Cumulative Sums (Backward):						 (1.1436908817434737, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.7_m-4.txt
+-> Input length: 11 
+
+2.1. Frequency Test:									 (0.763024600552995, True)
+2.2. Block Frequency Test:								 (0.763024600552995, True)
+2.3. Run Test:											 (0.3764623657676377, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0658309547935514, True)
+2.13. Cumulative Sums (Backward):						 (1.113751631657116, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.8_m-1.txt
+-> Input length: 3 
+
+2.1. Frequency Test:									 (0.5637028616507731, True)
+2.2. Block Frequency Test:								 (0.5637028616507731, True)
+2.3. Run Test:											 (0.38647623077123283, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.12384054062441, True)
+2.13. Cumulative Sums (Backward):						 (1.2421388204142036, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.8_m-2.txt
+-> Input length: 4 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.157305642550119, True)
+2.13. Cumulative Sums (Backward):						 (1.157305642550119, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.8_m-3.txt
+-> Input length: 8 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1436908817434737, True)
+2.13. Cumulative Sums (Backward):						 (1.1436908817434737, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.8_m-4.txt
+-> Input length: 11 
+
+2.1. Frequency Test:									 (0.763024600552995, True)
+2.2. Block Frequency Test:								 (0.763024600552995, True)
+2.3. Run Test:											 (0.3764623657676377, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0658309547935514, True)
+2.13. Cumulative Sums (Backward):						 (1.113751631657116, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.9_m-1.txt
+-> Input length: 2 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.15729920705028516, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.2230057387906683, True)
+2.13. Cumulative Sums (Backward):						 (1.2230057387906683, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.9_m-2.txt
+-> Input length: 4 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.157305642550119, True)
+2.13. Cumulative Sums (Backward):						 (1.157305642550119, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.9_m-3.txt
+-> Input length: 8 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1436908817434737, True)
+2.13. Cumulative Sums (Backward):						 (1.1436908817434737, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-0.9_m-4.txt
+-> Input length: 10 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.5270892568655381, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1028777043378484, True)
+2.13. Cumulative Sums (Backward):						 (1.1028777043378484, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-1.0_m-1.txt
+-> Input length: 2 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.15729920705028516, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.2230057387906683, True)
+2.13. Cumulative Sums (Backward):						 (1.2230057387906683, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-1.0_m-2.txt
+-> Input length: 4 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (1.0, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.157305642550119, True)
+2.13. Cumulative Sums (Backward):						 (1.157305642550119, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-1.0_m-3.txt
+-> Input length: 6 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.4142161782425252, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.1102163996899739, True)
+2.13. Cumulative Sums (Backward):						 (1.1102163996899739, True)
+
+=> keys_Simka_2022-P2_corridor_BW1600SF12_wimodlr_radiolink-cut_alpha-1.0_m-4.txt
+-> Input length: 8 
+
+2.1. Frequency Test:									 (0.4795001221869535, True)
+2.2. Block Frequency Test:								 (0.4795001221869535, True)
+2.3. Run Test:											 (0.18685750266304058, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.0, False), (0.0, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0385498790081427, True)
+2.13. Cumulative Sums (Backward):						 (1.1436908817434737, True)

@@ -1,0 +1,531 @@
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.0_m-1.txt
+-> Input length: 446 
+
+2.1. Frequency Test:									 (2.0294713525607786e-05, False)
+2.2. Block Frequency Test:								 (0.00011010263759597582, False)
+2.3. Run Test:											 (0.0, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.03165795082159532, True)
+2.11. Serial Test:										 ((0.12565564224007222, True), (0.20810562106726718, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (2.128621228084837e-05, False)
+2.13. Cumulative Sums (Backward):						 (2.6452717364082826e-05, False)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.0_m-2.txt
+-> Input length: 506 
+
+2.1. Frequency Test:									 (1.97480488656283e-05, False)
+2.2. Block Frequency Test:								 (0.0011010121245155708, False)
+2.3. Run Test:											 (0.0, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0014269632443303535, False)
+2.11. Serial Test:										 ((0.0012870069291424423, False), (0.07676281185774766, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.7534090015441337e-05, False)
+2.13. Cumulative Sums (Backward):						 (2.6415883023669776e-05, False)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.0_m-3.txt
+-> Input length: 505 
+
+2.1. Frequency Test:									 (0.00015529207169421208, False)
+2.2. Block Frequency Test:								 (0.004569510577253839, False)
+2.3. Run Test:											 (0.8298235561585127, True)
+2.4. Run Test (Longest Run of Ones): 					 (2.3145350552475402e-07, False)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.03719135482637599, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.00018009886424638736, False)
+2.13. Cumulative Sums (Backward):						 (0.00021638042429117913, False)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.0_m-4.txt
+-> Input length: 504 
+
+2.1. Frequency Test:									 (1.5040084860090882e-06, False)
+2.2. Block Frequency Test:								 (0.0001151493913579764, False)
+2.3. Run Test:											 (0.0, False)
+2.4. Run Test (Longest Run of Ones): 					 (1.2475866387906024e-10, False)
+2.11. Serial Test:										 ((3.0816331416847047e-06, False), (1.0828740719441699e-05, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.9187884050251416e-06, False)
+2.13. Cumulative Sums (Backward):						 (1.5281003058362961e-06, False)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.1_m-1.txt
+-> Input length: 366 
+
+2.1. Frequency Test:									 (0.601177210282063, True)
+2.2. Block Frequency Test:								 (0.8161762130223398, True)
+2.3. Run Test:											 (8.464359271319685e-18, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.003355731396700064, False)
+2.11. Serial Test:										 ((0.7574509004481662, True), (0.30946354783373803, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.8288568814263588, True)
+2.13. Cumulative Sums (Backward):						 (0.9119840047065189, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.1_m-2.txt
+-> Input length: 361 
+
+2.1. Frequency Test:									 (0.7924288824046001, True)
+2.2. Block Frequency Test:								 (0.8553453273074225, True)
+2.3. Run Test:											 (0.0001198229981291986, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.005575602440912177, False)
+2.11. Serial Test:										 ((0.23871601198410342, True), (0.15796025878934342, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9947879391868634, True)
+2.13. Cumulative Sums (Backward):						 (0.9947879391868634, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.1_m-3.txt
+-> Input length: 359 
+
+2.1. Frequency Test:									 (0.7117954132721951, True)
+2.2. Block Frequency Test:								 (0.9248488132162048, True)
+2.3. Run Test:											 (0.1519281787012423, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.006441812171035093, False)
+2.11. Serial Test:										 ((0.016582784590232023, True), (0.1566258575730751, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9946267278112475, True)
+2.13. Cumulative Sums (Backward):						 (0.998742619321229, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.1_m-4.txt
+-> Input length: 363 
+
+2.1. Frequency Test:									 (0.7929884503526489, True)
+2.2. Block Frequency Test:								 (0.8824969025845955, True)
+2.3. Run Test:											 (0.49724110059391635, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.2652564399134429, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.023632845390985733, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9999949607303913, True)
+2.13. Cumulative Sums (Backward):						 (0.9685556881396107, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.2_m-1.txt
+-> Input length: 366 
+
+2.1. Frequency Test:									 (0.601177210282063, True)
+2.2. Block Frequency Test:								 (0.8161762130223398, True)
+2.3. Run Test:											 (8.464359271319685e-18, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.003355731396700064, False)
+2.11. Serial Test:										 ((0.7574509004481662, True), (0.30946354783373803, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.8288568814263588, True)
+2.13. Cumulative Sums (Backward):						 (0.9119840047065189, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.2_m-2.txt
+-> Input length: 289 
+
+2.1. Frequency Test:									 (0.44444670263492436, True)
+2.2. Block Frequency Test:								 (0.5352614285189903, True)
+2.3. Run Test:											 (0.0002834444057536406, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0881745465348064, True)
+2.11. Serial Test:										 ((0.811991564460858, True), (0.49853075529673724, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.47798079656082537, True)
+2.13. Cumulative Sums (Backward):						 (0.7935123256253411, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.2_m-3.txt
+-> Input length: 292 
+
+2.1. Frequency Test:									 (0.558409388489248, True)
+2.2. Block Frequency Test:								 (0.8688150562628432, True)
+2.3. Run Test:											 (0.28252159388676246, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.056170781894716866, True)
+2.11. Serial Test:										 ((0.8095166021467702, True), (0.7316020092923281, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9652939456785916, True)
+2.13. Cumulative Sums (Backward):						 (0.8489337034241902, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.2_m-4.txt
+-> Input length: 288 
+
+2.1. Frequency Test:									 (0.9061856157549283, True)
+2.2. Block Frequency Test:								 (0.8553453273074225, True)
+2.3. Run Test:											 (0.5562198042002016, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.22041900474416715, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9950585081544283, True)
+2.13. Cumulative Sums (Backward):						 (0.999096806238319, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.3_m-1.txt
+-> Input length: 188 
+
+2.1. Frequency Test:									 (0.5595836997752428, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (5.582962864330272e-08, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.015559175351268367, True)
+2.11. Serial Test:										 ((0.9969313449840144, True), (0.998228546159779, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9660352103926783, True)
+2.13. Cumulative Sums (Backward):						 (0.8127404380908816, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.3_m-2.txt
+-> Input length: 175 
+
+2.1. Frequency Test:									 (0.7054569861112734, True)
+2.2. Block Frequency Test:								 (0.5958830905651777, True)
+2.3. Run Test:											 (1.538358692987162e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.4195347050441254, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7861998097592475, True)
+2.13. Cumulative Sums (Backward):						 (0.9968349644042931, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.3_m-3.txt
+-> Input length: 171 
+
+2.1. Frequency Test:									 (0.592440090171318, True)
+2.2. Block Frequency Test:								 (0.2888443663464849, True)
+2.3. Run Test:											 (0.016549863318738617, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.41254030701698974, True)
+2.11. Serial Test:										 ((0.9332376010197025, True), (0.9834237835334554, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5660548027697678, True)
+2.13. Cumulative Sums (Backward):						 (0.9058545605461161, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.3_m-4.txt
+-> Input length: 174 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.12946977717929328, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.2269898467264786, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9840664982133573, True)
+2.13. Cumulative Sums (Backward):						 (0.9840664982133573, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.4_m-1.txt
+-> Input length: 188 
+
+2.1. Frequency Test:									 (0.5595836997752428, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (5.582962864330272e-08, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.015559175351268367, True)
+2.11. Serial Test:										 ((0.9969313449840144, True), (0.998228546159779, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9660352103926783, True)
+2.13. Cumulative Sums (Backward):						 (0.8127404380908816, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.4_m-2.txt
+-> Input length: 127 
+
+2.1. Frequency Test:									 (0.9292919989256294, True)
+2.2. Block Frequency Test:								 (0.9292919989256294, True)
+2.3. Run Test:											 (0.0033988292488482136, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.07756931527734719, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9836030003643037, True)
+2.13. Cumulative Sums (Backward):						 (0.9836030003643037, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.4_m-3.txt
+-> Input length: 146 
+
+2.1. Frequency Test:									 (0.7406124925233479, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (0.019906069853815083, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.016232882929749667, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7897879533884824, True)
+2.13. Cumulative Sums (Backward):						 (0.9236795919113736, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.4_m-4.txt
+-> Input length: 144 
+
+2.1. Frequency Test:									 (0.5049850750938459, True)
+2.2. Block Frequency Test:								 (0.2888443663464849, True)
+2.3. Run Test:											 (0.12312325568611618, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.012148202471576044, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6292225702004761, True)
+2.13. Cumulative Sums (Backward):						 (0.8579648838592456, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.5_m-1.txt
+-> Input length: 152 
+
+2.1. Frequency Test:									 (0.626496274346911, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (4.4822095229763296e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.047909865291406104, True)
+2.11. Serial Test:										 ((0.00041600900558945566, False), (0.11713880419988465, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9930387303693998, True)
+2.13. Cumulative Sums (Backward):						 (0.8742586070567893, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.5_m-2.txt
+-> Input length: 127 
+
+2.1. Frequency Test:									 (0.9292919989256294, True)
+2.2. Block Frequency Test:								 (0.9292919989256294, True)
+2.3. Run Test:											 (0.0033988292488482136, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.07756931527734719, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9836030003643037, True)
+2.13. Cumulative Sums (Backward):						 (0.9836030003643037, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.5_m-3.txt
+-> Input length: 146 
+
+2.1. Frequency Test:									 (0.7406124925233479, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (0.019906069853815083, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.016232882929749667, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7897879533884824, True)
+2.13. Cumulative Sums (Backward):						 (0.9236795919113736, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.5_m-4.txt
+-> Input length: 144 
+
+2.1. Frequency Test:									 (0.5049850750938459, True)
+2.2. Block Frequency Test:								 (0.2888443663464849, True)
+2.3. Run Test:											 (0.12312325568611618, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.012148202471576044, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6292225702004761, True)
+2.13. Cumulative Sums (Backward):						 (0.8579648838592456, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.6_m-1.txt
+-> Input length: 86 
+
+2.1. Frequency Test:									 (0.8292484591829462, True)
+2.2. Block Frequency Test:								 (0.8292484591829462, True)
+2.3. Run Test:											 (0.000545143107535302, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9983210320363989, True)
+2.13. Cumulative Sums (Backward):						 (0.9331703918722084, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.6_m-2.txt
+-> Input length: 54 
+
+2.1. Frequency Test:									 (0.2763029173374836, True)
+2.2. Block Frequency Test:								 (0.2763029173374836, True)
+2.3. Run Test:											 (0.11964445427275604, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3470694974861029, True)
+2.13. Cumulative Sums (Backward):						 (0.4409848795727805, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.6_m-3.txt
+-> Input length: 74 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.02007448554400914, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.00758729988012564, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9669650489605789, True)
+2.13. Cumulative Sums (Backward):						 (0.9669650489605789, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.6_m-4.txt
+-> Input length: 70 
+
+2.1. Frequency Test:									 (0.23199772362873428, True)
+2.2. Block Frequency Test:								 (0.23199772362873428, True)
+2.3. Run Test:											 (0.03346074257877043, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.30296268947338856, True)
+2.13. Cumulative Sums (Backward):						 (0.30296268947338856, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.7_m-1.txt
+-> Input length: 70 
+
+2.1. Frequency Test:									 (0.6325851216960416, True)
+2.2. Block Frequency Test:								 (0.6325851216960416, True)
+2.3. Run Test:											 (0.015279005032276267, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9597561091081024, True)
+2.13. Cumulative Sums (Backward):						 (0.6697159827153922, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.7_m-2.txt
+-> Input length: 54 
+
+2.1. Frequency Test:									 (0.2763029173374836, True)
+2.2. Block Frequency Test:								 (0.2763029173374836, True)
+2.3. Run Test:											 (0.11964445427275604, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3470694974861029, True)
+2.13. Cumulative Sums (Backward):						 (0.4409848795727805, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.7_m-3.txt
+-> Input length: 74 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.02007448554400914, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.00758729988012564, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9669650489605789, True)
+2.13. Cumulative Sums (Backward):						 (0.9669650489605789, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.7_m-4.txt
+-> Input length: 70 
+
+2.1. Frequency Test:									 (0.23199772362873428, True)
+2.2. Block Frequency Test:								 (0.23199772362873428, True)
+2.3. Run Test:											 (0.03346074257877043, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.30296268947338856, True)
+2.13. Cumulative Sums (Backward):						 (0.30296268947338856, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.8_m-1.txt
+-> Input length: 70 
+
+2.1. Frequency Test:									 (0.6325851216960416, True)
+2.2. Block Frequency Test:								 (0.6325851216960416, True)
+2.3. Run Test:											 (0.015279005032276267, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9597561091081024, True)
+2.13. Cumulative Sums (Backward):						 (0.6697159827153922, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.8_m-2.txt
+-> Input length: 48 
+
+2.1. Frequency Test:									 (0.24821307898992373, True)
+2.2. Block Frequency Test:								 (0.24821307898992373, True)
+2.3. Run Test:											 (0.047761242675103496, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3877156861342792, True)
+2.13. Cumulative Sums (Backward):						 (0.3877156861342792, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.8_m-3.txt
+-> Input length: 50 
+
+2.1. Frequency Test:									 (0.2578990352923396, True)
+2.2. Block Frequency Test:								 (0.2578990352923396, True)
+2.3. Run Test:											 (0.1780220859154258, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.31456527835661, True)
+2.13. Cumulative Sums (Backward):						 (0.4059820762410409, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.8_m-4.txt
+-> Input length: 49 
+
+2.1. Frequency Test:									 (0.11608313373865504, True)
+2.2. Block Frequency Test:								 (0.11608313373865504, True)
+2.3. Run Test:											 (0.08444846067819327, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.00013171138342053462, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0227501309615916, True)
+2.13. Cumulative Sums (Backward):						 (1.031645403483725, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.9_m-1.txt
+-> Input length: 37 
+
+2.1. Frequency Test:									 (0.8694170607412391, True)
+2.2. Block Frequency Test:								 (0.8694170607412391, True)
+2.3. Run Test:											 (0.6247630984858878, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9999862965746169, True)
+2.13. Cumulative Sums (Backward):						 (0.9920160274028822, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.9_m-2.txt
+-> Input length: 32 
+
+2.1. Frequency Test:									 (0.7236736098317631, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (0.031411298497528974, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.8920236983593505, True)
+2.13. Cumulative Sums (Backward):						 (0.9842562781617521, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.9_m-3.txt
+-> Input length: 42 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.21704390775694227, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9500660819835323, True)
+2.13. Cumulative Sums (Backward):						 (0.9500660819835323, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-0.9_m-4.txt
+-> Input length: 35 
+
+2.1. Frequency Test:									 (0.23672357063785743, True)
+2.2. Block Frequency Test:								 (0.23672357063785743, True)
+2.3. Run Test:											 (0.003881803912096551, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (1.8842808995264367e-07, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0640925757703545, True)
+2.13. Cumulative Sums (Backward):						 (0.35251810539238604, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-1.0_m-1.txt
+-> Input length: 37 
+
+2.1. Frequency Test:									 (0.8694170607412391, True)
+2.2. Block Frequency Test:								 (0.8694170607412391, True)
+2.3. Run Test:											 (0.6247630984858878, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.9999862965746169, True)
+2.13. Cumulative Sums (Backward):						 (0.9920160274028822, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-1.0_m-2.txt
+-> Input length: 23 
+
+2.1. Frequency Test:									 (0.5316145768816123, True)
+2.2. Block Frequency Test:								 (0.5316145768816123, True)
+2.3. Run Test:											 (0.8972638512078543, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5916506937655244, True)
+2.13. Cumulative Sums (Backward):						 (0.5916506937655244, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-1.0_m-3.txt
+-> Input length: 34 
+
+2.1. Frequency Test:									 (0.7316005889599013, True)
+2.2. Block Frequency Test:								 (0.7316005889599013, True)
+2.3. Run Test:											 (0.0370352600937457, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6039345218353391, True)
+2.13. Cumulative Sums (Backward):						 (0.907454760246353, True)
+
+=> keys_DeOliveira2022-coleta-estatica2-ED_alpha-1.0_m-4.txt
+-> Input length: 27 
+
+2.1. Frequency Test:									 (0.08326451666355045, True)
+2.2. Block Frequency Test:								 (0.08326451666355045, True)
+2.3. Run Test:											 (0.1939308522824108, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0171320037603724, True)
+2.13. Cumulative Sums (Backward):						 (1.0271459103014091, True)
+I: For saving the results in a file, try the command below:
+python 
+main_controller.py auto-key-eval DeOliveira2022-coleta-estatica2-ED 0.0 1.0 1 4 > key-eval-output.txt

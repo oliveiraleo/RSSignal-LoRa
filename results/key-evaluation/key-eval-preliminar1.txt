@@ -1,0 +1,528 @@
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.0_m-1.txt
+-> Input length: 375 
+
+2.1. Frequency Test:									 (0.015221336970124885, True)
+2.2. Block Frequency Test:								 (0.2196708476545753, True)
+2.3. Run Test:											 (5.483891922942766e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.009892011416729017, False)
+2.11. Serial Test:										 ((0.24696869823560907, True), (0.3136452729669242, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.026371741702776126, True)
+2.13. Cumulative Sums (Backward):						 (0.030442673939753435, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.0_m-2.txt
+-> Input length: 374 
+
+2.1. Frequency Test:									 (0.02987314401922904, True)
+2.2. Block Frequency Test:								 (0.36787944117144245, True)
+2.3. Run Test:											 (0.00018917034075550309, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.9846774803854366, True)
+2.11. Serial Test:										 ((0.08585410917620295, True), (0.6848092234858251, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.052367296143126775, True)
+2.13. Cumulative Sums (Backward):						 (0.05974628789337368, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.0_m-3.txt
+-> Input length: 373 
+
+2.1. Frequency Test:									 (0.006065192132484404, False)
+2.2. Block Frequency Test:								 (0.26497362135689667, True)
+2.3. Run Test:											 (4.24257777035635e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.006255966948516616, False)
+2.11. Serial Test:										 ((3.03695032339237e-08, False), (0.07326978971179103, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.007473495815794654, False)
+2.13. Cumulative Sums (Backward):						 (0.012130384264968416, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.0_m-4.txt
+-> Input length: 372 
+
+2.1. Frequency Test:									 (0.21337370709311854, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (9.603502387518663e-08, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.2974058294709343, True)
+2.11. Serial Test:										 ((1.550799088176397e-33, False), (5.265609898640151e-09, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.32304217962986, True)
+2.13. Cumulative Sums (Backward):						 (0.1741726220797162, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.1_m-1.txt
+-> Input length: 302 
+
+2.1. Frequency Test:									 (0.8179564595298034, True)
+2.2. Block Frequency Test:								 (0.07131668269775804, True)
+2.3. Run Test:											 (7.320528609120111e-07, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.139870664819335, True)
+2.11. Serial Test:										 ((1.3636995480148654e-05, False), (0.008646171235015366, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.2692242321775682, True)
+2.13. Cumulative Sums (Backward):						 (0.4107645376923744, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.1_m-2.txt
+-> Input length: 303 
+
+2.1. Frequency Test:									 (0.5274303394098011, True)
+2.2. Block Frequency Test:								 (0.1821135291210137, True)
+2.3. Run Test:											 (0.01951600669704077, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.34055820436170964, True)
+2.11. Serial Test:										 ((0.045995124283135014, True), (0.49853075529674534, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.169612096324089, True)
+2.13. Cumulative Sums (Backward):						 (0.5479705672541497, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.1_m-3.txt
+-> Input length: 303 
+
+2.1. Frequency Test:									 (0.6875813695012716, True)
+2.2. Block Frequency Test:								 (0.45783336177161427, True)
+2.3. Run Test:											 (0.00012213060221859918, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.13833144207704182, True)
+2.11. Serial Test:										 ((0.045995124283135014, True), (0.724097719323098, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7043676333619977, True)
+2.13. Cumulative Sums (Backward):						 (0.3726449501294862, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.1_m-4.txt
+-> Input length: 312 
+
+2.1. Frequency Test:									 (0.36503027183830417, True)
+2.2. Block Frequency Test:								 (0.031646586111036025, True)
+2.3. Run Test:											 (2.2713943619374995e-07, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.01682812291141604, True)
+2.11. Serial Test:										 ((3.090980212343742e-29, False), (1.462557150823177e-07, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.054496881714605636, True)
+2.13. Cumulative Sums (Backward):						 (0.3855643018989418, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.2_m-1.txt
+-> Input length: 194 
+
+2.1. Frequency Test:									 (0.25066607181324807, True)
+2.2. Block Frequency Test:								 (0.4795001221869535, True)
+2.3. Run Test:											 (0.0017393630512293518, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.05988830424091967, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.4440275905458941, True)
+2.13. Cumulative Sums (Backward):						 (0.30201932469833, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.2_m-2.txt
+-> Input length: 221 
+
+2.1. Frequency Test:									 (0.3818598292804778, True)
+2.2. Block Frequency Test:								 (0.05182992721790971, True)
+2.3. Run Test:											 (0.40886495735725115, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.1807617945606615, True)
+2.11. Serial Test:										 ((0.0002836852959694337, False), (0.05133121580174632, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.21287245345581776, True)
+2.13. Cumulative Sums (Backward):						 (0.6832051054665147, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.2_m-3.txt
+-> Input length: 225 
+
+2.1. Frequency Test:									 (0.8414805811217939, True)
+2.2. Block Frequency Test:								 (0.4795001221869535, True)
+2.3. Run Test:											 (0.0010962635685534128, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.16952070952870185, True)
+2.11. Serial Test:										 ((0.8725567349911697, True), (0.789082279456052, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6910813804655089, True)
+2.13. Cumulative Sums (Backward):						 (0.5128009094273884, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.2_m-4.txt
+-> Input length: 227 
+
+2.1. Frequency Test:									 (0.12686956000892485, True)
+2.2. Block Frequency Test:								 (0.002654029359482347, False)
+2.3. Run Test:											 (1.4457590865079277e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.056233055957545484, True)
+2.11. Serial Test:										 ((2.1694367023173043e-23, False), (0.0007977708089408099, False))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.005639113467036204, False)
+2.13. Cumulative Sums (Backward):						 (0.22234559505868484, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.3_m-1.txt
+-> Input length: 194 
+
+2.1. Frequency Test:									 (0.25066607181324807, True)
+2.2. Block Frequency Test:								 (0.4795001221869535, True)
+2.3. Run Test:											 (0.0017393630512293518, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.05988830424091967, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.4440275905458941, True)
+2.13. Cumulative Sums (Backward):						 (0.30201932469833, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.3_m-2.txt
+-> Input length: 160 
+
+2.1. Frequency Test:									 (0.42919530044034926, True)
+2.2. Block Frequency Test:								 (0.11161176829829224, True)
+2.3. Run Test:											 (0.22236362070278426, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.1611786716627406, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.26613872643880154, True)
+2.13. Cumulative Sums (Backward):						 (0.6040491568129163, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.3_m-3.txt
+-> Input length: 173 
+
+2.1. Frequency Test:									 (0.32297064326867264, True)
+2.2. Block Frequency Test:								 (0.05182992721790971, True)
+2.3. Run Test:											 (0.0022120290290266447, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.3341964119830555, True)
+2.11. Serial Test:										 ((0.930949941009963, True), (0.8523874150215677, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.08018939200008583, True)
+2.13. Cumulative Sums (Backward):						 (0.5069688434053725, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.3_m-4.txt
+-> Input length: 184 
+
+2.1. Frequency Test:									 (0.3763444934986555, True)
+2.2. Block Frequency Test:								 (0.021556266760016356, True)
+2.3. Run Test:											 (4.3498083814623254e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.5236278716187508, True)
+2.11. Serial Test:										 ((4.045110433114527e-12, False), (0.16257294768659045, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.036641470841676224, True)
+2.13. Cumulative Sums (Backward):						 (0.2807178769007762, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.4_m-1.txt
+-> Input length: 128 
+
+2.1. Frequency Test:									 (0.4795001221869535, True)
+2.2. Block Frequency Test:								 (0.4795001221869535, True)
+2.3. Run Test:											 (0.04587552493856417, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.10677768717127498, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.7375181432076914, True)
+2.13. Cumulative Sums (Backward):						 (0.22322081367444513, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.4_m-2.txt
+-> Input length: 160 
+
+2.1. Frequency Test:									 (0.42919530044034926, True)
+2.2. Block Frequency Test:								 (0.11161176829829224, True)
+2.3. Run Test:											 (0.22236362070278426, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.1611786716627406, True)
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.26613872643880154, True)
+2.13. Cumulative Sums (Backward):						 (0.6040491568129163, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.4_m-3.txt
+-> Input length: 142 
+
+2.1. Frequency Test:									 (0.866712086572302, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.011880325524675472, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.6868334408871231, True)
+2.11. Serial Test:										 ((0.964754593896842, True), (0.8992220724103978, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3073482476066182, True)
+2.13. Cumulative Sums (Backward):						 (0.415907036826849, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.4_m-4.txt
+-> Input length: 145 
+
+2.1. Frequency Test:									 (0.6779754429107876, True)
+2.2. Block Frequency Test:								 (0.5958830905651777, True)
+2.3. Run Test:											 (9.882902228567858e-05, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0027131843830886203, False)
+2.11. Serial Test:										 ((2.9354613767085765e-18, False), (0.1063099301901824, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.11225455718354366, True)
+2.13. Cumulative Sums (Backward):						 (0.26990894183937053, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.5_m-1.txt
+-> Input length: 93 
+
+2.1. Frequency Test:									 (0.9174112601920411, True)
+2.2. Block Frequency Test:								 (0.9174112601920411, True)
+2.3. Run Test:											 (0.029334231722779353, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.691153386631707, True)
+2.13. Cumulative Sums (Backward):						 (0.5957862435086688, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.5_m-2.txt
+-> Input length: 110 
+
+2.1. Frequency Test:									 (0.44560053289767665, True)
+2.2. Block Frequency Test:								 (0.44560053289767665, True)
+2.3. Run Test:											 (0.5281133189559171, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3637592389322691, True)
+2.13. Cumulative Sums (Backward):						 (0.7616063158992539, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.5_m-3.txt
+-> Input length: 129 
+
+2.1. Frequency Test:									 (0.79167568566565, True)
+2.2. Block Frequency Test:								 (0.7236736098317631, True)
+2.3. Run Test:											 (0.0433847485434238, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.21327601583491299, True)
+2.11. Serial Test:										 ((0.976827531826267, True), (0.9202687007205583, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.31778755769303757, True)
+2.13. Cumulative Sums (Backward):						 (0.5035707135668438, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.5_m-4.txt
+-> Input length: 113 
+
+2.1. Frequency Test:									 (0.5102139371152774, True)
+2.2. Block Frequency Test:								 (0.5102139371152774, True)
+2.3. Run Test:											 (0.003895290367904187, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((3.7114917055413322e-06, False), (0.9460607773029913, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.060981213559747276, True)
+2.13. Cumulative Sums (Backward):						 (0.2645598139085431, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.6_m-1.txt
+-> Input length: 93 
+
+2.1. Frequency Test:									 (0.9174112601920411, True)
+2.2. Block Frequency Test:								 (0.9174112601920411, True)
+2.3. Run Test:											 (0.029334231722779353, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.691153386631707, True)
+2.13. Cumulative Sums (Backward):						 (0.5957862435086688, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.6_m-2.txt
+-> Input length: 73 
+
+2.1. Frequency Test:									 (0.29217129931682506, True)
+2.2. Block Frequency Test:								 (0.29217129931682506, True)
+2.3. Run Test:											 (0.9896083293542848, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3203060136182154, True)
+2.13. Cumulative Sums (Backward):						 (0.4830018009860311, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.6_m-3.txt
+-> Input length: 105 
+
+2.1. Frequency Test:									 (0.7696979437812898, True)
+2.2. Block Frequency Test:								 (0.7696979437812898, True)
+2.3. Run Test:											 (0.008570910864443941, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.9928797958315941, True), (0.9997576534692882, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.28645293325810806, True)
+2.13. Cumulative Sums (Backward):						 (0.4822478294824992, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.6_m-4.txt
+-> Input length: 100 
+
+2.1. Frequency Test:									 (0.8414805811217939, True)
+2.2. Block Frequency Test:								 (0.8414805811217939, True)
+2.3. Run Test:											 (0.009403129750554642, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.9998768717137946, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.17826134155395001, True)
+2.13. Cumulative Sums (Backward):						 (0.11486622129289312, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.7_m-1.txt
+-> Input length: 63 
+
+2.1. Frequency Test:									 (0.7054569861112735, True)
+2.2. Block Frequency Test:								 (0.7054569861112735, True)
+2.3. Run Test:											 (0.015638074372647498, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5126739360664152, True)
+2.13. Cumulative Sums (Backward):						 (0.8530131145175062, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.7_m-2.txt
+-> Input length: 62 
+
+2.1. Frequency Test:									 (0.4460595493707441, True)
+2.2. Block Frequency Test:								 (0.4460595493707441, True)
+2.3. Run Test:											 (0.3988685363955927, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.40795990877116206, True)
+2.13. Cumulative Sums (Backward):						 (0.7327165684208411, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.7_m-3.txt
+-> Input length: 84 
+
+2.1. Frequency Test:									 (0.6625205835400576, True)
+2.2. Block Frequency Test:								 (0.6625205835400576, True)
+2.3. Run Test:											 (0.0838304256032282, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.2034124932370928, True)
+2.13. Cumulative Sums (Backward):						 (0.4596483636654103, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.7_m-4.txt
+-> Input length: 86 
+
+2.1. Frequency Test:									 (0.5176341185833456, True)
+2.2. Block Frequency Test:								 (0.5176341185833456, True)
+2.3. Run Test:											 (0.010610085572787626, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.49896108745923523, True), (0.9999903635647075, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.32189531433162194, True)
+2.13. Cumulative Sums (Backward):						 (0.08095891103801145, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.8_m-1.txt
+-> Input length: 46 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.0031896997062168704, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((2.0194464754895408e-08, False), (0.49853075529671326, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6011172349707088, True)
+2.13. Cumulative Sums (Backward):						 (0.6011172349707088, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.8_m-2.txt
+-> Input length: 55 
+
+2.1. Frequency Test:									 (0.5001842570707944, True)
+2.2. Block Frequency Test:								 (0.5001842570707944, True)
+2.3. Run Test:											 (0.45831769413307977, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.3549812868531803, True)
+2.13. Cumulative Sums (Backward):						 (0.8066505184472957, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.8_m-3.txt
+-> Input length: 66 
+
+2.1. Frequency Test:									 (0.6224606558934543, True)
+2.2. Block Frequency Test:								 (0.6224606558934543, True)
+2.3. Run Test:											 (0.22800938393679737, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.12967626838408172, True)
+2.13. Cumulative Sums (Backward):						 (0.35139569619004796, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.8_m-4.txt
+-> Input length: 73 
+
+2.1. Frequency Test:									 (0.9068274467904144, True)
+2.2. Block Frequency Test:								 (0.9068274467904144, True)
+2.3. Run Test:											 (0.026243083281449572, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.9997974868809365, True), (0.9937734937732554, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.20260183597401427, True)
+2.13. Cumulative Sums (Backward):						 (0.15830737578011583, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.9_m-1.txt
+-> Input length: 46 
+
+2.1. Frequency Test:									 (1.0, True)
+2.2. Block Frequency Test:								 (1.0, True)
+2.3. Run Test:											 (0.0031896997062168704, False)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((2.0194464754895408e-08, False), (0.49853075529671326, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.6011172349707088, True)
+2.13. Cumulative Sums (Backward):						 (0.6011172349707088, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.9_m-2.txt
+-> Input length: 43 
+
+2.1. Frequency Test:									 (0.4457659079148423, True)
+2.2. Block Frequency Test:								 (0.4457659079148423, True)
+2.3. Run Test:											 (0.7084868718791935, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0467236689574064, True)
+2.13. Cumulative Sums (Backward):						 (0.7113196834397639, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.9_m-3.txt
+-> Input length: 58 
+
+2.1. Frequency Test:									 (0.5994262792958637, True)
+2.2. Block Frequency Test:								 (0.5994262792958637, True)
+2.3. Run Test:											 (0.12190864798075063, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0244423152349367, True)
+2.13. Cumulative Sums (Backward):						 (0.2972473690841626, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-0.9_m-4.txt
+-> Input length: 60 
+
+2.1. Frequency Test:									 (0.7962534147376393, True)
+2.2. Block Frequency Test:								 (0.7962534147376393, True)
+2.3. Run Test:											 (0.02046244069915158, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.1414022014155017, True)
+2.13. Cumulative Sums (Backward):						 (0.24266546293947977, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-1.0_m-1.txt
+-> Input length: 29 
+
+2.1. Frequency Test:									 (0.5774686624272997, True)
+2.2. Block Frequency Test:								 (0.5774686624272997, True)
+2.3. Run Test:											 (0.08053512774823798, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.5291654723898698, True)
+2.13. Cumulative Sums (Backward):						 (0.9761432458402208, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-1.0_m-2.txt
+-> Input length: 37 
+
+2.1. Frequency Test:									 (0.8694170607412391, True)
+2.2. Block Frequency Test:								 (0.8694170607412391, True)
+2.3. Run Test:											 (0.4132719147307089, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.2779513495886487, True)
+2.13. Cumulative Sums (Backward):						 (1.0500887400902335, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-1.0_m-3.txt
+-> Input length: 45 
+
+2.1. Frequency Test:									 (0.6547208460185772, True)
+2.2. Block Frequency Test:								 (0.6547208460185772, True)
+2.3. Run Test:											 (0.026684443034674866, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (0.27206263990373164, True)
+2.13. Cumulative Sums (Backward):						 (1.0263161482289271, True)
+
+=> keys_DaCruz2021-preliminar1-cut-tab-2_alpha-1.0_m-4.txt
+-> Input length: 46 
+
+2.1. Frequency Test:									 (0.3763444934986555, True)
+2.2. Block Frequency Test:								 (0.3763444934986555, True)
+2.3. Run Test:											 (0.02245895892468056, True)
+2.4. Run Test (Longest Run of Ones): 					 (0.0, False, 'Error: Not enough data to run this test')
+2.11. Serial Test:										 ((0.4989610874592239, True), (0.49853075529672125, True))
+2.12. Approximate Entropy Test:							 (1.0, True)
+2.13. Cumulative Sums (Forward):						 (1.0194999762102528, True)
+2.13. Cumulative Sums (Backward):						 (0.4757665372174731, True)
