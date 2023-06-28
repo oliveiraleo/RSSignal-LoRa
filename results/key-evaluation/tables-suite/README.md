@@ -6,7 +6,7 @@ In our publications, because of display constraints (page size, etc), sometimes 
 
 The relationship with between each dataset survey and its results' table is the same as in the key-eval folder (i.e. each file name was copied from the suffix that identifies its survey/source).
 
-The PDF file contains all the tables in a vectorized representation for higher quality of image.
+The [PDF file](./Suite-Tables-Results-SBSeg-2023.pdf) contains all the tables in a vectorized representation for higher quality of image.
 
 ## Preview example
 
