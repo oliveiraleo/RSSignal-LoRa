@@ -57,7 +57,7 @@ def script_chooser(arguments):
         print("Probing: TODO\nSkipping...")
     elif (arguments[1] == "s2"): #step 2 - Preprocessing, filters RSSI values (removes everything else from the file)
             try:
-                os.system("./preprocess_input.sh " + arguments[2]) #TODO change the options to be more flexible
+                os.system(f"./preprocess_input.sh {' '.join(arguments[2:])}") #TODO change the options to be more flexible
             except IndexError:
                 print ("E: Not enough arguments were given!\nUsage:\npython3 " + arguments[0] + " " + arguments[1] + " [script args]")
                 print("NOTE: script args are those from the examples below")
